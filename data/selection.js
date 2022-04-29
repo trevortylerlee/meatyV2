@@ -1,17 +1,19 @@
 export const animals = [
   {
     title: "Chicken",
-    img: "/../public/selections/chickenFace.png"
+    img: "/../public/selections/chickenFace.png",
+    desc: "This is a chicken."
   },
   {
     title: "Cow",
-    img: "/../public/selections/cowFace.png"
+    img: "/../public/selections/cowFace.png",
+    desc: "This is a cow."
 
   },
   {
     title: "Pig",
-    img: "/../public/selections/pigFace.png"
-
+    img: "/../public/selections/pigFace.png",
+    desc: "This is a pig."
   }
 ]
 

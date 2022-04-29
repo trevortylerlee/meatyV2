@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styled from 'styled-components';
+import { useState, useEffect } from 'react';
 
 
 import { animals, weapons } from '../data/selection';
@@ -11,6 +12,8 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-content: center;
+  width: 400px;
+  margin: 0 auto;
 
   h2 {
     padding: 0;
@@ -46,22 +49,26 @@ const Container = styled.div`
 
 export default function Tile() {
 
-  return <Container>
-    {animals.map((o, i) => 
-      <div className="tile" key={i}>
-        <div className="titleCont">
-          {o.title}
-        </div>
-        <div className="imgCont">
-          <Image src={o.img} layout="fill" objectFit="contain"/>
-        </div>
-      </div>
-    )}
+  const [animal, setAnimals] = useState("Undefined");
+  const [words, setWords] = useState("Select an animal.")
 
-    {/* {weapons.map((o,i)=>
-      <Container>
-        {o.title}
-      </Container>
-    )} */}
-  </Container>
-}
+  return <div>
+    <Container>
+      {animals.map((o, i) => 
+        <div className="tile" key={i} onClick={()=>setAnimals(o.title)}>
+          <div className="titleCont">
+            {o.title}
+          </div>
+          <div className="imgCont">
+            <Image src={o.img} layout="fill" objectFit="contain"/>
+          </div>
+        </div>
+      )}
+    </Container>
+    <div>
+      <h3>{animal}</h3>
+      <h4>{words}</h4>
+    </div>
+  </div>
+  }
+
