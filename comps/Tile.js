@@ -1,14 +1,17 @@
 import Image from "next/image";
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
-
 import { animals, weapons } from '../data/selection';
+import { fadeIn, fadeOut } from "../data/animation";
 
-const Container = styled.div`
+// --------------------
+//  STYLING STARTS HERE
+// --------------------
+const TileContainer = styled.div`
   text-align: center;
   outline: 2px solid red;
-  margin: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   place-content: center;
@@ -25,6 +28,8 @@ const Container = styled.div`
     padding: 1rem;
     margin: 1rem;
     border-radius: 20px;
+    background: ${props=>props.bg || "white"};
+
   }
   .tile:hover {
     background: lightgray;
@@ -47,15 +52,30 @@ const Container = styled.div`
   }
 `
 
+const DescCont = styled.div`
+  text-align: center;
+  outline: 2px solid red;
+  place-content: center;
+  width: 400px;
+  margin: 0 auto;
+  animation: ${props=>props.fade} 3s;
+`
+
+// ----------------
+// PAGE STARTS HERE
+// ----------------
 export default function Tile() {
 
   const [animal, setAnimals] = useState("Undefined");
-  const [words, setWords] = useState("Select an animal.")
+  const [words, setWords] = useState("Select an animal.");
 
   return <div>
-    <Container>
+    <TileContainer>
       {animals.map((o, i) => 
-        <div className="tile" key={i} onClick={()=>setAnimals(o.title)}>
+        <div className="tile" key={i} onClick={()=>{
+          setAnimals(o.title);
+          setWords(o.desc);
+        }}>
           <div className="titleCont">
             {o.title}
           </div>
@@ -64,11 +84,11 @@ export default function Tile() {
           </div>
         </div>
       )}
-    </Container>
-    <div>
+    </TileContainer>
+    <DescCont>
       <h3>{animal}</h3>
-      <h4>{words}</h4>
-    </div>
+      <p>{words}</p>
+    </DescCont>
   </div>
   }
 
