@@ -17,18 +17,39 @@ export const animals = [
   }
 ]
 
-export const weapons = [
+export const chWeapons = [
   {
-    title: "Bath"
+    title: "Bath",
+    img: "/../public/selections/bath.png",
+    desc: "This is a bath."
   },
   {
-    title: "CO2"
+    title: "CO2",
+    img: "/../public/selections/co2.png",
+    desc: "This is a CO2 chamber."
   },
   {
-    title: "Gun"
+    title: "Tongs",
+    img: "/../public/selections/tongs.png",
+    desc: "This is a pair of electric tongs."
+  }
+]
+
+export const copiWeapons = [
+  {
+    title: "CO2",
+    img: "/../public/selections/co2.png",
+    desc: "This is a CO2 chamber."
   },
   {
-    title: "Tongs"
+    title: "Gun",
+    img: "/../public/selections/gun.png",
+    desc: "This is a captive bolt gun."
+  },
+  {
+    title: "Tongs",
+    img: "/../public/selections/tongs.png",
+    desc: "This is a pair of electric tongs."
   }
 ]
 

@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import styled from 'styled-components';
 
-import { animalSelection } from "./Tile";
 import { getAnimal } from "../data/selection";
 
 const ButtonCont = styled.div`

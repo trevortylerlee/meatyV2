@@ -3,7 +3,7 @@ import styled, {keyframes} from 'styled-components';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
-import { animals, changeAnimal, getAnimal, weapons } from '../data/selection';
+import { animals, changeAnimal, changeWeapon, chWeapons, copiWeapons, getAnimal, getWeapon } from '../data/selection';
 import { fadeIn, fadeOut } from "../data/animation";
 
 // --------------------
@@ -68,8 +68,10 @@ export default function Tile() {
 
   const r = useRouter();
   const [animal, setAnimals] = useState("Undefined");
+  const [weapon, setWeapons] = useState("Undefined")
   const [words, setWords] = useState("Select an animal.");
   const a = getAnimal();
+  const w = getWeapon()
 
   if (r.asPath === "/") {
     return <div>
@@ -97,16 +99,59 @@ export default function Tile() {
   } else if (r.asPath === "/weapons") {
     if (a === "Chicken") {
       return <div>
-        <h1>Weapon tiles</h1>
+        <TileContainer>
+          {chWeapons.map((o, i) =>
+            <div className="tile" key={i} onClick={() => {
+              setWeapons(o.title);
+              setWords(o.desc);
+              weaponSelection(o.title);
+            }}>
+              <div className="titleCont">
+                {o.title}
+              </div>
+              <div className="imgCont">
+                <Image src={o.img} layout="fill" objectFit="contain" />
+              </div>
+            </div>
+          )}
+        </TileContainer>
+        <DescCont>
+          <h3>{weapon}</h3>
+          <p>{words}</p>
+        </DescCont>
       </div>
     } else {
       return <div>
-        <h1>Weapon tiles (but not for a chicken)</h1>
+        <TileContainer>
+          {copiWeapons.map((o, i) =>
+            <div className="tile" key={i} onClick={() => {
+              setWeapons(o.title);
+              setWords(o.desc);
+              weaponSelection(o.title);
+            }}>
+              <div className="titleCont">
+                {o.title}
+              </div>
+              <div className="imgCont">
+                <Image src={o.img} layout="fill" objectFit="contain" />
+              </div>
+            </div>
+          )}
+        </TileContainer>
+        <DescCont>
+          <h3>{weapon}</h3>
+          <p>{words}</p>
+        </DescCont>
       </div>
     }
   }
 }
 
+// Functions start here
 export function animalSelection(a) {
   changeAnimal(a);
+}
+
+export function weaponSelection(w) {
+  changeWeapon(w);
 }
