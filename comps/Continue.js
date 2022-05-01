@@ -38,15 +38,12 @@ const ButtonCont = styled.div`
 
 export default function Continue() {
 
+  const r = useRouter();
+  let animal = getAnimal();
+
   return <ButtonCont>
     <button onClick={
-      ()=>Route()
+      ()=>r.push("weapons")
     }>Continue</button>
   </ButtonCont>
-}
-
-export function Route() {
-
-  let animal = getAnimal();
-  console.log(animal + " being exported.")
 }

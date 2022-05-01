@@ -32,8 +32,8 @@ export const weapons = [
   }
 ]
 
-// Creating variable and function for when user selects animal
-var animal = "";
+// Creating variable and functions for when user selects animal
+let animal = "";
 
 export function changeAnimal(a) {
   animal = a;
@@ -42,4 +42,16 @@ export function changeAnimal(a) {
 
 export function getAnimal() {
   return animal;
+}
+
+// Creating variable and functions for when user selects weapon
+let weapon = ""; 
+
+export function changeWeapon(w) {
+  weapon = w;
+  console.log(weapon)
+}
+
+export function getWeapon() {
+  return weapon;
 }

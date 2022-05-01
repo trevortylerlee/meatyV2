@@ -3,8 +3,7 @@ import styled, {keyframes} from 'styled-components';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
-import { animals, weapons } from '../data/selection';
-import { changeAnimal } from "../data/selection";
+import { animals, changeAnimal, getAnimal, weapons } from '../data/selection';
 import { fadeIn, fadeOut } from "../data/animation";
 
 // --------------------
@@ -67,33 +66,46 @@ const DescCont = styled.div`
 // ----------------
 export default function Tile() {
 
+  const r = useRouter();
   const [animal, setAnimals] = useState("Undefined");
   const [words, setWords] = useState("Select an animal.");
+  const a = getAnimal();
 
-  return <div>
-    <TileContainer>
-      {animals.map((o, i) => 
-        <div className="tile" key={i} onClick={()=>{
-          setAnimals(o.title);
-          setWords(o.desc);
-          animalSelection(o.title);
-        }}>
-          <div className="titleCont">
-            {o.title}
+  if (r.asPath === "/") {
+    return <div>
+      <TileContainer>
+        {animals.map((o, i) =>
+          <div className="tile" key={i} onClick={() => {
+            setAnimals(o.title);
+            setWords(o.desc);
+            animalSelection(o.title);
+          }}>
+            <div className="titleCont">
+              {o.title}
+            </div>
+            <div className="imgCont">
+              <Image src={o.img} layout="fill" objectFit="contain" />
+            </div>
           </div>
-          <div className="imgCont">
-            <Image src={o.img} layout="fill" objectFit="contain"/>
-          </div>
-        </div>
-      )}
-    </TileContainer>
-    <DescCont>
-      <h3>{animal}</h3>
-      <p>{words}</p>
-    </DescCont>
-  </div>
+        )}
+      </TileContainer>
+      <DescCont>
+        <h3>{animal}</h3>
+        <p>{words}</p>
+      </DescCont>
+    </div>
+  } else if (r.asPath === "/weapons") {
+    if (a === "Chicken") {
+      return <div>
+        <h1>Weapon tiles</h1>
+      </div>
+    } else {
+      return <div>
+        <h1>Weapon tiles (but not for a chicken)</h1>
+      </div>
+    }
+  }
 }
-
 
 export function animalSelection(a) {
   changeAnimal(a);
