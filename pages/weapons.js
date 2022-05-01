@@ -1,20 +1,20 @@
 import { useRouter } from "next/router";
 import styled from "styled-components";
 
+import Continue from "../comps/Continue";
+import Nav from "../comps/Nav";
 import Tile from "../comps/Tile";
-import { getAnimal } from "../data/selection";
-
-const Header = styled.h1`
-  text-align: center;
-`
+import { getAnimal, getWeapon } from "../data/selection";
 
 export default function WeaponsPage() {
 
   const r = useRouter();
-  let animal = getAnimal();
+  let a = getAnimal();
+  let w = getWeapon();
 
   return <div>
-    <Header>MEATY</Header>
+    <Nav />
     <Tile />
+    <Continue />
   </div>
 }

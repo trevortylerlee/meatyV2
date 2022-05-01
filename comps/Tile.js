@@ -67,9 +67,9 @@ const DescCont = styled.div`
 export default function Tile() {
 
   const r = useRouter();
-  const [animal, setAnimals] = useState("Undefined");
-  const [weapon, setWeapons] = useState("Undefined")
-  const [words, setWords] = useState("Select an animal.");
+  const [animal, setAnimals] = useState("Select an animal.");
+  const [weapon, setWeapons] = useState("Select a weapon.")
+  const [words, setWords] = useState("");
   const a = getAnimal();
   const w = getWeapon()
 
