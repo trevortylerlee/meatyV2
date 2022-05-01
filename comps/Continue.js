@@ -1,6 +1,9 @@
 import { useRouter } from "next/router";
 import styled from 'styled-components';
 
+import { animalSelection } from "./Tile";
+import { getAnimal } from "../data/selection";
+
 const ButtonCont = styled.div`
   text-align: center;
   place-content: center;
@@ -35,11 +38,15 @@ const ButtonCont = styled.div`
 
 export default function Continue() {
 
-  const r = useRouter();
-
   return <ButtonCont>
     <button onClick={
-      ()=>r.push("/")
+      ()=>Route()
     }>Continue</button>
   </ButtonCont>
+}
+
+export function Route() {
+
+  let animal = getAnimal();
+  console.log(animal + " being exported.")
 }

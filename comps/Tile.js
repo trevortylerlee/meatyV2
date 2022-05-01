@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 
 import { animals, weapons } from '../data/selection';
+import { changeAnimal } from "../data/selection";
 import { fadeIn, fadeOut } from "../data/animation";
 
 // --------------------
@@ -75,6 +76,7 @@ export default function Tile() {
         <div className="tile" key={i} onClick={()=>{
           setAnimals(o.title);
           setWords(o.desc);
+          animalSelection(o.title);
         }}>
           <div className="titleCont">
             {o.title}
@@ -90,5 +92,9 @@ export default function Tile() {
       <p>{words}</p>
     </DescCont>
   </div>
-  }
+}
 
+
+export function animalSelection(a) {
+  changeAnimal(a);
+}

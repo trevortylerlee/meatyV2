@@ -31,3 +31,15 @@ export const weapons = [
     title: "Tongs"
   }
 ]
+
+// Creating variable and function for when user selects animal
+var animal = "";
+
+export function changeAnimal(a) {
+  animal = a;
+  console.log(animal);
+}
+
+export function getAnimal() {
+  return animal;
+}
