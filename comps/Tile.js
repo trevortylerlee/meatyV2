@@ -92,7 +92,7 @@ export default function Tile() {
         )}
       </TileContainer>
       <DescCont>
-        <h3>{animal}</h3>
+        <h2>{animal}</h2>
         <p>{words}</p>
       </DescCont>
     </div>
@@ -139,7 +139,7 @@ export default function Tile() {
           )}
         </TileContainer>
         <DescCont>
-          <h3>{weapon}</h3>
+          <h2>{weapon}</h2>
           <p>{words}</p>
         </DescCont>
       </div>
