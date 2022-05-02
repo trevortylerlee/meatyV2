@@ -38,7 +38,12 @@ const ButtonCont = styled.div`
 export default function Continue() {
 
   const r = useRouter();
+  let {page} = r.query;
   let a = getAnimal();
+
+  if (page === undefined) {
+    page = 0;
+  }
 
   if (r.asPath === "/") {
     return <ButtonCont>
@@ -66,7 +71,18 @@ export default function Continue() {
           }>Continue</button>
         </ButtonCont>
         }
-  } else {
+  } else if (r.asPath === "/chicken") {
+      return <ButtonCont>
+        <button onClick={
+          () => r.push({
+            query: {
+              page: Number(page) + 1
+            }
+          })}>Continue</button>
+      </ButtonCont>
+  } 
+  
+  else {
     return <ButtonCont>
       <button>Error</button>
     </ButtonCont>

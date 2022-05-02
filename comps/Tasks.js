@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 import { getAnimal, getWeapon } from '../data/selection';
@@ -10,10 +11,17 @@ const Container = styled.div`
 
 export default function TaskBar() {
   
+  let r = useRouter();
   let a = getAnimal();
   let w = getWeapon();
 
-  return <Container>
-    <h3>INSTRUCTIONS HERE</h3>
-  </Container>
+  if (r.asPath === "/chicken") {
+    return <Container>
+      <h3>INSTRUCTIONS HERE</h3>
+    </Container>
+  } else if (r.asPath === "/chicken?page=1") {
+      return <Container>
+        <h3>Let's move on!</h3>
+      </Container>
+  }
 }
