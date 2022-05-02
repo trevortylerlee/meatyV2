@@ -89,7 +89,7 @@ export const chba = [
 export const chco2 = [
   {
     animal: "/../public/ch/chDefault.png",
-    weapon: "/../public/weapons/co2.svg"
+    weapon: "/../public/weapons/co2.png"
   }
 ]
 

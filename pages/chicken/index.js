@@ -11,23 +11,24 @@ const Container = styled.div`
   height: 800px;
   margin: 0 auto;
   outline: 2px red solid;
-
-  
   
   .aCont {
     position: relative;
     width: 200px;
     height: 200px;
     place-content: center;
-    top: 250px;
+    top: 420px;
+    left: 100px;
+  }
+
+  .wCont {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    left: 70px;
+    top: -150px;
   }
 `
-
-// const aCont = styled.div`
-//   position: relative;
-//   outline: 2px green solid;
-//   height: 50px;
-// `
 
 const wCont = styled.div`
 `
@@ -38,7 +39,10 @@ export default function ChickenIndex() {
       <Nav />
       <TaskBar />
       <div className="aCont">
-        <Image src={chco2[0].animal} class="chDefault" layout="fill" objectFit='contain'/>
+        <Image src={chco2[0].animal} layout="fill" objectFit='contain'/>
+      </div>
+      <div className="wCont">
+        <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
       </div>
       
     </Container>
