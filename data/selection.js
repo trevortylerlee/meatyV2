@@ -76,3 +76,23 @@ export function changeWeapon(w) {
 export function getWeapon() {
   return weapon;
 }
+
+
+// ------------------------
+// Arrays for chicken paths
+// ------------------------
+
+export const chba = [
+
+]
+
+export const chco2 = [
+  {
+    animal: "/../public/ch/chDefault.png",
+    weapon: "/../public/weapons/co2.svg"
+  }
+]
+
+export const chto = [
+
+]
