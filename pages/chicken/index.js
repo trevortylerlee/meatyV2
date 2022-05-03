@@ -6,12 +6,12 @@ import Continue from '../../comps/Continue';
 import Nav from "../../comps/Nav"
 import TaskBar from "../../comps/Tasks";
 
-import { chco2 } from '../../data/selection';
+import { chco2, chto } from '../../data/selection';
 import { getWeapon } from '../../data/selection';
 
 const Container = styled.div`
   width: 400px;
-  height: 600px;
+  height: 650px;
   margin: 0 auto;
   outline: 2px red solid;
   
@@ -24,6 +24,22 @@ const Container = styled.div`
     left: 100px;
     z-index: 9999;
   }
+  .chTongsCont {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    place-content: center;
+    top: 150px;
+    left: 50px;
+  }
+  .chTongsCont2 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    place-content: center;
+    top: 200px;
+    left: 85px;
+  }
 
   .wCont {
     position: relative;
@@ -32,6 +48,21 @@ const Container = styled.div`
     left: 70px;
     top: -50px;
   }
+  .tongsCont {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    left: 125px;
+    top: 40px;
+  }
+  .tongsCont2 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    left: 110px;
+    top: -330px;
+  }
+
 
   .hover:hover {
     filter: drop-shadow(4px 4px 8px red);
@@ -81,12 +112,18 @@ export default function ChickenIndex() {
           <Container>
           <Nav />
           <TaskBar />
-            <div className="aCont">
+            <div className="chTongsCont">
+              <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
-            <div className="wCont">
+            <div className="tongsCont hover" onClick={
+              () => r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })}>
+              <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
             </div>
           </Container>
-          <Continue />
         </div>
     } else {
         return <div>
@@ -124,7 +161,22 @@ export default function ChickenIndex() {
               <Container>
                 <Nav />
                 <TaskBar />
-                <h1>Tongs</h1>
+                <div className="chTongsCont2 hover" onClick={
+                  () => r.push({
+                    query: {
+                      page: Number(page) + 1
+                    }
+                  })}>
+                  <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+                </div>
+                <div className="tongsCont2 hover" onClick={
+                  () => r.push({
+                    query: {
+                      page: Number(page) + 1
+                    }
+                  })}>
+                  <Image src={chto[1].weapon} layout="fill" objectFit='contain' />
+                </div>
               </Container>
             </div>
         }
@@ -150,8 +202,13 @@ export default function ChickenIndex() {
         } else {
             return <div>
               <Container>
-
+                <Nav />
+                <TaskBar />
+                <div className="chTongsCont2">
+                  <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+                </div>
               </Container>
+              <Continue />
             </div>
         }
     }

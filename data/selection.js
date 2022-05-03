@@ -25,12 +25,12 @@ export const chWeapons = [
   },
   {
     title: "CO2",
-    img: "/../public/selections/co2.png",
+    img: "/../public/weapons/co2.png",
     desc: "This is a CO2 chamber."
   },
   {
     title: "Tongs",
-    img: "/../public/selections/tongs.png",
+    img: "/../public/weapons/tongs.png",
     desc: "This is a pair of electric tongs."
   }
 ]
@@ -94,5 +94,10 @@ export const chco2 = [
 ]
 
 export const chto = [
-
+  {
+    weapon: "/../public/weapons/tongs.png"
+  },
+  {
+    weapon: "/../public/weapons/tongsHand.png"
+  }
 ]
