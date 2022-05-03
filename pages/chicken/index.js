@@ -7,7 +7,7 @@ import Continue from '../../comps/Continue';
 import Nav from "../../comps/Nav"
 import TaskBar from "../../comps/Tasks";
 
-import { chba, chco2, chto } from '../../data/selection';
+import { chba, chco2, chto, ch } from '../../data/selection';
 import { getWeapon } from '../../data/selection';
 
 const Container = styled.div`
@@ -96,7 +96,44 @@ const Container = styled.div`
     filter: drop-shadow(4px 4px 8px red);
     cursor: pointer;
   }
+
+
+
+
+  /* OK EVERYTHING BELOW STARTS FROM PAGE 3 */
+  /* OK EVERYTHING BELOW STARTS FROM PAGE 3 */
+  /* OK EVERYTHING BELOW STARTS FROM PAGE 3 */
+
+
+  .chPage3 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    place-content: center;
+    top: 250px;
+    left: 40px;
+    transform: rotate(90deg);
+  }
+
+  .knife1 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 120px;
+    top: -200px;
+    transform: rotate(90deg);
+  }
+  .knife2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 165px;
+    top: -20px;
+    transform: scaleX(-1) rotate(60deg);
+  }
 `
+
+//ANIMATIONS
 
 // Bath animation
 const bathAnimation = keyframes`
@@ -111,6 +148,34 @@ const Chickenbath = styled.div`
   animation-iteration-count: infinite;
 `
 
+// Knife bobbing animation
+const breatheAnimation = keyframes`
+  0% {transform: scale(1);}
+  50% {transform: scale(1.05);}
+  100% {transform: scale(1);}
+`
+
+const Knifecont = styled.div`
+  animation-name: ${breatheAnimation};
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+`
+// Knife cutting animation
+const cutAnimation = keyframes`
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-20px, 60px);
+  }
+
+`
+const Knifecont2 = styled.div`
+  animation-name: ${cutAnimation};
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+`
 
 export default function ChickenIndex() {
 
@@ -122,7 +187,7 @@ export default function ChickenIndex() {
     page = 0;
   } 
   
-  if (page === 0) { // PAGE 0
+  if (page === 0) { // PAGE 0 //
     if (w === "Bath") {
       return <div>
         <Container>
@@ -185,7 +250,7 @@ export default function ChickenIndex() {
           </Container>
           </div>
       }
-  } else if (r.asPath === "/chicken?page=1") { // PAGE 1
+  } else if (r.asPath === "/chicken?page=1") { // PAGE 1 //
       if (w === "Bath") {
         return <div>
           <Container>
@@ -247,7 +312,7 @@ export default function ChickenIndex() {
               </Container>
             </div>
         }
-    } else if (r.asPath === "/chicken?page=2") { // PAGE 2
+    } else if (r.asPath === "/chicken?page=2") { // PAGE 2 //
         if (w === "Bath") {
           return <div>
             <Container>
@@ -287,5 +352,45 @@ export default function ChickenIndex() {
               <Continue />
             </div>
         }
+    } else if (r.asPath === "/chicken?page=3") { // PAGE 3 //
+       return <div>
+        <Container>
+          <Nav />
+          <TaskBar />
+          <div className="chPage3">
+             <Image src={ch[0].animal} layout="fill" objectFit='contain' />
+          </div>
+          <Knifecont>
+          <div className="knife1 hover" onClick={
+            () => r.push({
+              query: {
+                page: Number(page) + 1
+              }
+            })}>
+             <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
+          </div>
+          </Knifecont>
+        </Container>
+       </div>
+    } else if (r.asPath === "/chicken?page=4") { // Page 4 //
+        return <div>
+          <Container>
+            <Nav />
+            <TaskBar />
+            <div className="chPage3">
+              <Image src={ch[1].animal} layout="fill" objectFit='contain' />
+            </div>
+            <Knifecont2>
+            <div className="knife2 hover" onClick={
+              () => r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })}>
+              <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
+            </div>
+            </Knifecont2>
+          </Container>
+        </div>
     }
 }

@@ -104,3 +104,14 @@ export const chto = [
     weapon: "/../public/weapons/tongsHand.png"
   }
 ]
+
+export const ch = [
+  {
+    animal: "/../public/ch/chStun.png",
+    weapon: "/../public/weapons/knife.png"
+  },
+  {
+    animal: "/../public/ch/chSlit.png",
+    
+  }
+]
