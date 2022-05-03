@@ -83,7 +83,9 @@ export function getWeapon() {
 // ------------------------
 
 export const chba = [
-
+  {
+    weapon: "/../public/weapons/bath.png"
+  }
 ]
 
 export const chco2 = [
@@ -98,6 +100,7 @@ export const chto = [
     weapon: "/../public/weapons/tongs.png"
   },
   {
+    animal: "/../public/ch/chDefaultStun.png",
     weapon: "/../public/weapons/tongsHand.png"
   }
 ]

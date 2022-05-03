@@ -1,17 +1,18 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { keyframes } from 'styled-components';
 import styled from 'styled-components';
 
 import Continue from '../../comps/Continue';
 import Nav from "../../comps/Nav"
 import TaskBar from "../../comps/Tasks";
 
-import { chco2, chto } from '../../data/selection';
+import { chba, chco2, chto } from '../../data/selection';
 import { getWeapon } from '../../data/selection';
 
 const Container = styled.div`
   width: 400px;
-  height: 650px;
+  height: 90vh;
   margin: 0 auto;
   outline: 2px red solid;
   
@@ -40,6 +41,24 @@ const Container = styled.div`
     top: 200px;
     left: 85px;
   }
+  .chBathCont {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    place-content: center;
+    top: 50px;
+    left: 100px;
+    transform: rotate(180deg);
+  }
+  .chBathCont2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    place-content: center;
+    top: 350px;
+    left: 100px;
+    transform: rotate(180deg);
+  }
 
   .wCont {
     position: relative;
@@ -62,6 +81,15 @@ const Container = styled.div`
     left: 110px;
     top: -330px;
   }
+  .bathCont {
+    position: relative;
+    width: 390px;
+    height: 390px;
+    left: 5px;
+    top: 50px;
+    opacity: 85%;
+    pointer-events: none;
+  }
 
 
   .hover:hover {
@@ -69,6 +97,20 @@ const Container = styled.div`
     cursor: pointer;
   }
 `
+
+// Bath animation
+const bathAnimation = keyframes`
+  0% {transform: translateY(20px);}
+  50% {transform: translateY(-20px);}
+  100% {transform: translateY(20px);}
+`
+
+const Chickenbath = styled.div`
+  animation-name: ${bathAnimation};
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+`
+
 
 export default function ChickenIndex() {
 
@@ -85,8 +127,18 @@ export default function ChickenIndex() {
       return <div>
         <Container>
           <Nav />
-          <h1>Bath</h1>
           <TaskBar />
+          <div className="chBathCont hover" onClick={
+            () => r.push({
+              query: {
+                page: Number(page) + 1
+              }
+            })}>
+            <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+          </div>
+          <div className="bathCont">
+            <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
+          </div>
         </Container>
       </div>
     } else if (w === "CO2") {
@@ -128,15 +180,30 @@ export default function ChickenIndex() {
     } else {
         return <div>
           <Container>
-            <h1>Uhoh! line 94 chicken index</h1>
+          <Nav />
+            <h1>😂😂😂 u broke it moron</h1>
           </Container>
           </div>
-      } // end of page 0 
+      }
   } else if (r.asPath === "/chicken?page=1") { // PAGE 1
       if (w === "Bath") {
         return <div>
           <Container>
-            <h1>Bath 1</h1>
+          <Nav />
+          <TaskBar />
+            <Chickenbath>
+            <div className='chBathCont2 hover' onClick={
+              () => r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })}>
+              <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+            </div>
+            </Chickenbath>
+            <div className="bathCont">
+              <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
+            </div>
           </Container>
         </div>
       } else if (w === "CO2") {
@@ -184,7 +251,16 @@ export default function ChickenIndex() {
         if (w === "Bath") {
           return <div>
             <Container>
+              <Nav />
+              <TaskBar />
+              <div className='chBathCont'>
+                <Image src={chto[1].animal} layout="fill" objectFit='contain' />
+              </div>
+              <div className="bathCont">
+                <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
+              </div>
             </Container>
+            <Continue />
           </div>
         } else if (w === "CO2") {
           return <div>
@@ -205,7 +281,7 @@ export default function ChickenIndex() {
                 <Nav />
                 <TaskBar />
                 <div className="chTongsCont2">
-                  <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+                  <Image src={chto[1].animal} layout="fill" objectFit='contain' />
                 </div>
               </Container>
               <Continue />

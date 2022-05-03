@@ -18,7 +18,19 @@ export default function TaskBar() {
 
   if (a === "Chicken") {
     if (w === "Bath") {
-
+      if (r.asPath === "/chicken") {
+        return <Container>
+          <h3>Click the chicken</h3>
+        </Container>
+      } else if (r.asPath === "/chicken?page=1") {
+        return <Container>
+          <h3>Ok click the chicken again to stop</h3>
+        </Container>
+      } else if (r.asPath === "/chicken?page=2") {
+        return <Container>
+          <h3>Press continue to continue duh</h3>
+        </Container>
+      }
     } else if (w === "CO2") {
         if (r.asPath === "/chicken") {
           return <Container>
@@ -34,7 +46,19 @@ export default function TaskBar() {
           </Container>
         }
     } else {
-      
+        if (r.asPath === "/chicken") {
+          return <Container>
+            <h3>Pickup the tongs by clicking on it</h3>
+          </Container>
+        } else if (r.asPath === "/chicken?page=1") {
+            return <Container>
+              <h3>Click on the tongs to stop</h3>
+            </Container>
+        } else if (r.asPath === "/chicken?page=2") {
+          return <Container>
+            <h3>Press continue to continue</h3>
+          </Container>
+        }
     }
   }
 }
