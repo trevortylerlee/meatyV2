@@ -71,7 +71,7 @@ export default function Continue() {
           }>Continue</button>
         </ButtonCont>
         }
-  } else if (r.asPath === "/chicken") {
+  } else if (r.pathname === "/chicken") {
       return <ButtonCont>
         <button onClick={
           () => r.push({

@@ -11,17 +11,30 @@ const Container = styled.div`
 
 export default function TaskBar() {
   
-  let r = useRouter();
+  const r = useRouter();
+  let {page} = r.query;
   let a = getAnimal();
   let w = getWeapon();
 
-  if (r.asPath === "/chicken") {
-    return <Container>
-      <h3>INSTRUCTIONS HERE</h3>
-    </Container>
-  } else if (r.asPath === "/chicken?page=1") {
-      return <Container>
-        <h3>Let's move on!</h3>
-      </Container>
+  if (a === "Chicken") {
+    if (w === "Bath") {
+
+    } else if (w === "CO2") {
+        if (r.asPath === "/chicken") {
+          return <Container>
+            <h3>Click the Chicken</h3>
+          </Container>
+        } else if (r.asPath === "/chicken?page=1") {
+          return <Container>
+            <h3>Click the chamber</h3>
+          </Container> 
+        } else if (r.asPath === "/chicken?page=2") {
+          return <Container>
+          <h3>Press continue</h3>
+          </Container>
+        }
+    } else {
+      
+    }
   }
 }
