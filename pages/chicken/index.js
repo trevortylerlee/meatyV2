@@ -10,6 +10,13 @@ import TaskBar from "../../comps/Tasks";
 import { chba, chco2, chto, ch } from '../../data/selection';
 import { getWeapon } from '../../data/selection';
 
+// Import animations
+import { bathAnimation } from '../../data/animation';
+import { breatheAnimation } from '../../data/animation';
+import { cutAnimation } from '../../data/animation';
+
+// Styled components start here
+
 const Container = styled.div`
   width: 400px;
   height: 90vh;
@@ -114,6 +121,15 @@ const Container = styled.div`
     left: 40px;
     transform: rotate(90deg);
   }
+  .chPage6 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    place-content: center;
+    top: 20px;
+    left: 40px;
+    transform: rotate(180deg);
+  }
 
   .knife1 {
     position: relative;
@@ -133,14 +149,7 @@ const Container = styled.div`
   }
 `
 
-//ANIMATIONS
-
-// Bath animation
-const bathAnimation = keyframes`
-  0% {transform: translateY(20px);}
-  50% {transform: translateY(-20px);}
-  100% {transform: translateY(20px);}
-`
+// ANIMATIONS
 
 const Chickenbath = styled.div`
   animation-name: ${bathAnimation};
@@ -148,29 +157,12 @@ const Chickenbath = styled.div`
   animation-iteration-count: infinite;
 `
 
-// Knife bobbing animation
-const breatheAnimation = keyframes`
-  0% {transform: scale(1);}
-  50% {transform: scale(1.05);}
-  100% {transform: scale(1);}
-`
-
 const Knifecont = styled.div`
   animation-name: ${breatheAnimation};
   animation-duration: 3s;
   animation-iteration-count: infinite;
 `
-// Knife cutting animation
-const cutAnimation = keyframes`
-  0%, 100% {
-    transform: translate(0, 0);
-  }
 
-  50% {
-    transform: translate(-20px, 60px);
-  }
-
-`
 const Knifecont2 = styled.div`
   animation-name: ${cutAnimation};
   animation-duration: 1s;
@@ -390,6 +382,31 @@ export default function ChickenIndex() {
               <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
             </div>
             </Knifecont2>
+          </Container>
+        </div>
+    } else if (r.asPath === "/chicken?page=5") { // Page 5 //
+        return <div>
+          <Container>
+            <Nav />
+            <TaskBar />
+            <div className="chPage3">
+              <Image src={ch[1].animal} layout="fill" objectFit='contain' />
+            </div>
+          </Container>
+          <Continue />
+        </div>
+    } else if (r.asPath === "/chicken?page=6") { // Page 6 //
+        return <div>
+          <Container>
+            <Nav />
+            <TaskBar />
+            <div className="chPage6 hover" onClick={
+              () => r.push({
+                query: {
+                  page: Number(page) + 1
+                }})}>
+              <Image src={ch[1].animal} layout="fill" objectFit='contain' />
+            </div>
           </Container>
         </div>
     }

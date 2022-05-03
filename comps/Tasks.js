@@ -25,6 +25,14 @@ export default function TaskBar() {
       return <Container>
         <h3>Click the knife to stop.</h3>
       </Container>
+    } else if (r.asPath === "/chicken?page=5") {
+      return <Container>
+        <h3>Click continue to continue</h3>
+      </Container>
+    } else if (r.asPath === "/chicken?page=6") {
+      return <Container>
+        <h3>Defeather that mofo</h3>
+      </Container>
     } else if (w === "Bath") {
         if (r.asPath === "/chicken") {
           return <Container>

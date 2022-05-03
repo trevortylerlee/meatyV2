@@ -112,6 +112,8 @@ export const ch = [
   },
   {
     animal: "/../public/ch/chSlit.png",
-    
+  },
+  {
+    animal: "/../public/ch/chDefeather.png"
   }
 ]
