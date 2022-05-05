@@ -2,18 +2,20 @@ export const animals = [
   {
     title: "Chicken",
     img: "/../public/selections/chickenFace.png",
-    desc: "This is a chicken."
+    desc: "This is a chicken.",
+    species: "Gallus domesticus"
   },
   {
     title: "Cow",
     img: "/../public/selections/cowFace.png",
-    desc: "This is a cow."
-
+    desc: "This is a cow.",
+    species: "Bos taurus"
   },
   {
     title: "Pig",
     img: "/../public/selections/pigFace.png",
-    desc: "This is a pig."
+    desc: "This is a pig.",
+    species: "Sus domesticus"
   }
 ]
 
@@ -25,12 +27,12 @@ export const chWeapons = [
   },
   {
     title: "CO2",
-    img: "/../public/selections/co2.png",
+    img: "/../public/weapons/co2.png",
     desc: "This is a CO2 chamber."
   },
   {
     title: "Tongs",
-    img: "/../public/selections/tongs.png",
+    img: "/../public/weapons/tongs.png",
     desc: "This is a pair of electric tongs."
   }
 ]
@@ -76,3 +78,65 @@ export function changeWeapon(w) {
 export function getWeapon() {
   return weapon;
 }
+
+
+// ------------------------
+// Arrays for chicken paths
+// ------------------------
+export const chba = [
+  {
+    weapon: "/../public/weapons/bath.png"
+  }
+]
+
+export const chco2 = [
+  {
+    animal: "/../public/ch/chDefault.png",
+    weapon: "/../public/weapons/co2.png"
+  }
+]
+
+export const chto = [
+  {
+    weapon: "/../public/weapons/tongs.png"
+  },
+  {
+    animal: "/../public/ch/chDefaultStun.png",
+    weapon: "/../public/weapons/tongsHand.png"
+  }
+]
+
+export const ch = [
+  {
+    animal: "/../public/ch/chStun.png",
+    weapon: "/../public/weapons/knife.png"
+  },
+  {
+    animal: "/../public/ch/chSlit.png",
+  },
+  {
+    animal: "/../public/ch/chDefeather.png"
+  }
+]
+
+// -----------------------
+// Arrays for cow paths
+// -----------------------
+export const coco2 = [
+
+]
+
+export const cogun = [
+  {
+    animal: "/../public/co/coDefault.png",
+    weapon: "/../public/weapons/gunHand.png"
+  }
+]
+
+// An array for the animal photos at the start (and maybe weapons)
+
+export const photos = [
+  {
+    chicken: "/../public/ch/chickenPhoto.png"
+  }
+]

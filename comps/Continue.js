@@ -38,11 +38,53 @@ const ButtonCont = styled.div`
 export default function Continue() {
 
   const r = useRouter();
-  let animal = getAnimal();
+  let {page} = r.query;
+  let a = getAnimal();
 
-  return <ButtonCont>
-    <button onClick={
-      ()=>r.push("weapons")
-    }>Continue</button>
-  </ButtonCont>
+  if (page === undefined) {
+    page = 0;
+  }
+
+  if (r.asPath === "/") {
+    return <ButtonCont>
+      <button onClick={
+        () => r.push("/weapons")
+      }>Continue</button>
+    </ButtonCont>
+  } else if (r.asPath === "/weapons") {
+      if (a === "Chicken") {
+        return <ButtonCont>
+          <button onClick={
+            () => r.push("/chicken")
+          }>Continue</button>
+        </ButtonCont>
+      } else if (a === "Cow") {
+          return <ButtonCont>
+            <button onClick={
+              () => r.push("/cow")
+            }>Continue</button>
+          </ButtonCont>
+      } else {
+        return <ButtonCont>
+          <button onClick={
+            () => r.push("pig")
+          }>Continue</button>
+        </ButtonCont>
+        }
+  } else if (r.pathname === "/chicken") {
+      return <ButtonCont>
+        <button onClick={
+          () => r.push({
+            query: {
+              page: Number(page) + 1
+            }
+          })}>Continue</button>
+      </ButtonCont>
+  } 
+  
+  else {
+    return <ButtonCont>
+      <button>Error</button>
+    </ButtonCont>
+  }
 }
