@@ -76,5 +76,15 @@ export default function TaskBar() {
           </Container>
         }
     }
+  } else if (a === "Cow") {
+      if (w === "CO2") {
+
+      } else if (w === "Gun") {
+        return <Container>
+          <h3>Click the target on the cow's head to stun them.</h3>
+        </Container>
+      }
+  } else if (a === "Pig") {
+
   }
 }

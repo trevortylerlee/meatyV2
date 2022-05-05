@@ -9,6 +9,5 @@ export default function Home() {
   return <div>
       <Nav />
       <Tile />
-      <Continue />
     </div>
 }
