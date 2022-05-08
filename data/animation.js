@@ -62,3 +62,23 @@ export const shakeAnimation = keyframes`
     transform: translate3d(4px, 0, 0);
   }
 `
+
+// Blood gush from slitting throat
+export const bloodGush = keyframes`
+  100% {
+    transform: translate(-50px, 0px);
+    opacity: 0;
+  }
+`
+export const bloodGush2 = keyframes`
+  100% {
+    transform: translate(50px, 0px);
+    opacity: 0;
+  }
+`
+export const bloodGushY = keyframes`
+  100% {
+    transform: translate(0px, -100px);
+    opacity: 0;
+  }
+`
