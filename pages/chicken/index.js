@@ -14,6 +14,7 @@ import { getWeapon } from '../../data/selection';
 import { bathAnimation } from '../../data/animation';
 import { breatheAnimation } from '../../data/animation';
 import { cutAnimation } from '../../data/animation';
+import { shakeAnimation } from '../../data/animation';
 
 // Styled components start here
 
@@ -164,6 +165,11 @@ const Knifecont = styled.div`
 const Knifecont2 = styled.div`
   animation-name: ${cutAnimation};
   animation-duration: 1s;
+  animation-iteration-count: infinite;
+`
+const Co2cont = styled.div`
+  animation-name: ${shakeAnimation};
+  animation-duration: 0.82s;
   animation-iteration-count: infinite;
 `
 
@@ -324,9 +330,9 @@ export default function ChickenIndex() {
               <TaskBar />
               <div className="aCont">
               </div>
-              <div className="wCont">
+              <Co2cont className="wCont">
                 <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
-              </div>
+              </Co2cont>
             </Container>
             <Continue />
           </div>
