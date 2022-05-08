@@ -80,7 +80,17 @@ export default function Continue() {
             }
           })}>Continue</button>
       </ButtonCont>
-  } 
+  } else if (r.pathname === "/cow") {
+    return <ButtonCont>
+      <button onClick={
+        () => r.push({
+          query: {
+            page: Number(page) + 1
+          }
+        })
+      }>Continue</button>
+    </ButtonCont>
+  }
   
   else {
     return <ButtonCont>

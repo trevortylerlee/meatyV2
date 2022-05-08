@@ -18,7 +18,6 @@ const Container = styled.div`
   height: 90vh;
   margin: 0 auto;
   outline: 2px red solid;
-  cursor: url(/../public/glyphs/reticle.png), crosshair;
 
   .hover:hover {
     filter: drop-shadow(4px 4px 8px red);
@@ -33,6 +32,13 @@ const Container = styled.div`
     left: 70px;
   }
 
+  .gun {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    margin: 0 auto;
+  }
   .gunDefault {
     position: relative;
     width: 400px;
@@ -55,6 +61,7 @@ const Container = styled.div`
     background-color: green;
     transform: scale(0.8);
     transition: 0.3s;
+    cursor: pointer;
   }
   .circle:active {
     transform: scale(1.1);
@@ -74,7 +81,7 @@ export default function CowIndex() {
     page = 0;
   }
 
-  if (page === 0) {
+  if (page === 0) { // PAGE 0 //
     if (w === "CO2") {
       alert("CO2 for cow")
     } else if (w === "Gun") {
@@ -85,12 +92,88 @@ export default function CowIndex() {
           <div className="coDefault">
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
-          <div className="gunDefault">
+          <div className="gun hover" onClick={
+            () => r.push({
+              query: {
+                page: Number(page) + 1
+              }
+            })}>
             <Image src={cogun[0].weapon} layout="fill" objectFit='contain' />
           </div>
-          <div className="circle"></div>
+        </Container>
+      </div>
+    } else if (w === "Tongs") {
+      return <div>
+        <Container>
+          <Nav />
+          <TaskBar />
+        </Container>
+      </div>
+    } else {
+      return <div>
+        <Container>
+          <Nav />
+          <h1>😂😂😂 u broke it moron COW ERROR</h1>
         </Container>
       </div>
     }
+  } else if (r.asPath === "/cow?page=1") { // PAGE 1 //
+      if (w === "CO2") {
+        return <div>
+          <Container>
+            <Nav />
+            <TaskBar />
+            <h1>Bath</h1>
+          </Container>
+        </div>
+      } else if (w === "Gun") {
+        return <div>
+          <Container>
+            <Nav />
+            <TaskBar />
+            <div className="coDefault">
+              <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
+            </div>
+            <div className="gunDefault">
+              <Image src={cogun[1].weapon} layout="fill" objectFit='contain' />
+            </div>
+            <div className="circle" onClick={
+              () => r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })}></div>
+          </Container>
+        </div>
+      } else {
+        return <div>
+          <Container>
+            <Nav />
+            <TaskBar />
+            <h1>Tongs</h1>
+          </Container>
+        </div>
+      }
+  } else if (r.asPath === "/cow?page=2") {
+      if (w === "CO2") {
+        return <div>
+          <Container>
+            <Nav />
+            <TaskBar />
+            <h1>CO2</h1>
+          </Container>
+        </div>
+      } else if (w === "Gun") {
+        return <div>
+          <Container>
+            <Nav />
+            <TaskBar />
+            <div className="coDefault">
+              <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
+            </div>
+          </Container>
+          <Continue />
+        </div>
+      }
   }
 }

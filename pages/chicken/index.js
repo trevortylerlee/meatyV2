@@ -296,7 +296,7 @@ export default function ChickenIndex() {
         return <div>
           <Container>
           <Nav />
-            <h1>😂😂😂 u broke it moron</h1>
+            <h1>😂😂😂 u broke it moron CHICKEN ERROR</h1>
           </Container>
           </div>
       }
@@ -334,7 +334,7 @@ export default function ChickenIndex() {
                     page: Number(page) + 1
                   }
                 })}>
-                <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
+                <Image src={chco2[1].weapon} layout="fill" objectFit='contain' />
               </div>
             </Container>
           </div>
@@ -385,7 +385,7 @@ export default function ChickenIndex() {
               <div className="aCont">
               </div>
               <Co2cont className="wCont">
-                <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
+                <Image src={chco2[2].weapon} layout="fill" objectFit='contain' />
               </Co2cont>
             </Container>
             <Continue />

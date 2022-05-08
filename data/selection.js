@@ -92,7 +92,13 @@ export const chba = [
 export const chco2 = [
   {
     animal: "/../public/ch/chDefault.png",
-    weapon: "/../public/weapons/co2.png"
+    weapon: "/../public/weapons/chamberOpen.png"
+  },
+  {
+    weapon: "/../public/weapons/chamberChHalf.png"
+  },
+  {
+    weapon: "/../public/weapons/chamberChInside.png"
   }
 ]
 
@@ -130,6 +136,10 @@ export const coco2 = [
 export const cogun = [
   {
     animal: "/../public/co/coDefault.png",
+    weapon: "/../public/selections/gun.png"
+  },
+  {
+    animal: "/../public/co/coDefaultStun.png",
     weapon: "/../public/weapons/gunHand.png"
   }
 ]
