@@ -443,7 +443,7 @@ export default function ChickenIndex() {
                   page: Number(page) + 1
                 }
               })}>
-              <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
+              <Image src={ch[1].weapon} layout="fill" objectFit='contain' />
             </div>
             </Knifecont2>
           </Container>

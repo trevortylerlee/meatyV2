@@ -113,6 +113,7 @@ export const ch = [
   },
   {
     animal: "/../public/ch/chSlit.png",
+    weapon: "/../public/weapons/bloodyKnife.png"
   },
   {
     animal: "/../public/ch/chDefeather.png"
