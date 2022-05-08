@@ -18,6 +18,7 @@ const Container = styled.div`
   height: 90vh;
   margin: 0 auto;
   outline: 2px red solid;
+  cursor: url(/../public/glyphs/reticle.png), crosshair;
 
   .hover:hover {
     filter: drop-shadow(4px 4px 8px red);
@@ -30,6 +31,34 @@ const Container = styled.div`
     height: 250px;
     top: 100px;
     left: 70px;
+  }
+
+  .gunDefault {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    left: 240px;
+    top: 50px;
+    transform: rotate(20deg);
+  }
+
+  .circle {
+    position: relative;
+    top: -510px;
+    left: 240px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+  }
+  .circle:hover {
+    background-color: green;
+    transform: scale(0.8);
+    transition: 0.3s;
+  }
+  .circle:active {
+    transform: scale(1.1);
+    background-color: yellow;
   }
 `
 
@@ -56,9 +85,10 @@ export default function CowIndex() {
           <div className="coDefault">
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
-          <div className="coGun">
+          <div className="gunDefault">
             <Image src={cogun[0].weapon} layout="fill" objectFit='contain' />
           </div>
+          <div className="circle"></div>
         </Container>
       </div>
     }
