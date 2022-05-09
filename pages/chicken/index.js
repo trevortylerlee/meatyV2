@@ -7,7 +7,8 @@ import Continue from '../../comps/Continue';
 import Nav from "../../comps/Nav"
 import TaskBar from "../../comps/Tasks";
 
-import { chba, chco2, chto, ch } from '../../data/selection';
+// Import data
+import { chba, chco2, chto, ch, feathers } from '../../data/selection';
 import { getWeapon } from '../../data/selection';
 
 // Import animations
@@ -17,6 +18,7 @@ import { cutAnimation } from '../../data/animation';
 import { shakeAnimation } from '../../data/animation';
 import { bloodGush, bloodGush2 } from '../../data/animation';
 import { bloodGushY } from '../../data/animation';
+import { featherFly, featherFly2, featherFly3, featherFly4 } from '../../data/animation';
 
 // Styled components start here
 
@@ -200,6 +202,33 @@ const Container = styled.div`
     animation-duration: 1s;
     animation-iteration-count: infinite;
   }
+
+  .feather {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: -130px;
+    left: 100px;
+  }
+  .feather2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: -130px;
+    left: 100px;
+  }
+`
+const BgCont = styled.div`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: red;
+  background-image: url("/misc/barn2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `
 
 // ANIMATIONS
@@ -227,6 +256,29 @@ const Co2cont = styled.div`
   animation-iteration-count: infinite;
 `
 
+const Feather1 = styled.div`
+  animation-name: ${featherFly};
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+`
+const Feather2 = styled.div`
+  animation-name: ${featherFly2};
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+`
+const Feather3 = styled.div`
+  animation-name: ${featherFly3};
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+`
+const Feather4 = styled.div`
+  animation-name: ${featherFly4};
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+`
+
+
+// PAGE CONTENT STARTS HERE //
 export default function ChickenIndex() {
 
   const r = useRouter();
@@ -240,6 +292,7 @@ export default function ChickenIndex() {
   if (page === 0) { // PAGE 0 //
     if (w === "Bath") {
       return <div>
+        <BgCont>
         <Container>
           <Nav />
           <TaskBar />
@@ -255,6 +308,7 @@ export default function ChickenIndex() {
             <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
           </div>
         </Container>
+        </BgCont>
       </div>
     } else if (w === "CO2") {
         return <div>
@@ -469,9 +523,75 @@ export default function ChickenIndex() {
                 query: {
                   page: Number(page) + 1
                 }})}>
-              <Image src={ch[1].animal} layout="fill" objectFit='contain' />
+              <Image src={feathers[0].chicken} layout="fill" objectFit='contain' />
             </div>
           </Container>
         </div>
-    }
+    } else if (r.asPath === "/chicken?page=7") { // Page 7 //
+    return <div>
+      <Container>
+        <Nav />
+        <TaskBar />
+        <div className="chPage6 hover" onClick={
+          () => r.push({
+            query: {
+              page: Number(page) + 1
+            }
+          })}>
+          <Image src={feathers[1].chicken} layout="fill" objectFit='contain' />
+        </div>
+        <Feather1>
+        <div className="feather">
+          <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
+        </div>
+        </Feather1>
+      </Container>
+    </div>
+    } else if (r.asPath === "/chicken?page=8") { // Page 8 //
+      return <div>
+        <Container>
+          <Nav />
+          <TaskBar />
+          <div className="chPage6 hover" onClick={
+            () => r.push({
+              query: {
+                page: Number(page) + 1
+              }
+            })}>
+            <Image src={feathers[2].chicken} layout="fill" objectFit='contain' />
+          </div>
+          <Feather2>
+            <div className="feather2">
+              <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
+            </div>
+          </Feather2>
+        </Container>
+      </div>
+  } else if (r.asPath === "/chicken?page=9") { // Page 9 //
+    return <div>
+      <Container>
+        <Nav />
+        <TaskBar />
+        <div className="chPage6 hover" onClick={
+          () => r.push({
+            query: {
+              page: Number(page) + 1
+            }
+          })}>
+          <Image src={feathers[3].chicken} layout="fill" objectFit='contain' />
+        </div>
+      </Container>
+    </div>
+  } else if (r.asPath === "/chicken?page=10") { // Page 10 //
+    return <div>
+      <Container>
+        <Nav />
+        <TaskBar />
+        <div className="chPage6">
+          <Image src={feathers[4].chicken} layout="fill" objectFit='contain' />
+        </div>
+      </Container>
+      <Continue />
+    </div>
+  }
 }

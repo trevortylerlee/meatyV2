@@ -6,6 +6,7 @@ import { getAnimal } from "../data/selection";
 const NavBar = styled.div`
   text-align: center;
   cursor: pointer;
+  color: red;
 `
 
 export default function Nav() {

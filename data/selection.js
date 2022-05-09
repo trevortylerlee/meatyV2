@@ -126,6 +126,25 @@ export const ch = [
   }
 ]
 
+export const feathers = [
+  {
+    chicken: "/../public/ch/defeather1.png",
+    feather: "/../public/ch/feather.png"
+  },
+  {
+    chicken: "/../public/ch/defeather2.png"
+  },
+  {
+    chicken: "/../public/ch/defeather3.png"
+  },
+  {
+    chicken: "/../public/ch/defeather4.png"
+  },
+  {
+    chicken: "/../public/ch/defeather5.png"
+  }
+]
+
 // -----------------------
 // Arrays for cow paths
 // -----------------------

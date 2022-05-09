@@ -34,6 +34,13 @@ const Container = styled.div`
     top: 100px;
     left: 70px;
   }
+  .coDefaultTong {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top: 150px;
+    left: 70px;
+  }
   .aContCO2 {
     position: relative;
     width: 250px;
@@ -90,6 +97,14 @@ const Container = styled.div`
   .circle:active {
     transform: scale(1.1);
     background-color: yellow;
+  }
+
+  .tongsCont {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    left: 125px;
+    top: 100px;
   }
 `
 
@@ -154,6 +169,17 @@ export default function CowIndex() {
         <Container>
           <Nav />
           <TaskBar />
+          <div className="coDefaultTong">
+            <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
+          </div>
+          <div className="tongsCont hover" onClick={
+            () => r.push({
+              query: {
+                page: Number(page) + 1
+              }
+            })}>
+            <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
+          </div>
         </Container>
       </div>
     } else {

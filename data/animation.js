@@ -82,3 +82,32 @@ export const bloodGushY = keyframes`
     opacity: 0;
   }
 `
+
+export const featherFly = keyframes `
+  100% {
+    transform: rotate(-120deg);
+    transform-origin: top left;
+    opacity: 0;
+  }
+`
+export const featherFly2 = keyframes `
+  100% {
+    opacity: 0;
+    transform: rotate(60deg);
+    transform-origin: top left;
+  }
+`
+export const featherFly3 = keyframes `
+  100% {
+    transform: rotate(-60deg);
+    transform-origin: top left;
+    opacity: 0;
+  }
+`
+export const featherFly4 = keyframes `
+  100% {
+    transform: rotate(160deg);
+    transform-origin: top left;
+    opacity: 0;
+  }
+`

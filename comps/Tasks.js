@@ -33,6 +33,22 @@ export default function TaskBar() {
       return <Container>
         <h3>Defeather that mofo</h3>
       </Container>
+    } else if (r.asPath === "/chicken?page=7") {
+      return <Container>
+        <h3>Keep at it</h3>
+      </Container>
+    } else if (r.asPath === "/chicken?page=8") {
+      return <Container>
+        <h3>Keep at it</h3>
+      </Container>
+    } else if (r.asPath === "/chicken?page=9") {
+      return <Container>
+        <h3>Keep at it</h3>
+      </Container>
+    } else if (r.asPath === "/chicken?page=10") {
+      return <Container>
+        <h3>Click continue</h3>
+      </Container>
     } else if (w === "Bath") {
         if (r.asPath === "/chicken") {
           return <Container>
