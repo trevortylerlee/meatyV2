@@ -13,7 +13,7 @@ import { chba, chco2, chto, ch, cogun, coco2, coto, electric } from '../../data/
 import { getWeapon } from '../../data/selection';
 
 // Animations
-import { shakeAnimation, electricAnimation } from '../../data/animation';
+import { shakeAnimation, electricAnimation, breatheAnimation } from '../../data/animation';
 
 // Styled components
 const Container = styled.div`
@@ -150,6 +150,15 @@ const Container = styled.div`
     top: 200px;
     left: 50px;
   }
+
+  .knife1 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 120px;
+    top: -200px;
+    transform: rotate(90deg);
+  }
 `
 
 // Components for animations
@@ -171,6 +180,12 @@ const Electricity2 = styled.div`
 const Electricity3 = styled.div`
   animation-name: ${electricAnimation};
   animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+`
+
+const Knifecont = styled.div`
+  animation-name: ${breatheAnimation};
+  animation-duration: 3s;
   animation-iteration-count: infinite;
 `
 
@@ -312,7 +327,7 @@ export default function CowIndex() {
           </Container>
         </div>
       }
-  } else if (r.asPath === "/cow?page=2") {
+  } else if (r.asPath === "/cow?page=2") { // PAGE 2 //
       if (w === "CO2") {
         return <div>
           <Container>
@@ -354,5 +369,25 @@ export default function CowIndex() {
           <Continue />
         </div>
       }
+  } else if (r.asPath === "/cow?page=3") { // PAGE 3 //
+      return <div>
+        <Container>
+          <Nav />
+          <TaskBar />
+          <div className="coStun">
+            <Image src={coto[0].animal} layout="fill" objectFit='contain' />
+          </div>
+          <Knifecont>
+            <div className="knife1 hover" onClick={
+              () => r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })}>
+              <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
+            </div>
+          </Knifecont>
+        </Container>
+      </div>
   }
 }
