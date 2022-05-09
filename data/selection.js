@@ -130,7 +130,15 @@ export const ch = [
 // Arrays for cow paths
 // -----------------------
 export const coco2 = [
-
+  {
+    weapon: "/../public/weapons/chamberOpen.png"
+  },
+  {
+    weapon: "/../public/weapons/chamberCoHalf.png"
+  },
+  {
+    weapon: "/../public/weapons/chamberCoInside.png"
+  }
 ]
 
 export const cogun = [

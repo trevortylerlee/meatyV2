@@ -9,8 +9,11 @@ import Nav from "../../comps/Nav"
 import TaskBar from "../../comps/Tasks";
 
 // Data
-import { chba, chco2, chto, ch, cogun } from '../../data/selection';
+import { chba, chco2, chto, ch, cogun, coco2 } from '../../data/selection';
 import { getWeapon } from '../../data/selection';
+
+// Animations
+import { shakeAnimation } from '../../data/animation';
 
 // Styled components
 const Container = styled.div`
@@ -30,6 +33,27 @@ const Container = styled.div`
     height: 250px;
     top: 100px;
     left: 70px;
+  }
+  .aContCO2 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top: 380px;
+    left: 40px;
+  }
+  .wContCO2 {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    top: -100px;
+    left: 100px;
+  }
+  .wContCO2Half {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    top: 150px;
+    left: 100px;
   }
 
   .gun {
@@ -69,6 +93,13 @@ const Container = styled.div`
   }
 `
 
+// Components for animations
+const Co2cont = styled.div`
+  animation-name: ${shakeAnimation};
+  animation-duration: 0.82s;
+  animation-iteration-count: infinite;
+`
+
 // Page content starts below
 
 export default function CowIndex() {
@@ -83,7 +114,23 @@ export default function CowIndex() {
 
   if (page === 0) { // PAGE 0 //
     if (w === "CO2") {
-      alert("CO2 for cow")
+      return <div>
+        <Container>
+          <Nav />
+          <TaskBar />
+          <div className="aContCO2 hover" onClick={
+            () => r.push({
+              query: {
+                page: Number(page) + 1
+              }
+            })}>
+            <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
+          </div>
+          <div className="wContCO2">
+            <Image src={coco2[0].weapon} layout="fill" objectFit='contain' />
+          </div>
+        </Container>
+      </div>
     } else if (w === "Gun") {
       return <div>
         <Container>
@@ -123,7 +170,14 @@ export default function CowIndex() {
           <Container>
             <Nav />
             <TaskBar />
-            <h1>Bath</h1>
+            <div className="wContCO2Half hover" onClick={
+              () => r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })}>
+              <Image src={coco2[1].weapon} layout="fill" objectFit='contain' />
+            </div>
           </Container>
         </div>
       } else if (w === "Gun") {
@@ -160,8 +214,18 @@ export default function CowIndex() {
           <Container>
             <Nav />
             <TaskBar />
-            <h1>CO2</h1>
+            <Co2cont>
+            <div className="wContCO2Half" onClick={
+              () => r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })}>
+              <Image src={coco2[2].weapon} layout="fill" objectFit='contain' />
+            </div>
+            </Co2cont>
           </Container>
+          <Continue />
         </div>
       } else if (w === "Gun") {
         return <div>
