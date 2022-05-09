@@ -83,6 +83,7 @@ export const bloodGushY = keyframes`
   }
 `
 
+// Defeathering chicken
 export const featherFly = keyframes `
   100% {
     transform: rotate(-120deg);
@@ -108,6 +109,19 @@ export const featherFly4 = keyframes `
   100% {
     transform: rotate(180deg);
     transform-origin: top left;
+    opacity: 0;
+  }
+`
+
+// Electric tongs pig
+export const electricAnimation = keyframes`
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 `

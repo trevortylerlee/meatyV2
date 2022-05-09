@@ -22,9 +22,9 @@ const Container = styled.div`
 export default function Home() {
 
   return <div>
-    <Container>
+    {/* <Container> */}
       <Nav />
       <Tile />
-    </Container>
+    {/* </Container> */}
   </div>
 }

@@ -99,6 +99,10 @@ export default function TaskBar() {
         return <Container>
           <h3>Click the target on the cow's head to stun them.</h3>
         </Container>
+      } else if (w === "Tongs") {
+        return <Container>
+          <h3>Click the tongs</h3>
+        </Container>
       }
   } else if (a === "Pig") {
 

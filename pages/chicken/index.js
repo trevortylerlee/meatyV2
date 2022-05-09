@@ -292,7 +292,7 @@ export default function ChickenIndex() {
   if (page === 0) { // PAGE 0 //
     if (w === "Bath") {
       return <div>
-        <BgCont>
+        {/* <BgCont>  */}
         <Container>
           <Nav />
           <TaskBar />
@@ -308,7 +308,7 @@ export default function ChickenIndex() {
             <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
           </div>
         </Container>
-        </BgCont>
+        {/* </BgCont> */}
       </div>
     } else if (w === "CO2") {
         return <div>

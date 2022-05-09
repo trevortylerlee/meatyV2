@@ -9,11 +9,11 @@ import Nav from "../../comps/Nav"
 import TaskBar from "../../comps/Tasks";
 
 // Data
-import { chba, chco2, chto, ch, cogun, coco2 } from '../../data/selection';
+import { chba, chco2, chto, ch, cogun, coco2, coto, electric } from '../../data/selection';
 import { getWeapon } from '../../data/selection';
 
 // Animations
-import { shakeAnimation } from '../../data/animation';
+import { shakeAnimation, electricAnimation } from '../../data/animation';
 
 // Styled components
 const Container = styled.div`
@@ -40,6 +40,13 @@ const Container = styled.div`
     height: 250px;
     top: 150px;
     left: 70px;
+  }
+  .coTong2 {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    top: 280px;
+    left: 10px;
   }
   .aContCO2 {
     position: relative;
@@ -106,12 +113,64 @@ const Container = styled.div`
     left: 125px;
     top: 100px;
   }
+  .tongsCont2 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    left: 160px;
+    top: -200px;
+  }
+
+  .elec1 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: -300px;
+    left: 110px;
+  }
+  .elec2 {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: -325px;
+    left: 220px;
+  }
+  .elec3 {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: -350px;
+    left: 170px;
+  }
+
+  .coStun {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 200px;
+    left: 50px;
+  }
 `
 
 // Components for animations
 const Co2cont = styled.div`
   animation-name: ${shakeAnimation};
   animation-duration: 0.82s;
+  animation-iteration-count: infinite;
+`
+const Electricity = styled.div`
+  animation-name: ${electricAnimation};
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+`
+const Electricity2 = styled.div`
+  animation-name: ${electricAnimation};
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+`
+const Electricity3 = styled.div`
+  animation-name: ${electricAnimation};
+  animation-duration: 0.8s;
   animation-iteration-count: infinite;
 `
 
@@ -230,7 +289,26 @@ export default function CowIndex() {
           <Container>
             <Nav />
             <TaskBar />
-            <h1>Tongs</h1>
+            <div className="coTong2">
+              <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
+            </div>
+            <div className="tongsCont2 hover" onClick={
+              () => r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })}>
+              <Image src={chto[1].weapon} layout="fill" objectFit='contain' />
+            </div>
+            <Electricity className='elec1'>
+              <Image src={electric[0].bolt} layout="fill" objectFit='contain' />
+            </Electricity>
+            <Electricity2 className='elec2'>
+              <Image src={electric[1].bolt} layout="fill" objectFit='contain' />
+            </Electricity2>
+            <Electricity3 className='elec3'>
+              <Image src={electric[2].bolt} layout="fill" objectFit='contain' />
+            </Electricity3>
           </Container>
         </div>
       }
@@ -260,6 +338,17 @@ export default function CowIndex() {
             <TaskBar />
             <div className="coDefault">
               <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
+            </div>
+          </Container>
+          <Continue />
+        </div>
+      } else {
+        return <div>
+          <Container>
+            <Nav />
+            <TaskBar />
+            <div className="coStun">
+              <Image src={coto[0].animal} layout="fill" objectFit='contain' />
             </div>
           </Container>
           <Continue />

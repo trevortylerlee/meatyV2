@@ -171,10 +171,23 @@ export const cogun = [
   }
 ]
 
-// An array for the animal photos at the start (and maybe weapons)
-
-export const photos = [
+export const coto = [
   {
-    chicken: "/../public/ch/chickenPhoto.png"
+    animal: "/../public/co/coSlitStun.png"
   }
+]
+
+export const electric = [
+  {
+    bolt: "/../public/weapons/electric1.png"
+  },
+  {
+    bolt: "/../public/weapons/electric2.png"
+  },
+  {
+    bolt: "/../public/weapons/electric3.png"
+  },
+  {
+    bolt: "/../public/weapons/electric4.png"
+  },
 ]
