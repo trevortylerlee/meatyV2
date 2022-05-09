@@ -580,6 +580,11 @@ export default function ChickenIndex() {
           })}>
           <Image src={feathers[3].chicken} layout="fill" objectFit='contain' />
         </div>
+        <Feather3>
+          <div className="feather2">
+            <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
+          </div>
+        </Feather3>
       </Container>
     </div>
   } else if (r.asPath === "/chicken?page=10") { // Page 10 //
@@ -590,6 +595,11 @@ export default function ChickenIndex() {
         <div className="chPage6">
           <Image src={feathers[4].chicken} layout="fill" objectFit='contain' />
         </div>
+        <Feather4>
+          <div className="feather2">
+            <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
+          </div>
+        </Feather4>
       </Container>
       <Continue />
     </div>

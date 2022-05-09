@@ -12,7 +12,7 @@ const Container = styled.div`
   top: 0px;
   left: 0px;
   background-color: red;
-  background-image: url("/misc/barn.png");
+  background-image: url("/misc/barn2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

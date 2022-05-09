@@ -99,14 +99,14 @@ export const featherFly2 = keyframes `
 `
 export const featherFly3 = keyframes `
   100% {
-    transform: rotate(-60deg);
+    transform: rotate(-100deg);
     transform-origin: top left;
     opacity: 0;
   }
 `
 export const featherFly4 = keyframes `
   100% {
-    transform: rotate(160deg);
+    transform: rotate(180deg);
     transform-origin: top left;
     opacity: 0;
   }
