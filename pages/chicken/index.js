@@ -20,6 +20,7 @@ import { bloodGush, bloodGush2 } from '../../data/animation';
 import { bloodGushY } from '../../data/animation';
 import { featherFly, featherFly2, featherFly3, featherFly4 } from '../../data/animation';
 import { cleaverAnimation, headAnimation } from '../../data/animation';
+import { intestineAnimation, kidneyAnimation, lungsAnimation, heartAnimation, liverAnimation } from '../../data/animation';
 
 // Styled components start here
 
@@ -251,6 +252,49 @@ const Container = styled.div`
     top: -200px;
     left: 160px;
   }
+
+  .chDisembowel {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 200px;
+    left: 48px;
+  }
+
+  .intestines {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 150px;
+    top: 40px;
+  }
+  .kidneys {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 180px;
+  }
+  .lungs {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 160px;
+    top: -90px;
+  }
+  .heart {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: -200px;
+    left: 200px;
+  }
+  .liver {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 140px;
+    top: -220px;
+  }
 `
 const BgCont = styled.div`
   width: 100%;
@@ -321,6 +365,36 @@ const Head = styled.div`
   animation-name: ${headAnimation};
   animation-duration: 2.0s;
   animation-fill-mode: forwards;
+`
+
+const Intestines = styled.div`
+  animation-name: ${intestineAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+`
+const Kidneys = styled.div`
+  animation-name: ${kidneyAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+`
+const Lungs = styled.div`
+  animation-name: ${lungsAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+`
+const Heart = styled.div`
+  animation-name: ${heartAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+`
+const Liver = styled.div`
+  animation-name: ${liverAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 `
 
 
@@ -685,6 +759,57 @@ export default function ChickenIndex() {
           <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
         </div>
         </Cleaver>
+      </Container>
+      <Continue />
+    </div>
+  } else if (r.asPath === "/chicken?page=13") {
+    return <div>
+      <Container>
+        <Nav />
+        <TaskBar />
+        <div className="chDisembowel hover" onClick={
+          () => r.push({
+            query: {
+              page: Number(page) + 1
+            }
+          })}>
+          <Image src={ch[4].disembowel} layout="fill" objectFit='contain' />
+        </div>
+      </Container>
+    </div>
+  } else if (r.asPath === "/chicken?page=14") {
+    return <div>
+      <Container>
+        <Nav />
+        <TaskBar />
+        <div className="chDisembowel">
+          <Image src={ch[4].disemboweled} layout="fill" objectFit='contain' />
+        </div>
+        <Intestines>
+        <div className='intestines'>
+          <Image src={ch[4].intestines} layout="fill" objectFit='contain' />
+        </div>
+        </Intestines>
+        <Kidneys>
+        <div className='kidneys'>
+          <Image src={ch[4].kidneys} layout="fill" objectFit='contain' />
+        </div>
+        </Kidneys>
+        <Lungs>
+        <div className='lungs'>
+          <Image src={ch[4].lungs} layout="fill" objectFit='contain' />
+        </div>
+        </Lungs>
+        <Heart>
+        <div className='heart'>
+          <Image src={ch[4].heart} layout="fill" objectFit='contain' />
+        </div>
+        </Heart>
+        <Liver>
+        <div className='liver'>
+          <Image src={ch[4].liver} layout="fill" objectFit='contain' />
+        </div>
+        </Liver>
       </Container>
       <Continue />
     </div>

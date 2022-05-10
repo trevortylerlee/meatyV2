@@ -147,3 +147,35 @@ export const headAnimation = keyframes`
     opacity: 0;
   }
 `
+
+// Organs
+export const intestineAnimation = keyframes`
+  100% {
+    transform: translate(-400px, 100px);
+    opacity: 0
+  }
+`
+export const kidneyAnimation = keyframes`
+  100% {
+    transform: translate(-400px, 400px);
+    opacity: 0
+  }
+`
+export const lungsAnimation = keyframes`
+  100% {
+    transform: translate(400px, -400px);
+    opacity: 0
+  }
+`
+export const heartAnimation = keyframes`
+  100% {
+    transform: translate(400px, 400px);
+    opacity: 0
+  }
+`
+export const liverAnimation = keyframes`
+  100% {
+    transform: translate(0px, 300px);
+    opacity: 0
+  }
+`

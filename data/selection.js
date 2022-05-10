@@ -128,6 +128,15 @@ export const ch = [
   {
     body: "/../public/ch/chBody.png",
     head: "/../public/ch/chHead.png",
+  },
+  {
+    disembowel: "/../public/ch/disembowel.png",
+    disemboweled: "/../public/ch/disemboweled.png",
+    intestines: "/../public/ch/intestines.png",
+    kidneys: "/../public/ch/kidneys.png",
+    lungs: "/../public/ch/lungs.png",
+    heart: "/../public/ch/heart.png",
+    liver: "/../public/ch/liver.png"
   }
 ]
 
