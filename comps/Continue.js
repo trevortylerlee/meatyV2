@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 import { getAnimal } from "../data/selection";
 
+// Sound
+import useSound from "use-sound";
+
 const ButtonCont = styled.div`
   text-align: center;
   place-content: center;
@@ -39,6 +42,7 @@ export default function Continue() {
   const r = useRouter();
   let {page} = r.query;
   let a = getAnimal();
+  const [play] = useSound("/sounds/ping.mp3");
 
   if (page === undefined) {
     page = 0;
@@ -47,53 +51,73 @@ export default function Continue() {
   if (r.asPath === "/") {
     return <ButtonCont>
       <button onClick={
-        () => r.push("/weapons")
-      }>Continue</button>
+        () => {
+          {play("/sounds/ping.mp3")};
+          r.push("/weapons");
+      }}>Continue</button>
     </ButtonCont>
   } else if (r.asPath === "/weapons") {
       if (a === "Chicken") {
         return <ButtonCont>
           <button onClick={
-            () => r.push("/chicken")
-          }>Continue</button>
+            () => {
+              {play("/sounds/ping.mp3")};
+              r.push("/chicken");
+          }}>Continue</button>
         </ButtonCont>
       } else if (a === "Cow") {
           return <ButtonCont>
             <button onClick={
-              () => r.push("/cow")
-            }>Continue</button>
+              () => {
+                {play("/sounds/ping.mp3")};
+                r.push("/cow")
+            }}>Continue</button>
           </ButtonCont>
       } else {
         return <ButtonCont>
           <button onClick={
-            () => r.push("pig")
-          }>Continue</button>
+            () => {
+              { play("/sounds/ping.mp3") };
+              r.push("pig")
+          }}>Continue</button>
         </ButtonCont>
         }
   } else if (r.pathname === "/chicken") {
       return <ButtonCont>
         <button onClick={
-          () => r.push({
+          () => {
+            { play("/sounds/ping.mp3") };
+            r.push({
             query: {
               page: Number(page) + 1
             }
-          })}>Continue</button>
+          })}}>Continue</button>
       </ButtonCont>
   } else if (r.pathname === "/cow") {
     return <ButtonCont>
       <button onClick={
-        () => r.push({
+        () => {
+          { play("/sounds/ping.mp3") };
+          r.push({
           query: {
             page: Number(page) + 1
           }
         })
-      }>Continue</button>
+      }}>Continue</button>
     </ButtonCont>
-  }
-  
-  else {
+  } else if (r.pathname === "/pig") {
     return <ButtonCont>
-      <button>Error</button>
+      <button onClick={
+        () => {
+          { play("/sounds/ping.mp3") };
+          r.push({
+          query: {
+            page: Number(page) + 1
+          }
+        })
+      }}>Continue</button>
     </ButtonCont>
   }
 }
+
+// Function
