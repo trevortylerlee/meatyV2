@@ -1,3 +1,9 @@
+export const misc = [
+  {
+    logo: "/../public/misc/logo.png"
+  }
+]
+
 export const animals = [
   {
     title: "Chicken",

@@ -20,7 +20,6 @@ const ButtonCont = styled.div`
     padding: 0.5rem;
     border-radius: 30px;
     border: none; 
-    text-transform: uppercase;
     font-weight: bold;
   }
   button:hover {

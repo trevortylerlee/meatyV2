@@ -1,12 +1,16 @@
+import Image from "next/image";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 
-import { getAnimal } from "../data/selection";
+import { getAnimal, misc } from "../data/selection";
 
 const NavBar = styled.div`
-  text-align: center;
   cursor: pointer;
-  color: red;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 8px;
+  width: 44px;
+  height: 44px;
 `
 
 export default function Nav() {
@@ -18,8 +22,8 @@ export default function Nav() {
   }
 
   return <NavBar>
-    <h1 onClick={
+    <Image src={misc[0].logo} layout="fill" objectFit="contain" onClick={
       ()=>resetAnimal()
-      }>MEATY</h1>
+      } />
   </NavBar>
 }

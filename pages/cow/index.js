@@ -145,10 +145,10 @@ const Container = styled.div`
 
   .coStun {
     position: relative;
-    width: 300px;
-    height: 300px;
-    top: 200px;
-    left: 50px;
+    width: 340px;
+    height: 340px;
+    top: 240px;
+    left: 30px;
   }
 
   .knife1 {
