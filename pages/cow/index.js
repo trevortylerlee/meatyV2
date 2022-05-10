@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import useSound from 'use-sound';
 
 // My components
 import Continue from '../../comps/Continue';
@@ -196,6 +197,11 @@ export default function CowIndex() {
   let r = useRouter();
   let {page} = r.query;
   let w = getWeapon();
+  const [cow] = useSound("/sounds/cow.mp3");
+  const [toc] = useSound("/sounds/toc.mp3");
+  const [blowdart] = useSound("/sounds/blowdart.mp3");
+  const [gas] = useSound("/sounds/gas.mp3");
+  const [electricity] = useSound("/sounds/electricity.mp3");
 
   if (page === undefined) {
     page = 0;
@@ -208,11 +214,13 @@ export default function CowIndex() {
           <Nav />
           <TaskBar />
           <div className="aContCO2 hover" onClick={
-            () => r.push({
+            () => {
+              {cow("/sounds/cow.mp3")};
+              r.push({
               query: {
                 page: Number(page) + 1
               }
-            })}>
+            })}}>
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
           <div className="wContCO2">
@@ -229,11 +237,13 @@ export default function CowIndex() {
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
           <div className="gun hover" onClick={
-            () => r.push({
+            () => {
+              { toc("/sounds/toc.mp3") };
+              r.push({
               query: {
                 page: Number(page) + 1
               }
-            })}>
+            })}}>
             <Image src={cogun[0].weapon} layout="fill" objectFit='contain' />
           </div>
         </Container>
@@ -247,11 +257,14 @@ export default function CowIndex() {
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
           <div className="tongsCont hover" onClick={
-            () => r.push({
+            () => {
+              { electricity("/sounds/electricity.mp3") };
+              { cow("/sounds/cow.mp3") };
+              r.push({
               query: {
                 page: Number(page) + 1
               }
-            })}>
+            })}}>
             <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
           </div>
         </Container>
@@ -271,11 +284,13 @@ export default function CowIndex() {
             <Nav />
             <TaskBar />
             <div className="wContCO2Half hover" onClick={
-              () => r.push({
+              () => {
+                { gas("/sounds/gas.mp3") };
+                r.push({
                 query: {
                   page: Number(page) + 1
                 }
-              })}>
+              })}}>
               <Image src={coco2[1].weapon} layout="fill" objectFit='contain' />
             </div>
           </Container>
@@ -292,11 +307,14 @@ export default function CowIndex() {
               <Image src={cogun[1].weapon} layout="fill" objectFit='contain' />
             </div>
             <div className="circle" onClick={
-              () => r.push({
+              () => {
+                { blowdart("/sounds/blowdart.mp3") };
+                { cow("/sounds/cow.mp3") };
+                r.push({
                 query: {
                   page: Number(page) + 1
                 }
-              })}></div>
+              })}}></div>
           </Container>
         </div>
       } else {
@@ -308,11 +326,13 @@ export default function CowIndex() {
               <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
             </div>
             <div className="tongsCont2 hover" onClick={
-              () => r.push({
+              () => {
+                { toc("/sounds/toc.mp3") };
+                r.push({
                 query: {
                   page: Number(page) + 1
                 }
-              })}>
+              })}}>
               <Image src={chto[1].weapon} layout="fill" objectFit='contain' />
             </div>
             <Electricity className='elec1'>
@@ -379,11 +399,13 @@ export default function CowIndex() {
           </div>
           <Knifecont>
             <div className="knife1 hover" onClick={
-              () => r.push({
+              () => {
+                { toc("/sounds/toc.mp3") };
+                r.push({
                 query: {
                   page: Number(page) + 1
                 }
-              })}>
+              })}}>
               <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
             </div>
           </Knifecont>
