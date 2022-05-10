@@ -24,14 +24,14 @@ const ButtonCont = styled.div`
     font-weight: bold;
   }
   button:hover {
-    background-color: #D00;
+    background-color: green;
     cursor: pointer;
     text-decoration: underline;
+    transition: 0.3s;
   }
   button:active {
-    background-color: #900;
     position: relative;
-    top: 2px;
+    top: 4px;
   }
 `
 
