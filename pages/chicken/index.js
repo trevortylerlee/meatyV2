@@ -684,6 +684,7 @@ export default function ChickenIndex() {
           <Container>
             <Nav />
             <TaskBar />
+            <Hoverwrap>
             <div className="chPage6 hover" onClick={
               () => r.push({
                 query: {
@@ -691,6 +692,7 @@ export default function ChickenIndex() {
                 }})}>
               <Image src={feathers[0].chicken} layout="fill" objectFit='contain' />
             </div>
+            </Hoverwrap>
           </Container>
         </div>
     } else if (r.asPath === "/chicken?page=6") { // Page 6 //
@@ -698,6 +700,7 @@ export default function ChickenIndex() {
       <Container>
         <Nav />
         <TaskBar />
+        <Hoverwrap>
         <div className="chPage6 hover" onClick={
           () => r.push({
             query: {
@@ -706,6 +709,7 @@ export default function ChickenIndex() {
           })}>
           <Image src={feathers[1].chicken} layout="fill" objectFit='contain' />
         </div>
+        </Hoverwrap>
         <Feather1>
         <div className="feather">
           <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
@@ -718,6 +722,7 @@ export default function ChickenIndex() {
         <Container>
           <Nav />
           <TaskBar />
+          <Hoverwrap>
           <div className="chPage6 hover" onClick={
             () => r.push({
               query: {
@@ -726,6 +731,7 @@ export default function ChickenIndex() {
             })}>
             <Image src={feathers[2].chicken} layout="fill" objectFit='contain' />
           </div>
+          </Hoverwrap>
           <Feather2>
             <div className="feather2">
               <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
@@ -738,6 +744,7 @@ export default function ChickenIndex() {
       <Container>
         <Nav />
         <TaskBar />
+        <Hoverwrap>
         <div className="chPage6 hover" onClick={
           () => r.push({
             query: {
@@ -746,6 +753,7 @@ export default function ChickenIndex() {
           })}>
           <Image src={feathers[3].chicken} layout="fill" objectFit='contain' />
         </div>
+        </Hoverwrap>
         <Feather3>
           <div className="feather2">
             <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
@@ -777,6 +785,7 @@ export default function ChickenIndex() {
         <div className="chDecap">
           <Image src={ch[2].animal} layout="fill" objectFit='contain' />
         </div>
+        <Hoverwrap>
         <div className="cleaver hover" onClick={
           () => r.push({
             query: {
@@ -785,6 +794,7 @@ export default function ChickenIndex() {
           })}>
           <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
         </div>
+        </Hoverwrap>
       </Container>
     </div>
   } else if (r.asPath === "/chicken?page=11") { // Page 11 //
@@ -813,6 +823,7 @@ export default function ChickenIndex() {
       <Container>
         <Nav />
         <TaskBar />
+        <Hoverwrap>
         <div className="chDisembowel hover" onClick={
           () => r.push({
             query: {
@@ -821,6 +832,7 @@ export default function ChickenIndex() {
           })}>
           <Image src={ch[4].disembowel} layout="fill" objectFit='contain' />
         </div>
+        </Hoverwrap>
       </Container>
     </div>
   } else if (r.asPath === "/chicken?page=13") { // Page 13 //
