@@ -1,10 +1,8 @@
 import { useRouter } from "next/router";
 import styled from 'styled-components';
+import useSound from "use-sound";
 
 import { getAnimal } from "../data/selection";
-
-// Sound
-import useSound from "use-sound";
 
 const ButtonCont = styled.div`
   text-align: center;

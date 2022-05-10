@@ -3,14 +3,13 @@ import Image from "next/image";
 import styled, {keyframes} from 'styled-components';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import useSound from "use-sound";
 
 // My components
 import Continue from "./Continue";
-import TaskBar from "./Tasks";
 
 // Data
 import { animals, changeAnimal, changeWeapon, chWeapons, copiWeapons, getAnimal, getWeapon } from '../data/selection';
-import { fadeIn, fadeOut } from "../data/animation";
 
 // --------------------
 //  STYLING STARTS HERE
@@ -103,7 +102,8 @@ export default function Tile() {
   const [weapon, setWeapons] = useState("")
   const [words, setWords] = useState("");
   const a = getAnimal();
-  const w = getWeapon()
+  const w = getWeapon();
+  const [play] = useSound("/sounds/toc.mp3");
 
   if (r.asPath === "/") {
     if (a.length === 0) {
@@ -117,6 +117,7 @@ export default function Tile() {
               setAnimals(o.title);
               setWords(o.desc);
               animalSelection(o.title);
+              {play("/sounds/toc.mp3")};
             }}>
               <div className="titleCont">
                 {o.title}
@@ -143,6 +144,7 @@ export default function Tile() {
               setAnimals(o.title);
               setWords(o.desc);
               animalSelection(o.title);
+              { play("/sounds/toc.mp3") };
             }}>
               <div className="titleCont">
                 {o.title}
@@ -172,6 +174,7 @@ export default function Tile() {
                     setWeapons(o.title);
                     setWords(o.desc);
                     weaponSelection(o.title);
+                    { play("/sounds/toc.mp3") };
                   }}>
                     <div className="titleCont">
                       {o.title}
@@ -198,6 +201,7 @@ export default function Tile() {
                     setWeapons(o.title);
                     setWords(o.desc);
                     weaponSelection(o.title);
+                    { play("/sounds/toc.mp3") };
                   }}>
                     <div className="titleCont">
                       {o.title}
