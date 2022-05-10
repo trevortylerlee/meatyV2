@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { keyframes } from 'styled-components';
 import styled from 'styled-components';
+import useSound from 'use-sound';
 
 import Continue from '../../comps/Continue';
 import Nav from "../../comps/Nav"
@@ -39,7 +40,6 @@ const Container = styled.div`
     place-content: center;
     top: 350px;
     left: 100px;
-    z-index: 9999;
   }
   .chTongsCont {
     position: relative;
@@ -48,7 +48,6 @@ const Container = styled.div`
     place-content: center;
     top: 150px;
     left: 50px;
-    z-index: 9999;
   }
   .chTongsCont2 {
     position: relative;
@@ -83,6 +82,7 @@ const Container = styled.div`
     height: 250px;
     left: 70px;
     top: -50px;
+    z-index: 2;
   }
   .tongsCont {
     position: relative;
@@ -401,25 +401,25 @@ const Kidneys = styled.div`
   animation-name: ${kidneyAnimation};
   animation-duration: 2.0s;
   animation-fill-mode: forwards;
-  animation-delay: 0.5s;
+  animation-delay: 0.2s;
 `
 const Lungs = styled.div`
   animation-name: ${lungsAnimation};
   animation-duration: 2.0s;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation-delay: 0.4s;
 `
 const Heart = styled.div`
   animation-name: ${heartAnimation};
   animation-duration: 2.0s;
   animation-fill-mode: forwards;
-  animation-delay: 1.5s;
+  animation-delay: 0.6s;
 `
 const Liver = styled.div`
   animation-name: ${liverAnimation};
   animation-duration: 2.0s;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
+  animation-delay: 0.8s;
 `
 
 const Electricity = styled.div`
@@ -456,6 +456,15 @@ export default function ChickenIndex() {
   let w = getWeapon();
   let {page} = r.query;
 
+  // Sounds
+  const [chicken] = useSound("/sounds/chicken.mp3");
+  const [toc] = useSound("/sounds/toc.mp3");
+  const [splash] = useSound("/sounds/splash.mp3");
+  const [gas] = useSound("/sounds/gas.mp3");
+  const [electricity] = useSound("/sounds/electricity.mp3");
+  const [wet] = useSound("/sounds/wet.mp3");
+  const [sharp] = useSound("/sounds/sharp.mp3");
+
   if (page === undefined) {
     page = 0;
   } 
@@ -468,11 +477,13 @@ export default function ChickenIndex() {
           <Nav />
           <TaskBar />
           <div className="chBathCont hover" onClick={
-            () => r.push({
+            () => {
+              {toc("/sounds/toc.mp3")};
+              r.push({
               query: {
                 page: Number(page) + 1
               }
-            })}>
+            })}}>
             <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
           </div>
           <div className="bathCont">
@@ -488,11 +499,14 @@ export default function ChickenIndex() {
             <TaskBar />
             <Hoverwrap>
             <div className="aCont hover" onClick={
-              () => r.push({
+              () => {
+                { chicken("/sounds/chicken.mp3") };
+                {toc ("/sounds/toc.mp3")};
+                r.push({
                 query: {
                   page: Number(page) + 1
                 }
-            })}>
+            })}}>
             <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
             </Hoverwrap>
@@ -510,11 +524,14 @@ export default function ChickenIndex() {
               <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
             <div className="tongsCont hover" onClick={
-              () => r.push({
+              () => {
+                { chicken("/sounds/chicken.mp3") };
+                { electricity("/sounds/electricity.mp3") };
+                r.push({
                 query: {
                   page: Number(page) + 1
                 }
-              })}>
+              })}}>
               <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
             </div>
           </Container>
@@ -530,16 +547,24 @@ export default function ChickenIndex() {
   } else if (r.asPath === "/chicken?page=1") { // PAGE 1 //
       if (w === "Bath") {
         return <div>
-          <Container>
+          <Container onLoad={
+            () => {
+              {chicken("/sounds/chicken.mp3")};
+              {splash("/sounds/splash.mp3")};
+              {electricity("/sounds/electricity.mp3") };
+            }
+          }>
           <Nav />
           <TaskBar />
             <Chickenbath>
             <div className='chBathCont2 hover' onClick={
-              () => r.push({
+              () => {
+                {toc("/sounds/toc.mp3")};
+                r.push({
                 query: {
                   page: Number(page) + 1
                 }
-              })}>
+              })}}>
               <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
             </Chickenbath>
@@ -557,11 +582,14 @@ export default function ChickenIndex() {
               </div>
               <Hoverwrap>
               <div className="wCont hover" onClick={
-                () => r.push({
+                () => {
+                  { toc("/sounds/toc.mp3") };
+                  {gas("/sounds/gas.mp3")};
+                  r.push({
                   query: {
                     page: Number(page) + 1
                   }
-                })}>
+                })}}>
                 <Image src={chco2[1].weapon} layout="fill" objectFit='contain' />
               </div>
               </Hoverwrap>
@@ -576,11 +604,13 @@ export default function ChickenIndex() {
                   <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
                 </div>
                 <div className="tongsCont2 hover" onClick={
-                  () => r.push({
+                  () => {
+                    {toc("/sounds/toc.mp3")}
+                    r.push({
                     query: {
                       page: Number(page) + 1
                     }
-                  })}>
+                  })}}>
                   <Image src={chto[1].weapon} layout="fill" objectFit='contain' />
                 </div>
                 <Electricity className='elec1'>
@@ -646,11 +676,13 @@ export default function ChickenIndex() {
           <Hoverwrap>
           <Knifecont>
           <div className="knife1 hover" onClick={
-            () => r.push({
+            () => {
+              {toc("sounds/toc.mp3")};
+              r.push({
               query: {
                 page: Number(page) + 1
               }
-            })}>
+            })}}>
              <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
           </div>
           </Knifecont>
@@ -686,10 +718,12 @@ export default function ChickenIndex() {
             <TaskBar />
             <Hoverwrap>
             <div className="chPage6 hover" onClick={
-              () => r.push({
+              () => {
+                { toc("sounds/toc.mp3") };
+                r.push({
                 query: {
                   page: Number(page) + 1
-                }})}>
+                }})}}>
               <Image src={feathers[0].chicken} layout="fill" objectFit='contain' />
             </div>
             </Hoverwrap>
@@ -702,11 +736,13 @@ export default function ChickenIndex() {
         <TaskBar />
         <Hoverwrap>
         <div className="chPage6 hover" onClick={
-          () => r.push({
+          () => {
+            { toc("sounds/toc.mp3") };
+            r.push({
             query: {
               page: Number(page) + 1
             }
-          })}>
+          })}}>
           <Image src={feathers[1].chicken} layout="fill" objectFit='contain' />
         </div>
         </Hoverwrap>
@@ -724,11 +760,13 @@ export default function ChickenIndex() {
           <TaskBar />
           <Hoverwrap>
           <div className="chPage6 hover" onClick={
-            () => r.push({
+            () => {
+              { toc("sounds/toc.mp3") };
+              r.push({
               query: {
                 page: Number(page) + 1
               }
-            })}>
+            })}}>
             <Image src={feathers[2].chicken} layout="fill" objectFit='contain' />
           </div>
           </Hoverwrap>
@@ -746,11 +784,13 @@ export default function ChickenIndex() {
         <TaskBar />
         <Hoverwrap>
         <div className="chPage6 hover" onClick={
-          () => r.push({
+          () => {
+            { toc("sounds/toc.mp3") };
+            r.push({
             query: {
               page: Number(page) + 1
             }
-          })}>
+          })}}>
           <Image src={feathers[3].chicken} layout="fill" objectFit='contain' />
         </div>
         </Hoverwrap>
@@ -787,11 +827,13 @@ export default function ChickenIndex() {
         </div>
         <Hoverwrap>
         <div className="cleaver hover" onClick={
-          () => r.push({
+          () => {
+            { toc("sounds/toc.mp3") };
+            r.push({
             query: {
               page: Number(page) + 1
             }
-          })}>
+          })}}>
           <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
         </div>
         </Hoverwrap>
@@ -799,7 +841,11 @@ export default function ChickenIndex() {
     </div>
   } else if (r.asPath === "/chicken?page=11") { // Page 11 //
     return <div>
-      <Container>
+      <Container onLoad={
+        () => {
+          { sharp("sounds/sharp.mp3") };
+        }
+      }>
         <Nav />
         <TaskBar />
         <div className="chDecapBody">
@@ -825,11 +871,13 @@ export default function ChickenIndex() {
         <TaskBar />
         <Hoverwrap>
         <div className="chDisembowel hover" onClick={
-          () => r.push({
+          () => {
+            { wet("sounds/wet.mp3") };
+            r.push({
             query: {
               page: Number(page) + 1
             }
-          })}>
+          })}}>
           <Image src={ch[4].disembowel} layout="fill" objectFit='contain' />
         </div>
         </Hoverwrap>

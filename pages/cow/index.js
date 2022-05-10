@@ -197,6 +197,8 @@ export default function CowIndex() {
   let r = useRouter();
   let {page} = r.query;
   let w = getWeapon();
+
+  // Sounds
   const [cow] = useSound("/sounds/cow.mp3");
   const [toc] = useSound("/sounds/toc.mp3");
   const [blowdart] = useSound("/sounds/blowdart.mp3");
@@ -215,6 +217,7 @@ export default function CowIndex() {
           <TaskBar />
           <div className="aContCO2 hover" onClick={
             () => {
+              {toc("/sounds.toc.mp3")};
               {cow("/sounds/cow.mp3")};
               r.push({
               query: {
