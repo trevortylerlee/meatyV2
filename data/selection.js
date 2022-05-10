@@ -122,7 +122,8 @@ export const ch = [
     weapon: "/../public/weapons/bloodyKnife.png"
   },
   {
-    animal: "/../public/ch/chDefeather.png"
+    animal: "/../public/ch/chDefeather.png",
+    weapon: "/../public/weapons/cleaver.png"
   }
 ]
 

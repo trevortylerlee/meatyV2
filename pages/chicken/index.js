@@ -217,6 +217,23 @@ const Container = styled.div`
     top: -130px;
     left: 100px;
   }
+
+  .chDecap {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 300px;
+    left: 60px;
+    transform: rotate(-90deg);
+  }
+
+  .cleaver {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    top: -200px;
+    left: 160px;
+  }
 `
 const BgCont = styled.div`
   width: 100%;
@@ -602,6 +619,24 @@ export default function ChickenIndex() {
         </Feather4>
       </Container>
       <Continue />
+    </div>
+  } else if (r.asPath === "/chicken?page=11") { // Page 11: Decapitate
+    return <div>
+      <Container>
+        <Nav />
+        <TaskBar />
+        <div className="chDecap">
+          <Image src={ch[2].animal} layout="fill" objectFit='contain' />
+        </div>
+        <div className="cleaver hover" onClick={
+          () => r.push({
+            query: {
+              page: Number(page) + 1
+            }
+          })}>
+          <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
+        </div>
+      </Container>
     </div>
   }
 }
