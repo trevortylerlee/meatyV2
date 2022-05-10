@@ -440,7 +440,7 @@ const Electricity3 = styled.div`
 
 const Hoverwrap = styled.div`
   animation-name: ${glowAnimation};
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
 
   &:hover {
@@ -555,6 +555,7 @@ export default function ChickenIndex() {
               <TaskBar />
               <div className="aCont">
               </div>
+              <Hoverwrap>
               <div className="wCont hover" onClick={
                 () => r.push({
                   query: {
@@ -563,6 +564,7 @@ export default function ChickenIndex() {
                 })}>
                 <Image src={chco2[1].weapon} layout="fill" objectFit='contain' />
               </div>
+              </Hoverwrap>
             </Container>
           </div>
         } else {
@@ -641,6 +643,7 @@ export default function ChickenIndex() {
           <div className="chPage3">
              <Image src={ch[0].animal} layout="fill" objectFit='contain' />
           </div>
+          <Hoverwrap>
           <Knifecont>
           <div className="knife1 hover" onClick={
             () => r.push({
@@ -651,6 +654,7 @@ export default function ChickenIndex() {
              <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
           </div>
           </Knifecont>
+          </Hoverwrap>
         </Container>
        </div>
     } else if (r.asPath === "/chicken?page=4") { // Page 4 //
@@ -668,29 +672,14 @@ export default function ChickenIndex() {
             <div className="blood4"></div>
             </div>
             <Knifecont2>
-            <div className="knife2 hover" onClick={
-              () => r.push({
-                query: {
-                  page: Number(page) + 1
-                }
-              })}>
+            <div className="knife2">
               <Image src={ch[1].weapon} layout="fill" objectFit='contain' />
             </div>
             </Knifecont2>
           </Container>
-        </div>
-    } else if (r.asPath === "/chicken?page=5") { // Page 5 //
-        return <div>
-          <Container>
-            <Nav />
-            <TaskBar />
-            <div className="chPage3">
-              <Image src={ch[1].animal} layout="fill" objectFit='contain' />
-            </div>
-          </Container>
           <Continue />
         </div>
-    } else if (r.asPath === "/chicken?page=6") { // Page 6 //
+    } else if (r.asPath === "/chicken?page=5") { // Page 5 //
         return <div>
           <Container>
             <Nav />
@@ -704,7 +693,7 @@ export default function ChickenIndex() {
             </div>
           </Container>
         </div>
-    } else if (r.asPath === "/chicken?page=7") { // Page 7 //
+    } else if (r.asPath === "/chicken?page=6") { // Page 6 //
     return <div>
       <Container>
         <Nav />
@@ -724,7 +713,7 @@ export default function ChickenIndex() {
         </Feather1>
       </Container>
     </div>
-    } else if (r.asPath === "/chicken?page=8") { // Page 8 //
+    } else if (r.asPath === "/chicken?page=7") { // Page 7 //
       return <div>
         <Container>
           <Nav />
@@ -744,7 +733,7 @@ export default function ChickenIndex() {
           </Feather2>
         </Container>
       </div>
-  } else if (r.asPath === "/chicken?page=9") { // Page 9 //
+  } else if (r.asPath === "/chicken?page=8") { // Page 8 //
     return <div>
       <Container>
         <Nav />
@@ -764,7 +753,7 @@ export default function ChickenIndex() {
         </Feather3>
       </Container>
     </div>
-  } else if (r.asPath === "/chicken?page=10") { // Page 10 //
+  } else if (r.asPath === "/chicken?page=9") { // Page 9 //
     return <div>
       <Container>
         <Nav />
@@ -780,7 +769,7 @@ export default function ChickenIndex() {
       </Container>
       <Continue />
     </div>
-  } else if (r.asPath === "/chicken?page=11") { // Page 11: Decapitate
+  } else if (r.asPath === "/chicken?page=10") { // Page 10: Decapitate
     return <div>
       <Container>
         <Nav />
@@ -798,7 +787,7 @@ export default function ChickenIndex() {
         </div>
       </Container>
     </div>
-  } else if (r.asPath === "/chicken?page=12") { // Page 12 //
+  } else if (r.asPath === "/chicken?page=11") { // Page 11 //
     return <div>
       <Container>
         <Nav />
@@ -819,7 +808,7 @@ export default function ChickenIndex() {
       </Container>
       <Continue />
     </div>
-  } else if (r.asPath === "/chicken?page=13") {
+  } else if (r.asPath === "/chicken?page=12") { // Page 12 //
     return <div>
       <Container>
         <Nav />
@@ -834,7 +823,7 @@ export default function ChickenIndex() {
         </div>
       </Container>
     </div>
-  } else if (r.asPath === "/chicken?page=14") {
+  } else if (r.asPath === "/chicken?page=13") { // Page 13 //
     return <div>
       <Container>
         <Nav />

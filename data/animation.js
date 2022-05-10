@@ -182,9 +182,10 @@ export const liverAnimation = keyframes`
 
 // Pulsing red glow
 export const glowAnimation = keyframes`
-  50% {
+  40% {
     filter: drop-shadow(2px 2px 8px red);
   }
-  100% {
+  50% {
+    filter: drop-shadow(2px 2px 8px red);
   }
 `
