@@ -8,7 +8,7 @@ import Nav from "../../comps/Nav"
 import TaskBar from "../../comps/Tasks";
 
 // Import data
-import { chba, chco2, chto, ch, feathers } from '../../data/selection';
+import { chba, chco2, chto, ch, feathers, electric } from '../../data/selection';
 import { getWeapon } from '../../data/selection';
 
 // Import animations
@@ -21,6 +21,7 @@ import { bloodGushY } from '../../data/animation';
 import { featherFly, featherFly2, featherFly3, featherFly4 } from '../../data/animation';
 import { cleaverAnimation, headAnimation } from '../../data/animation';
 import { intestineAnimation, kidneyAnimation, lungsAnimation, heartAnimation, liverAnimation } from '../../data/animation';
+import { electricAnimation } from '../../data/animation';
 
 // Styled components start here
 
@@ -49,10 +50,10 @@ const Container = styled.div`
   }
   .chTongsCont2 {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     place-content: center;
-    top: 200px;
+    top: 300px;
     left: 85px;
   }
   .chBathCont {
@@ -92,8 +93,8 @@ const Container = styled.div`
     position: relative;
     width: 300px;
     height: 300px;
-    left: 110px;
-    top: -330px;
+    left: 100px;
+    top: -200px;
   }
   .bathCont {
     position: relative;
@@ -295,6 +296,28 @@ const Container = styled.div`
     left: 140px;
     top: -220px;
   }
+
+  .elec1 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top: -300px;
+    left: 110px;
+  }
+  .elec2 {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    top: -325px;
+    left: 220px;
+  }
+  .elec3 {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: -350px;
+    left: 170px;
+  }
 `
 const BgCont = styled.div`
   width: 100%;
@@ -395,6 +418,22 @@ const Liver = styled.div`
   animation-duration: 2.0s;
   animation-fill-mode: forwards;
   animation-delay: 2s;
+`
+
+const Electricity = styled.div`
+  animation-name: ${electricAnimation};
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+`
+const Electricity2 = styled.div`
+  animation-name: ${electricAnimation};
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+`
+const Electricity3 = styled.div`
+  animation-name: ${electricAnimation};
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
 `
 
 
@@ -517,12 +556,7 @@ export default function ChickenIndex() {
               <Container>
                 <Nav />
                 <TaskBar />
-                <div className="chTongsCont2 hover" onClick={
-                  () => r.push({
-                    query: {
-                      page: Number(page) + 1
-                    }
-                  })}>
+                <div className="chTongsCont2">
                   <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
                 </div>
                 <div className="tongsCont2 hover" onClick={
@@ -533,6 +567,15 @@ export default function ChickenIndex() {
                   })}>
                   <Image src={chto[1].weapon} layout="fill" objectFit='contain' />
                 </div>
+                <Electricity className='elec1'>
+                  <Image src={electric[0].bolt} layout="fill" objectFit='contain' />
+                </Electricity>
+                <Electricity2 className='elec2'>
+                  <Image src={electric[1].bolt} layout="fill" objectFit='contain' />
+                </Electricity2>
+                <Electricity3 className='elec3'>
+                  <Image src={electric[2].bolt} layout="fill" objectFit='contain' />
+                </Electricity3>
               </Container>
             </div>
         }
