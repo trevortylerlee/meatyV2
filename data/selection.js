@@ -124,6 +124,10 @@ export const ch = [
   {
     animal: "/../public/ch/chDefeather.png",
     weapon: "/../public/weapons/cleaver.png"
+  },
+  {
+    body: "/../public/ch/chBody.png",
+    head: "/../public/ch/chHead.png",
   }
 ]
 

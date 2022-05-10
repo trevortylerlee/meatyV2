@@ -125,3 +125,25 @@ export const electricAnimation = keyframes`
     opacity: 0;
   }
 `
+
+// Cleaver
+export const cleaverAnimation = keyframes`
+  0% {
+  }
+  50% {
+    transform-origin: 0% 0%;
+    transform: translate(0px, 400px) rotate(-50deg);
+  }
+  100% {
+  }
+`
+
+// Head
+export const headAnimation = keyframes`
+  99% {
+    transform: translate(-200px, 50px) rotate(-60deg);
+  }
+  100% {
+    opacity: 0;
+  }
+`

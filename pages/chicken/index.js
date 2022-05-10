@@ -19,6 +19,7 @@ import { shakeAnimation } from '../../data/animation';
 import { bloodGush, bloodGush2 } from '../../data/animation';
 import { bloodGushY } from '../../data/animation';
 import { featherFly, featherFly2, featherFly3, featherFly4 } from '../../data/animation';
+import { cleaverAnimation, headAnimation } from '../../data/animation';
 
 // Styled components start here
 
@@ -226,6 +227,22 @@ const Container = styled.div`
     left: 60px;
     transform: rotate(-90deg);
   }
+  .chDecapBody {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    top: 340px;
+    left: 130px;
+    transform: rotate(-90deg);
+  }
+  .chDecapHead {
+    position: relative;
+    width: 112px;
+    height: 112px;
+    top: 152px;
+    left: 50px;
+    transform: rotate(-90deg);
+  }
 
   .cleaver {
     position: relative;
@@ -291,6 +308,18 @@ const Feather3 = styled.div`
 const Feather4 = styled.div`
   animation-name: ${featherFly4};
   animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+`
+
+const Cleaver = styled.div`
+  animation-name: ${cleaverAnimation};
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+`
+
+const Head = styled.div`
+  animation-name: ${headAnimation};
+  animation-duration: 2.0s;
   animation-fill-mode: forwards;
 `
 
@@ -637,6 +666,27 @@ export default function ChickenIndex() {
           <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
         </div>
       </Container>
+    </div>
+  } else if (r.asPath === "/chicken?page=12") { // Page 12 //
+    return <div>
+      <Container>
+        <Nav />
+        <TaskBar />
+        <div className="chDecapBody">
+          <Image src={ch[3].body} layout="fill" objectFit='contain' />
+        </div>
+        <Head>
+        <div className="chDecapHead">
+          <Image src={ch[3].head} layout="fill" objectFit='contain' />
+        </div>
+        </Head>
+        <Cleaver>
+        <div className="cleaver hover">
+          <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
+        </div>
+        </Cleaver>
+      </Container>
+      <Continue />
     </div>
   }
 }
