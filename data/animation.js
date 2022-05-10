@@ -179,3 +179,12 @@ export const liverAnimation = keyframes`
     opacity: 0
   }
 `
+
+// Pulsing red glow
+export const glowAnimation = keyframes`
+  50% {
+    filter: drop-shadow(2px 2px 8px red);
+  }
+  100% {
+  }
+`

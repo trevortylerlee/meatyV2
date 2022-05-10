@@ -22,6 +22,7 @@ import { featherFly, featherFly2, featherFly3, featherFly4 } from '../../data/an
 import { cleaverAnimation, headAnimation } from '../../data/animation';
 import { intestineAnimation, kidneyAnimation, lungsAnimation, heartAnimation, liverAnimation } from '../../data/animation';
 import { electricAnimation } from '../../data/animation';
+import { glowAnimation } from '../../data/animation';
 
 // Styled components start here
 
@@ -36,7 +37,7 @@ const Container = styled.div`
     width: 150px;
     height: 150px;
     place-content: center;
-    top: 250px;
+    top: 350px;
     left: 100px;
     z-index: 9999;
   }
@@ -47,6 +48,7 @@ const Container = styled.div`
     place-content: center;
     top: 150px;
     left: 50px;
+    z-index: 9999;
   }
   .chTongsCont2 {
     position: relative;
@@ -108,7 +110,7 @@ const Container = styled.div`
 
 
   .hover:hover {
-    filter: drop-shadow(4px 4px 8px red);
+    filter: drop-shadow(4px 4px 20px lime);
     cursor: pointer;
   }
 
@@ -436,6 +438,16 @@ const Electricity3 = styled.div`
   animation-iteration-count: infinite;
 `
 
+const Hoverwrap = styled.div`
+  animation-name: ${glowAnimation};
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+`
+
 
 // PAGE CONTENT STARTS HERE //
 export default function ChickenIndex() {
@@ -474,6 +486,7 @@ export default function ChickenIndex() {
           <Container>
             <Nav />
             <TaskBar />
+            <Hoverwrap>
             <div className="aCont hover" onClick={
               () => r.push({
                 query: {
@@ -482,6 +495,7 @@ export default function ChickenIndex() {
             })}>
             <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
+            </Hoverwrap>
             <div className="wCont">
               <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
             </div>
