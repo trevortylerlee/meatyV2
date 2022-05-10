@@ -10,8 +10,7 @@ const ButtonCont = styled.div`
   margin: 0 auto;
 
   button {
-    color: white;
-    background-color: red;
+    background-color: white;
     display: flex;
     width: 50%;
     float: right;
@@ -19,10 +18,11 @@ const ButtonCont = styled.div`
     font-size: 1.5rem;
     padding: 0.5rem;
     border-radius: 30px;
-    border: none; 
+    border: 4px solid green; 
     font-weight: bold;
   }
   button:hover {
+    color: white;
     background-color: green;
     cursor: pointer;
     text-decoration: underline;
