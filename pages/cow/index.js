@@ -21,11 +21,16 @@ const Container = styled.div`
   widtH: 400px;
   height: 80vh;
   margin: 0 auto;
+  margin-top: 1rem;
   outline: 2px red solid;
 
   .hover:hover {
     filter: drop-shadow(4px 4px 8px lime);
     cursor: pointer;
+  }
+
+  .blur {
+    filter: blur(4px);
   }
 
   .coDefault {
@@ -123,7 +128,7 @@ const Container = styled.div`
     width: 300px;
     height: 300px;
     left: 125px;
-    top: 100px;
+    top: 0px;
   }
   .tongsCont2 {
     position: relative;
@@ -280,9 +285,10 @@ export default function CowIndex() {
       return <div>
         <Container>
           <Nav />
-          <div className="coDefaultTong">
+          <div className="coDefaultTong blur">
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
+          <Hoverwrap>
           <div className="tongsCont hover" onClick={
             () => {
               { electricity("/sounds/electricity.mp3") };
@@ -294,6 +300,7 @@ export default function CowIndex() {
             })}}>
             <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
           </div>
+          </Hoverwrap>
         </Container>
       </div>
     } else {
@@ -333,6 +340,7 @@ export default function CowIndex() {
             <div className="gunDefault">
               <Image src={cogun[1].weapon} layout="fill" objectFit='contain' />
             </div>
+            <Hoverwrap>
             <div className="circle" onClick={
               () => {
                 { blowdart("/sounds/blowdart.mp3") };
@@ -342,6 +350,7 @@ export default function CowIndex() {
                   page: Number(page) + 1
                 }
               })}}></div>
+            </Hoverwrap>
           </Container>
         </div>
       } else {
@@ -351,6 +360,7 @@ export default function CowIndex() {
             <div className="coTong2">
               <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
             </div>
+            <Hoverwrap>
             <div className="tongsCont2 hover" onClick={
               () => {
                 { toc("/sounds/toc.mp3") };
@@ -361,6 +371,7 @@ export default function CowIndex() {
               })}}>
               <Image src={chto[1].weapon} layout="fill" objectFit='contain' />
             </div>
+            </Hoverwrap>
             <Electricity className='elec1'>
               <Image src={electric[0].bolt} layout="fill" objectFit='contain' />
             </Electricity>
