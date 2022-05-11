@@ -394,7 +394,7 @@ const Knifecont = styled.div`
 
 const Knifecont2 = styled.div`
   animation-name: ${cutAnimation};
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   position: relative;
   z-index: -1;
@@ -505,14 +505,25 @@ const Hoverwrap = styled.div`
 const Wrapper = styled.div`
   position: relative;
   top: -20px;
+  width: 0;
 `
 const Wrapper2 = styled.div`
   position: relative;
   top: 82px;
+  width: 0;
 `
 const Wrapper3 = styled.div`
   position: relative;
   top: -46px;
+  width: 0px;
+`
+
+
+
+const Wrapper5 = styled.div`
+  position: relative;
+  top: -80px;
+  width: 0;
 `
 
 
@@ -581,7 +592,6 @@ export default function ChickenIndex() {
             })}}>
             <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
           </div>
-          
           </Hoverwrap>
           <div className="bathCont">
             <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
@@ -788,6 +798,16 @@ export default function ChickenIndex() {
        return <div>
         <Container>
           <Nav />
+           <motion.div initial="onLoad" animate="visible" variants={{
+             onLoad: {
+               scale: .4,
+               opacity: 0
+             },
+             visible: {
+               scale: 1,
+               opacity: 1
+             }
+           }}>
           <div className="chPage3">
              <Image src={ch[0].animal} layout="fill" objectFit='contain' />
           </div>
@@ -805,12 +825,29 @@ export default function ChickenIndex() {
           </div>
           </Knifecont>
           </Hoverwrap>
+          </motion.div>
         </Container>
        </div>
     } else if (r.asPath === "/chicken?page=4") { // Page 4 //
         return <div>
           <Container>
             <Nav />
+            <motion.div className="infoCont" initial="onLoad" animate="visible" variants={{
+              onLoad: {
+                opacity: 0
+              },
+              visible: {
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  delay: 0.4
+                }
+              }
+            }}>
+              <h3>Did you know?</h3>
+              <p>Chickens are placed in "kill cones" to prevent bruising and trauma.</p>
+            </motion.div>
+            <Wrapper5>
             <div className="chPage3">
               <Image src={ch[1].animal} layout="fill" objectFit='contain' />
             </div>
@@ -825,6 +862,7 @@ export default function ChickenIndex() {
               <Image src={ch[1].weapon} layout="fill" objectFit='contain' />
             </div>
             </Knifecont2>
+            </Wrapper5>
           </Container>
           <Continue />
         </div>
