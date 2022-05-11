@@ -479,6 +479,7 @@ export default function ChickenIndex() {
           <div className="chBathCont hover" onClick={
             () => {
               {toc("/sounds/toc.mp3")};
+              { electricity("/sounds/electricity.mp3") };
               r.push({
               query: {
                 page: Number(page) + 1
@@ -500,7 +501,7 @@ export default function ChickenIndex() {
             <Hoverwrap>
             <div className="aCont hover" onClick={
               () => {
-                { chicken("/sounds/chicken.mp3") };
+                { chicken("/sounds/chicken.mp3")};
                 {toc ("/sounds/toc.mp3")};
                 r.push({
                 query: {
@@ -547,13 +548,7 @@ export default function ChickenIndex() {
   } else if (r.asPath === "/chicken?page=1") { // PAGE 1 //
       if (w === "Bath") {
         return <div>
-          <Container onLoad={
-            () => {
-              {chicken("/sounds/chicken.mp3")};
-              {splash("/sounds/splash.mp3")};
-              {electricity("/sounds/electricity.mp3") };
-            }
-          }>
+          <Container>
           <Nav />
           <TaskBar />
             <Chickenbath>
@@ -571,6 +566,15 @@ export default function ChickenIndex() {
             <div className="bathCont">
               <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
             </div>
+            <Electricity className='elec1'>
+              <Image src={electric[0].bolt} layout="fill" objectFit='contain' />
+            </Electricity>
+            <Electricity2 className='elec2'>
+              <Image src={electric[1].bolt} layout="fill" objectFit='contain' />
+            </Electricity2>
+            <Electricity3 className='elec3'>
+              <Image src={electric[2].bolt} layout="fill" objectFit='contain' />
+            </Electricity3>
           </Container>
         </div>
       } else if (w === "CO2") {
