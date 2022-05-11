@@ -6,7 +6,6 @@ import useSound from 'use-sound';
 
 import Continue from '../../comps/Continue';
 import Nav from "../../comps/Nav"
-import TaskBar from "../../comps/Tasks";
 
 // Import data
 import { chba, chco2, chto, ch, feathers, electric } from '../../data/selection';
@@ -499,7 +498,6 @@ export default function ChickenIndex() {
         {/* <BgCont>  */}
         <Container>
           <Nav />
-          <TaskBar />
           <Hoverwrap>
           <div className="chBathCont hover" onClick={
             () => {
@@ -525,7 +523,6 @@ export default function ChickenIndex() {
         return <div>
           <Container>
             <Nav />
-            <TaskBar />
             <Hoverwrap>
             <div className="aCont hover" onClick={
               () => {
@@ -548,7 +545,6 @@ export default function ChickenIndex() {
         return <div>
           <Container>
           <Nav />
-          <TaskBar />
             <div className="chTongsCont">
               <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
@@ -580,7 +576,6 @@ export default function ChickenIndex() {
         return <div>
           <Container>
           <Nav />
-          <TaskBar />
             <Chickenbath>
             <Hoverwrap>
             <div className='chBathCont2 hover' onClick={
@@ -613,7 +608,6 @@ export default function ChickenIndex() {
           return <div>
             <Container>
               <Nav />
-              <TaskBar />
               <div className="aCont">
               </div>
               <Hoverwrap>
@@ -635,7 +629,6 @@ export default function ChickenIndex() {
             return <div>
               <Container>
                 <Nav />
-                <TaskBar />
                 <div className="chTongsCont2">
                   <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
                 </div>
@@ -666,7 +659,6 @@ export default function ChickenIndex() {
           return <div>
             <Container>
               <Nav />
-              <TaskBar />
               <Chickenbath2>
               <div className='chBathCont3'>
                 <Image src={chto[1].animal} layout="fill" objectFit='contain' />
@@ -682,7 +674,6 @@ export default function ChickenIndex() {
           return <div>
             <Container>
               <Nav />
-              <TaskBar />
               <div className="aCont">
               </div>
               <Co2cont className="wCont">
@@ -695,7 +686,6 @@ export default function ChickenIndex() {
             return <div>
               <Container>
                 <Nav />
-                <TaskBar />
                 <div className="chTongsCont2">
                   <Image src={chto[1].animal} layout="fill" objectFit='contain' />
                 </div>
@@ -707,7 +697,6 @@ export default function ChickenIndex() {
        return <div>
         <Container>
           <Nav />
-          <TaskBar />
           <div className="chPage3">
              <Image src={ch[0].animal} layout="fill" objectFit='contain' />
           </div>
@@ -731,7 +720,6 @@ export default function ChickenIndex() {
         return <div>
           <Container>
             <Nav />
-            <TaskBar />
             <div className="chPage3">
               <Image src={ch[1].animal} layout="fill" objectFit='contain' />
             </div>
@@ -753,7 +741,6 @@ export default function ChickenIndex() {
         return <div>
           <Container>
             <Nav />
-            <TaskBar />
             <Hoverwrap>
             <div className="chPage6 hover" onClick={
               () => {
@@ -771,7 +758,6 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
-        <TaskBar />
         <Hoverwrap>
         <div className="chPage6 hover" onClick={
           () => {
@@ -795,7 +781,6 @@ export default function ChickenIndex() {
       return <div>
         <Container>
           <Nav />
-          <TaskBar />
           <Hoverwrap>
           <div className="chPage6 hover" onClick={
             () => {
@@ -819,7 +804,6 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
-        <TaskBar />
         <Hoverwrap>
         <div className="chPage6 hover" onClick={
           () => {
@@ -843,7 +827,6 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
-        <TaskBar />
         <div className="chPage6">
           <Image src={feathers[4].chicken} layout="fill" objectFit='contain' />
         </div>
@@ -859,7 +842,6 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
-        <TaskBar />
         <div className="chDecap">
           <Image src={ch[2].animal} layout="fill" objectFit='contain' />
         </div>
@@ -885,7 +867,6 @@ export default function ChickenIndex() {
         }
       }>
         <Nav />
-        <TaskBar />
         <div className="chDecapBody">
           <Image src={ch[3].body} layout="fill" objectFit='contain' />
         </div>
@@ -906,7 +887,6 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
-        <TaskBar />
         <Hoverwrap>
         <div className="chDisembowel hover" onClick={
           () => {
@@ -925,7 +905,6 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
-        <TaskBar />
         <div className="chDisembowel">
           <Image src={ch[4].disemboweled} layout="fill" objectFit='contain' />
         </div>

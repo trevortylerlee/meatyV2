@@ -21,7 +21,6 @@ const Container = styled.div`
   widtH: 400px;
   height: 80vh;
   margin: 0 auto;
-  margin-top: 1rem;
   outline: 2px red solid;
 
   .hover:hover {
@@ -430,6 +429,7 @@ export default function CowIndex() {
           <div className="coStun">
             <Image src={coto[0].animal} layout="fill" objectFit='contain' />
           </div>
+          <Hoverwrap>
           <Knifecont>
             <div className="knife1 hover" onClick={
               () => {
@@ -442,6 +442,7 @@ export default function CowIndex() {
               <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
             </div>
           </Knifecont>
+          </Hoverwrap>
         </Container>
       </div>
   }
