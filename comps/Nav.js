@@ -8,7 +8,7 @@ import { getAnimal, misc } from "../data/selection";
 const NavBar = styled.div`
   width: 100%;
   z-index: 1;
-  margin-top: 1rem;
+  margin-top: 2rem;
 
   .logo {
     height: 50px;

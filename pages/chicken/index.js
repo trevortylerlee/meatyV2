@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import { keyframes } from 'styled-components';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import useSound from 'use-sound';
 
 import Continue from '../../comps/Continue';
@@ -144,7 +145,7 @@ const Container = styled.div`
     width: 300px;
     height: 300px;
     place-content: center;
-    top: 20px;
+    top: 100px;
     left: 40px;
     transform: rotate(180deg);
   }
@@ -238,7 +239,7 @@ const Container = styled.div`
     position: relative;
     width: 300px;
     height: 300px;
-    top: 200px;
+    top: 250px;
     left: 60px;
     transform: rotate(-90deg);
   }
@@ -246,7 +247,7 @@ const Container = styled.div`
     position: relative;
     width: 230px;
     height: 230px;
-    top: 240px;
+    top: 260px;
     left: 130px;
     transform: rotate(-90deg);
   }
@@ -254,7 +255,7 @@ const Container = styled.div`
     position: relative;
     width: 112px;
     height: 112px;
-    top: 52px;
+    top: 72px;
     left: 50px;
     transform: rotate(-90deg);
   }
@@ -263,7 +264,7 @@ const Container = styled.div`
     position: relative;
     width: 180px;
     height: 180px;
-    top: -300px;
+    top: -220px;
     left: 160px;
   }
 
@@ -331,6 +332,31 @@ const Container = styled.div`
     top: -350px;
     left: 140px;
   }
+
+  ${'' /* INFO TILES */}
+  .infoCont {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: aliceblue;
+    box-shadow: -3px 0px 0px 0px blue;
+
+    h3 {
+      margin: 0;
+      color: blue;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+
 `
 const BgCont = styled.div`
   width: 100%;
@@ -368,7 +394,7 @@ const Knifecont = styled.div`
 
 const Knifecont2 = styled.div`
   animation-name: ${cutAnimation};
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   position: relative;
   z-index: -1;
@@ -462,13 +488,31 @@ const Electricity3 = styled.div`
 `
 
 const Hoverwrap = styled.div`
+  width: 0px;
   animation-name: ${glowAnimation};
   animation-duration: 3s;
   animation-iteration-count: infinite;
+  cursor-events: none;
 
   &:hover {
     animation-play-state: paused;
   }
+`
+
+// Wrappers
+// Wrappers surround the interactive elements.
+//
+const Wrapper = styled.div`
+  position: relative;
+  top: -20px;
+`
+const Wrapper2 = styled.div`
+  position: relative;
+  top: 82px;
+`
+const Wrapper3 = styled.div`
+  position: relative;
+  top: -46px;
 `
 
 
@@ -498,6 +542,31 @@ export default function ChickenIndex() {
         {/* <BgCont>  */}
         <Container>
           <Nav />
+          <motion.div className="infoCont" initial="onLoad" animate="visible" variants={{
+            onLoad: {
+              opacity: 0
+            },
+            visible: {
+              opacity: 1,
+              transition: {
+                duration: 1,
+                delay: 3
+              }
+            }
+          }}>
+            <p>Try clicking on glowing red objects to interact with them!</p>
+          </motion.div>
+          <motion.div initial="onLoad" animate="visible" variants={{
+            onLoad: {
+              scale: .4,
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1
+            }
+          }}>
+          <Wrapper>
           <Hoverwrap>
           <div className="chBathCont hover" onClick={
             () => {
@@ -512,10 +581,13 @@ export default function ChickenIndex() {
             })}}>
             <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
           </div>
+          
           </Hoverwrap>
           <div className="bathCont">
             <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
           </div>
+          </Wrapper>
+          </motion.div>
         </Container>
         {/* </BgCont> */}
       </div>
@@ -576,6 +648,7 @@ export default function ChickenIndex() {
         return <div>
           <Container>
           <Nav />
+            <Wrapper2>
             <Chickenbath>
             <Hoverwrap>
             <div className='chBathCont2 hover' onClick={
@@ -602,6 +675,7 @@ export default function ChickenIndex() {
             <Electricity3 className='elec3'>
               <Image src={electric[2].bolt} layout="fill" objectFit='contain' />
             </Electricity3>
+            </Wrapper2>
           </Container>
         </div>
       } else if (w === "CO2") {
@@ -659,6 +733,21 @@ export default function ChickenIndex() {
           return <div>
             <Container>
               <Nav />
+              <motion.div className="infoCont" initial="onLoad" animate="visible" variants={{
+                onLoad: {
+                  opacity: 0
+                },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    delay: 0.4
+                  }
+                }
+              }}>
+                <h3>Did you know?</h3>
+                <p>Chickens have excellent memories.</p>
+              </motion.div>
+              <Wrapper3>
               <Chickenbath2>
               <div className='chBathCont3'>
                 <Image src={chto[1].animal} layout="fill" objectFit='contain' />
@@ -667,7 +756,9 @@ export default function ChickenIndex() {
               <div className="bathCont">
                 <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
               </div>
+              </Wrapper3>
             </Container>
+            
             <Continue />
           </div>
         } else if (w === "CO2") {

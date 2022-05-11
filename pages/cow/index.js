@@ -182,6 +182,7 @@ const Hoverwrap = styled.div`
   animation-name: ${glowAnimation};
   animation-duration: 3s;
   animation-iteration-count: infinite;
+  width: 0px;
 
   &:hover {
     animation-play-state: paused;
