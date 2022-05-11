@@ -1,6 +1,7 @@
 export const misc = [
   {
-    logo: "/../public/misc/logo.png"
+    logo: "/../public/misc/logo.png",
+    alt: "/../public/misc/logoColor.png"
   }
 ]
 

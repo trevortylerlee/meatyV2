@@ -1,29 +1,47 @@
 import Image from "next/image";
 import styled from "styled-components";
 import { useRouter } from "next/router";
+import useSound from "use-sound";
 
 import { getAnimal, misc } from "../data/selection";
 
 const NavBar = styled.div`
-  cursor: pointer;
-  position: relative;
-  margin: 0 auto;
-  margin-top: 8px;
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 80px;
+
+  .logo {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 8px;
+    background-image: url("../misc/logo.png");
+    background-size: 50px 50px;
+  }
+
+  .logo:hover {
+    background-image: url("../misc/logoColor.png");
+    background-size: 50px 50px;
+  }
 `
 
 export default function Nav() {
 
   const r = useRouter();
+  const [toc] = useSound("sounds/toc.mp3");
 
   function resetAnimal() {
     r.push("/")
   }
 
   return <NavBar>
-    <Image src={misc[0].logo} layout="fill" objectFit="contain" onClick={
-      ()=>resetAnimal()
-      } />
+    <div className="logo" onClick={
+      () => {
+        {toc("sounds/toc.mp3")};
+        resetAnimal()
+    }}>
+    {/* <Image src={misc[0].logo} layout="fill" objectFit="contain" /> */}
+    </div>
   </NavBar>
 }
