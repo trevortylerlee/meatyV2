@@ -15,6 +15,7 @@ import { getWeapon } from '../../data/selection';
 
 // Animations
 import { shakeAnimation, electricAnimation, breatheAnimation } from '../../data/animation';
+import { glowAnimation } from '../../data/animation';
 
 // Styled components
 const Container = styled.div`
@@ -24,16 +25,24 @@ const Container = styled.div`
   outline: 2px red solid;
 
   .hover:hover {
-    filter: drop-shadow(4px 4px 8px red);
+    filter: drop-shadow(4px 4px 8px lime);
     cursor: pointer;
   }
 
   .coDefault {
     position: relative;
-    width: 250px;
-    height: 250px;
-    top: 100px;
-    left: 70px;
+    width: 300px;
+    height: 300px;
+    top: 120px;
+    left: 50px;
+    filter: blur(4px);
+  }
+  .coDefault2 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 120px;
+    left: 50px;
   }
   .coDefaultTong {
     position: relative;
@@ -53,29 +62,32 @@ const Container = styled.div`
     position: relative;
     width: 250px;
     height: 250px;
-    top: 380px;
-    left: 40px;
+    top: 280px;
+    left: 20px;
+    z-index: 1;
   }
   .wContCO2 {
     position: relative;
     width: 220px;
     height: 220px;
-    top: -100px;
+    top: 0px;
     left: 100px;
+    filter: blur(4px);
+    z-index: -1;
   }
   .wContCO2Half {
     position: relative;
-    width: 220px;
-    height: 220px;
-    top: 150px;
-    left: 100px;
+    width: 300px;
+    height: 300px;
+    top: 200px;
+    left: 50px;
   }
 
   .gun {
     position: relative;
     width: 200px;
     height: 200px;
-    top: 100px;
+    top: -100px;
     margin: 0 auto;
   }
   .gunDefault {
@@ -89,8 +101,8 @@ const Container = styled.div`
 
   .circle {
     position: relative;
-    top: -510px;
-    left: 240px;
+    top: -520px;
+    left: 260px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -163,6 +175,16 @@ const Container = styled.div`
 `
 
 // Components for animations
+const Hoverwrap = styled.div`
+  animation-name: ${glowAnimation};
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+`
+
 const Co2cont = styled.div`
   animation-name: ${shakeAnimation};
   animation-duration: 0.82s;
@@ -204,6 +226,7 @@ export default function CowIndex() {
   const [blowdart] = useSound("/sounds/blowdart.mp3");
   const [gas] = useSound("/sounds/gas.mp3");
   const [electricity] = useSound("/sounds/electricity.mp3");
+  const [reload] = useSound("/sounds/reload.mp3");
 
   if (page === undefined) {
     page = 0;
@@ -215,6 +238,7 @@ export default function CowIndex() {
         <Container>
           <Nav />
           <TaskBar />
+          <Hoverwrap>
           <div className="aContCO2 hover" onClick={
             () => {
               {toc("/sounds.toc.mp3")};
@@ -226,6 +250,7 @@ export default function CowIndex() {
             })}}>
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
+          </Hoverwrap>
           <div className="wContCO2">
             <Image src={coco2[0].weapon} layout="fill" objectFit='contain' />
           </div>
@@ -239,8 +264,10 @@ export default function CowIndex() {
           <div className="coDefault">
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
+          <Hoverwrap>
           <div className="gun hover" onClick={
             () => {
+              {reload("/sounds/reload.mp3")};
               { toc("/sounds/toc.mp3") };
               r.push({
               query: {
@@ -249,6 +276,7 @@ export default function CowIndex() {
             })}}>
             <Image src={cogun[0].weapon} layout="fill" objectFit='contain' />
           </div>
+          </Hoverwrap>
         </Container>
       </div>
     } else if (w === "Tongs") {
@@ -286,6 +314,7 @@ export default function CowIndex() {
           <Container>
             <Nav />
             <TaskBar />
+            <Hoverwrap>
             <div className="wContCO2Half hover" onClick={
               () => {
                 { gas("/sounds/gas.mp3") };
@@ -296,6 +325,7 @@ export default function CowIndex() {
               })}}>
               <Image src={coco2[1].weapon} layout="fill" objectFit='contain' />
             </div>
+            </Hoverwrap>
           </Container>
         </div>
       } else if (w === "Gun") {
@@ -303,7 +333,7 @@ export default function CowIndex() {
           <Container>
             <Nav />
             <TaskBar />
-            <div className="coDefault">
+            <div className="coDefault2">
               <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
             </div>
             <div className="gunDefault">
@@ -374,7 +404,7 @@ export default function CowIndex() {
           <Container>
             <Nav />
             <TaskBar />
-            <div className="coDefault">
+            <div className="coDefault2">
               <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
             </div>
           </Container>

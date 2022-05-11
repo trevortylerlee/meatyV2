@@ -48,6 +48,7 @@ const Container = styled.div`
     place-content: center;
     top: 200px;
     left: 120px;
+    filter: blur(4px);
   }
   .chTongsCont2 {
     position: relative;
