@@ -13,7 +13,7 @@ import { chba, chco2, chto, ch, feathers, electric } from '../../data/selection'
 import { getWeapon } from '../../data/selection';
 
 // Import animations
-import { bathAnimation } from '../../data/animation';
+import { bathAnimation, bathAnimation2 } from '../../data/animation';
 import { breatheAnimation } from '../../data/animation';
 import { cutAnimation } from '../../data/animation';
 import { shakeAnimation } from '../../data/animation';
@@ -29,7 +29,7 @@ import { glowAnimation } from '../../data/animation';
 
 const Container = styled.div`
   width: 400px;
-  height: 90vh;
+  height: 80vh;
   margin: 0 auto;
   outline: 2px red solid;
   
@@ -38,31 +38,31 @@ const Container = styled.div`
     width: 150px;
     height: 150px;
     place-content: center;
-    top: 350px;
-    left: 100px;
+    top: 300px;
+    left: 10px;
   }
   .chTongsCont {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     place-content: center;
-    top: 150px;
-    left: 50px;
+    top: 200px;
+    left: 120px;
   }
   .chTongsCont2 {
     position: relative;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     place-content: center;
-    top: 300px;
-    left: 85px;
+    top: 200px;
+    left: 120px;
   }
   .chBathCont {
     position: relative;
     width: 150px;
     height: 150px;
     place-content: center;
-    top: 50px;
+    top: 154px;
     left: 100px;
     transform: rotate(180deg);
   }
@@ -71,7 +71,16 @@ const Container = styled.div`
     width: 150px;
     height: 150px;
     place-content: center;
-    top: 350px;
+    top: 154px;
+    left: 100px;
+    transform: rotate(180deg);
+  }
+  .chBathCont3 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    place-content: center;
+    top: 274px;
     left: 100px;
     transform: rotate(180deg);
   }
@@ -89,21 +98,21 @@ const Container = styled.div`
     width: 300px;
     height: 300px;
     left: 125px;
-    top: 40px;
+    top: -40px;
   }
   .tongsCont2 {
     position: relative;
     width: 300px;
     height: 300px;
-    left: 100px;
-    top: -200px;
+    left: 110px;
+    top: -250px;
   }
   .bathCont {
     position: relative;
     width: 390px;
     height: 390px;
     left: 5px;
-    top: 50px;
+    top: -40px;
     opacity: 85%;
     pointer-events: none;
   }
@@ -125,9 +134,10 @@ const Container = styled.div`
     width: 300px;
     height: 300px;
     place-content: center;
-    top: 250px;
+    top: 200px;
     left: 40px;
     transform: rotate(90deg);
+    z-index: -2;
   }
   .chPage6 {
     position: relative;
@@ -144,7 +154,7 @@ const Container = styled.div`
     width: 150px;
     height: 150px;
     left: 120px;
-    top: -200px;
+    top: -220px;
     transform: rotate(90deg);
   }
   .knife2 {
@@ -152,8 +162,9 @@ const Container = styled.div`
     width: 150px;
     height: 150px;
     left: 160px;
-    top: -50px;
+    top: -120px;
     transform: scaleX(-1) rotate(60deg);
+    cursor-events: none;
   }
 
   .blood {
@@ -227,7 +238,7 @@ const Container = styled.div`
     position: relative;
     width: 300px;
     height: 300px;
-    top: 300px;
+    top: 200px;
     left: 60px;
     transform: rotate(-90deg);
   }
@@ -235,7 +246,7 @@ const Container = styled.div`
     position: relative;
     width: 230px;
     height: 230px;
-    top: 340px;
+    top: 240px;
     left: 130px;
     transform: rotate(-90deg);
   }
@@ -243,7 +254,7 @@ const Container = styled.div`
     position: relative;
     width: 112px;
     height: 112px;
-    top: 152px;
+    top: 52px;
     left: 50px;
     transform: rotate(-90deg);
   }
@@ -252,7 +263,7 @@ const Container = styled.div`
     position: relative;
     width: 180px;
     height: 180px;
-    top: -200px;
+    top: -300px;
     left: 160px;
   }
 
@@ -303,14 +314,14 @@ const Container = styled.div`
     position: relative;
     width: 100px;
     height: 100px;
-    top: -300px;
+    top: -280px;
     left: 110px;
   }
   .elec2 {
     position: relative;
     width: 60px;
     height: 60px;
-    top: -325px;
+    top: -300px;
     left: 220px;
   }
   .elec3 {
@@ -318,7 +329,7 @@ const Container = styled.div`
     width: 80px;
     height: 80px;
     top: -350px;
-    left: 170px;
+    left: 140px;
   }
 `
 const BgCont = styled.div`
@@ -339,7 +350,14 @@ const BgCont = styled.div`
 const Chickenbath = styled.div`
   animation-name: ${bathAnimation};
   animation-duration: 1s;
-  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+`
+const Chickenbath2 = styled.div`
+  animation-name: ${bathAnimation2};
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  cursor-events: none;
+  z-index: -1;
 `
 
 const Knifecont = styled.div`
@@ -352,6 +370,8 @@ const Knifecont2 = styled.div`
   animation-name: ${cutAnimation};
   animation-duration: 1s;
   animation-iteration-count: infinite;
+  position: relative;
+  z-index: -1;
 `
 const Co2cont = styled.div`
   animation-name: ${shakeAnimation};
@@ -426,16 +446,19 @@ const Electricity = styled.div`
   animation-name: ${electricAnimation};
   animation-duration: 1s;
   animation-iteration-count: infinite;
+  pointer-events: none;
 `
 const Electricity2 = styled.div`
   animation-name: ${electricAnimation};
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
+  pointer-events: none;
 `
 const Electricity3 = styled.div`
   animation-name: ${electricAnimation};
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
+  pointer-events: none;
 `
 
 const Hoverwrap = styled.div`
@@ -476,10 +499,13 @@ export default function ChickenIndex() {
         <Container>
           <Nav />
           <TaskBar />
+          <Hoverwrap>
           <div className="chBathCont hover" onClick={
             () => {
               {toc("/sounds/toc.mp3")};
               { electricity("/sounds/electricity.mp3") };
+              {chicken("/sounds/chicken.mp3")};
+              {splash("/sounds/splash.mp3")};
               r.push({
               query: {
                 page: Number(page) + 1
@@ -487,6 +513,7 @@ export default function ChickenIndex() {
             })}}>
             <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
           </div>
+          </Hoverwrap>
           <div className="bathCont">
             <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
           </div>
@@ -524,6 +551,7 @@ export default function ChickenIndex() {
             <div className="chTongsCont">
               <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
+            <Hoverwrap>
             <div className="tongsCont hover" onClick={
               () => {
                 { chicken("/sounds/chicken.mp3") };
@@ -535,6 +563,7 @@ export default function ChickenIndex() {
               })}}>
               <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
             </div>
+            </Hoverwrap>
           </Container>
         </div>
     } else {
@@ -552,6 +581,7 @@ export default function ChickenIndex() {
           <Nav />
           <TaskBar />
             <Chickenbath>
+            <Hoverwrap>
             <div className='chBathCont2 hover' onClick={
               () => {
                 {toc("/sounds/toc.mp3")};
@@ -562,6 +592,7 @@ export default function ChickenIndex() {
               })}}>
               <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
+            </Hoverwrap>
             </Chickenbath>
             <div className="bathCont">
               <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
@@ -635,9 +666,11 @@ export default function ChickenIndex() {
             <Container>
               <Nav />
               <TaskBar />
-              <div className='chBathCont'>
+              <Chickenbath2>
+              <div className='chBathCont3'>
                 <Image src={chto[1].animal} layout="fill" objectFit='contain' />
               </div>
+              </Chickenbath2>
               <div className="bathCont">
                 <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
               </div>

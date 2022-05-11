@@ -8,6 +8,7 @@ import { getAnimal, misc } from "../data/selection";
 const NavBar = styled.div`
   width: 100%;
   height: 80px;
+  z-index: 1;
 
   .logo {
     height: 50px;
@@ -18,6 +19,7 @@ const NavBar = styled.div`
     margin-top: 8px;
     background-image: url("../misc/logo.png");
     background-size: 50px 50px;
+    z-index: 9999;
   }
 
   .logo:hover {

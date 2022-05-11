@@ -19,7 +19,7 @@ import { shakeAnimation, electricAnimation, breatheAnimation } from '../../data/
 // Styled components
 const Container = styled.div`
   widtH: 400px;
-  height: 90vh;
+  height: 80vh;
   margin: 0 auto;
   outline: 2px red solid;
 

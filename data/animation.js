@@ -22,9 +22,14 @@ export const fadeOut = keyframes`
 
 // Bath animation
 export const bathAnimation = keyframes`
-  0% {transform: translateY(20px);}
-  50% {transform: translateY(-20px);}
-  100% {transform: translateY(20px);}
+  100% {
+    transform: translateY(120px);
+  }
+`
+export const bathAnimation2 = keyframes`
+  100% {
+    transform: translateY(-120px);
+  }
 `
 
 // Knife bobbing animation
@@ -131,7 +136,6 @@ export const cleaverAnimation = keyframes`
   0% {
   }
   50% {
-    transform-origin: 0% 0%;
     transform: translate(0px, 400px) rotate(-50deg);
   }
   100% {
@@ -140,11 +144,8 @@ export const cleaverAnimation = keyframes`
 
 // Head
 export const headAnimation = keyframes`
-  99% {
-    transform: translate(-200px, 50px) rotate(-60deg);
-  }
   100% {
-    opacity: 0;
+    transform: translate(-200px, 50px) rotate(-60deg);
   }
 `
 

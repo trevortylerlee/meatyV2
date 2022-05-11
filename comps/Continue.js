@@ -9,6 +9,7 @@ const ButtonCont = styled.div`
   place-content: center;
   width: 400px;
   margin: 0 auto;
+  z-index: 9999;
 
   button {
     background-color: white;
@@ -21,6 +22,7 @@ const ButtonCont = styled.div`
     border-radius: 30px;
     border: 4px solid green; 
     font-weight: bold;
+    z-index: 9999;
   }
   button:hover {
     color: white;
