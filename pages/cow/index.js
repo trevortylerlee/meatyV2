@@ -6,8 +6,7 @@ import useSound from 'use-sound';
 
 // My components
 import Continue from '../../comps/Continue';
-import Nav from "../../comps/Nav"
-import TaskBar from "../../comps/Tasks";
+import Nav from "../../comps/Nav";
 
 // Data
 import { chba, chco2, chto, ch, cogun, coco2, coto, electric } from '../../data/selection';
@@ -237,7 +236,6 @@ export default function CowIndex() {
       return <div>
         <Container>
           <Nav />
-          <TaskBar />
           <Hoverwrap>
           <div className="aContCO2 hover" onClick={
             () => {
@@ -260,7 +258,6 @@ export default function CowIndex() {
       return <div>
         <Container>
           <Nav />
-          <TaskBar />
           <div className="coDefault">
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
@@ -283,7 +280,6 @@ export default function CowIndex() {
       return <div>
         <Container>
           <Nav />
-          <TaskBar />
           <div className="coDefaultTong">
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
@@ -313,7 +309,6 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
-            <TaskBar />
             <Hoverwrap>
             <div className="wContCO2Half hover" onClick={
               () => {
@@ -332,7 +327,6 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
-            <TaskBar />
             <div className="coDefault2">
               <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
             </div>
@@ -354,7 +348,6 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
-            <TaskBar />
             <div className="coTong2">
               <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
             </div>
@@ -385,7 +378,6 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
-            <TaskBar />
             <Co2cont>
             <div className="wContCO2Half" onClick={
               () => r.push({
@@ -403,7 +395,6 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
-            <TaskBar />
             <div className="coDefault2">
               <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
             </div>
@@ -414,7 +405,6 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
-            <TaskBar />
             <div className="coStun">
               <Image src={coto[0].animal} layout="fill" objectFit='contain' />
             </div>
@@ -426,7 +416,6 @@ export default function CowIndex() {
       return <div>
         <Container>
           <Nav />
-          <TaskBar />
           <div className="coStun">
             <Image src={coto[0].animal} layout="fill" objectFit='contain' />
           </div>
