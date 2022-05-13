@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import styled from 'styled-components';
 import useSound from "use-sound";
@@ -49,7 +50,16 @@ export default function Continue() {
   }
 
   if (r.asPath === "/") {
-    return <ButtonCont>
+    return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+      onLoad: {
+        scale: .4,
+        opacity: 0
+      },
+      visible: {
+        opacity: 1,
+        scale: 1
+      }
+    }}>
       <button onClick={
         () => {
           {play("/sounds/ping.mp3")};
@@ -58,7 +68,16 @@ export default function Continue() {
     </ButtonCont>
   } else if (r.asPath === "/weapons") {
       if (a === "Chicken") {
-        return <ButtonCont>
+        return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+          onLoad: {
+            scale: .4,
+            opacity: 0
+          },
+          visible: {
+            opacity: 1,
+            scale: 1
+          }
+        }}>
           <button onClick={
             () => {
               {play("/sounds/ping.mp3")};
@@ -66,7 +85,16 @@ export default function Continue() {
           }}>Continue</button>
         </ButtonCont>
       } else if (a === "Cow") {
-          return <ButtonCont>
+        return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+          onLoad: {
+            scale: .4,
+            opacity: 0
+          },
+          visible: {
+            opacity: 1,
+            scale: 1
+          }
+        }}>
             <button onClick={
               () => {
                 {play("/sounds/ping.mp3")};
@@ -74,7 +102,16 @@ export default function Continue() {
             }}>Continue</button>
           </ButtonCont>
       } else {
-        return <ButtonCont>
+        return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+          onLoad: {
+            scale: .4,
+            opacity: 0
+          },
+          visible: {
+            opacity: 1,
+            scale: 1
+          }
+        }}>
           <button onClick={
             () => {
               { play("/sounds/ping.mp3") };
@@ -83,7 +120,16 @@ export default function Continue() {
         </ButtonCont>
         }
   } else if (r.pathname === "/chicken") {
-      return <ButtonCont>
+    return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+      onLoad: {
+        scale: .4,
+        opacity: 0
+      },
+      visible: {
+        opacity: 1,
+        scale: 1
+      }
+    }}>
         <button onClick={
           () => {
             { play("/sounds/ping.mp3") };
@@ -94,7 +140,16 @@ export default function Continue() {
           })}}>Continue</button>
       </ButtonCont>
   } else if (r.pathname === "/cow") {
-    return <ButtonCont>
+    return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+      onLoad: {
+        scale: .4,
+        opacity: 0
+      },
+      visible: {
+        opacity: 1,
+        scale: 1
+      }
+    }}>
       <button onClick={
         () => {
           { play("/sounds/ping.mp3") };
@@ -106,7 +161,16 @@ export default function Continue() {
       }}>Continue</button>
     </ButtonCont>
   } else if (r.pathname === "/pig") {
-    return <ButtonCont>
+    return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+      onLoad: {
+        scale: .4,
+        opacity: 0
+      },
+      visible: {
+        opacity: 1,
+        scale: 1
+      }
+    }}>
       <button onClick={
         () => {
           { play("/sounds/ping.mp3") };
