@@ -232,6 +232,7 @@ export default function CowIndex() {
   const [gas] = useSound("/sounds/gas.mp3");
   const [electricity] = useSound("/sounds/electricity.mp3");
   const [reload] = useSound("/sounds/reload.mp3");
+  const [knife] = useSound("/sounds/knife.mp3");
 
   if (page === undefined) {
     page = 0;
@@ -436,6 +437,7 @@ export default function CowIndex() {
             <div className="knife1 hover" onClick={
               () => {
                 { toc("/sounds/toc.mp3") };
+                {knife("/sounds/knife.mp3")};
                 r.push({
                 query: {
                   page: Number(page) + 1
