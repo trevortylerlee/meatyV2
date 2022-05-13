@@ -31,7 +31,7 @@ const Container = styled.div`
   width: 400px;
   height: 80vh;
   margin: 0 auto;
-  ${'' /* outline: 2px red solid; */}
+  outline: 2px red solid;
   overflow: hidden;
   
   .aCont {
@@ -574,7 +574,7 @@ const Info3 = styled.div` /* Page 4 */
 const Info4 = styled.div` /* Page 10 */
   position: relative;
 `
-const Info5 = styled.div`
+const Info5 = styled.div` 
   position: relative;
 `
 
@@ -598,17 +598,25 @@ const Wrapper3 = styled.div` /* Page 3 */
   top: -46px;
   width: 0px;
 `
-
-
-
+const Wrapper4 = styled.div` /* Page 5 */
+  position: relative;
+`
+const WrapperDecap = styled.div` /* Page 10 */
+  position: relative;
+  top: -80px;
+`
 const Wrapper5 = styled.div`
   position: relative;
-  top: -80px;
+  top: 0px;
   width: 0;
 `
-const WrapperDecap = styled.div`
+const Wrapper6 = styled.div`
   position: relative;
-  top: -80px;
+  width: 0;
+`
+const Wrapper7 = styled.div`
+  position: relative;
+  width: 0;
 `
 
 
@@ -690,6 +698,30 @@ export default function ChickenIndex() {
         return <div>
           <Container>
             <Nav />
+            <Info as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+              onLoad: {
+                opacity: 0
+              },
+              visible: {
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  delay: 3
+                }
+              }
+            }}>
+              <p>Tap glowing red objects to interact with them!</p>
+            </Info>
+              <Wrapper6 as={motion.div} initial="onLoad" animate="visible" variants={{
+                onLoad: {
+                  scale: .4,
+                  opacity: 0
+                },
+                visible: {
+                  scale: 1,
+                  opacity: 1
+                }
+              }}>
             <Hoverwrap>
             <div className="aCont hover" onClick={
               () => {
@@ -702,16 +734,42 @@ export default function ChickenIndex() {
             })}}>
             <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
+            
             </Hoverwrap>
             <div className="wCont">
               <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
             </div>
+            </Wrapper6>
           </Container>
         </div>
     } else if (w === "Tongs") {
         return <div>
           <Container>
           <Nav />
+            <Info as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+              onLoad: {
+                opacity: 0
+              },
+              visible: {
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  delay: 3
+                }
+              }
+            }}>
+              <p>Tap glowing red objects to interact with them!</p>
+            </Info>
+            <Wrapper7 as={motion.div} initial="onLoad" animate="visible" variants={{
+              onLoad: {
+                scale: .4,
+                opacity: 0
+              },
+              visible: {
+                scale: 1,
+                opacity: 1
+              }
+            }}>
             <div className="chTongsCont">
               <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
             </div>
@@ -728,6 +786,7 @@ export default function ChickenIndex() {
               <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
             </div>
             </Hoverwrap>
+            </Wrapper7>
           </Container>
         </div>
     } else {
@@ -777,6 +836,20 @@ export default function ChickenIndex() {
           return <div>
             <Container>
               <Nav />
+              <Info2 as={motion.div} className="infoCont" initial="onLoad" animate="visible" variants={{
+                onLoad: {
+                  opacity: 0
+                },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    delay: 0.4
+                  }
+                }
+              }}>
+                <h3>Did you know?</h3>
+                <p>Chickens have excellent memories.</p>
+              </Info2>
               <div className="aCont">
               </div>
               <Hoverwrap>
@@ -798,6 +871,20 @@ export default function ChickenIndex() {
             return <div>
               <Container>
                 <Nav />
+                <Info2 as={motion.div} className="infoCont" initial="onLoad" animate="visible" variants={{
+                  onLoad: {
+                    opacity: 0
+                  },
+                  visible: {
+                    opacity: 1,
+                    transition: {
+                      delay: 0.4
+                    }
+                  }
+                }}>
+                  <h3>Did you know?</h3>
+                  <p>Chickens have excellent memories.</p>
+                </Info2>
                 <div className="chTongsCont2">
                   <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
                 </div>
@@ -860,6 +947,10 @@ export default function ChickenIndex() {
           return <div>
             <Container>
               <Nav />
+              <div className="infoCont">
+                <h3>Did you know?</h3>
+                <p>Chickens have excellent memories.</p>
+              </div>
               <div className="aCont">
               </div>
               <Co2cont className="wCont">
@@ -872,6 +963,10 @@ export default function ChickenIndex() {
             return <div>
               <Container>
                 <Nav />
+                <div className="infoCont">
+                  <h3>Did you know?</h3>
+                  <p>Chickens have excellent memories.</p>
+                </div>
                 <div className="chTongsCont2">
                   <Image src={chto[1].animal} layout="fill" objectFit='contain' />
                 </div>
@@ -957,6 +1052,16 @@ export default function ChickenIndex() {
           <Container>
             <Nav />
             <Hoverwrap>
+              <Wrapper4 as={motion.div} initial="onLoad" animate="visible" variants={{
+                onLoad: {
+                  scale: .4,
+                  opacity: 0
+                },
+                visible: {
+                  scale: 1,
+                  opacity: 1
+                }
+              }}>
             <div className="chPage6 hover" onClick={
               () => {
                 { toc("sounds/toc.mp3") };
@@ -966,6 +1071,7 @@ export default function ChickenIndex() {
                 }})}}>
               <Image src={feathers[0].chicken} layout="fill" objectFit='contain' />
             </div>
+            </Wrapper4>
             </Hoverwrap>
           </Container>
         </div>
@@ -1073,7 +1179,16 @@ export default function ChickenIndex() {
             <h3>Terrible truths</h3>
             <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">survived decapitation for 18 months.</a></p>
           </Info4>
-        <WrapperDecap>
+        <WrapperDecap as={motion.div} initial="onLoad" animate="visible" variants={{
+             onLoad: {
+               scale: .4,
+               opacity: 0
+             },
+             visible: {
+               scale: 1,
+               opacity: 1
+             }
+           }}>
         <div className="chDecap">
           <Image src={ch[2].animal} layout="fill" objectFit='contain' />
         </div>
@@ -1127,6 +1242,16 @@ export default function ChickenIndex() {
       <Container>
         <Nav />
         <Hoverwrap>
+          <Wrapper5 as={motion.div} initial="onLoad" animate="visible" variants={{
+            onLoad: {
+              scale: .4,
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1
+            }
+          }}>
         <div className="chDisembowel hover" onClick={
           () => {
             { wet("sounds/wet.mp3") };
@@ -1137,6 +1262,7 @@ export default function ChickenIndex() {
           })}}>
           <Image src={ch[4].disembowel} layout="fill" objectFit='contain' />
         </div>
+        </Wrapper5>
         </Hoverwrap>
       </Container>
     </div>
