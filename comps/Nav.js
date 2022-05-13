@@ -34,7 +34,7 @@ export default function Nav() {
   const [toc] = useSound("sounds/toc.mp3");
 
   function resetAnimal() {
-    r.push("/")
+    r.push("/animalselection")
   }
 
   return <NavBar>
