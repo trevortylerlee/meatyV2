@@ -295,11 +295,18 @@ const Container = styled.div`
     left: 160px;
   }
 
+  .chDisembowelBefore {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    top: 300px;
+    left: 48px;
+  }
   .chDisembowel {
     position: relative;
     width: 300px;
     height: 300px;
-    top: 200px;
+    top: 180px;
     left: 48px;
   }
 
@@ -1262,7 +1269,7 @@ export default function ChickenIndex() {
               opacity: 1
             }
           }}>
-        <div className="chDisembowel hover" onClick={
+        <div className="chDisembowelBefore hover" onClick={
           () => {
             { wet("sounds/wet.mp3") };
             r.push({
