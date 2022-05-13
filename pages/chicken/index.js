@@ -39,8 +39,8 @@ const Container = styled.div`
     width: 150px;
     height: 150px;
     place-content: center;
-    top: 300px;
-    left: 10px;
+    top: 310px;
+    left: 20px;
   }
   .chTongsCont {
     position: relative;

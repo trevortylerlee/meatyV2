@@ -9,7 +9,7 @@ export const animals = [
   {
     title: "Chicken",
     img: "/../public/selections/chickenFace.png",
-    desc: "A chicken is a bird. One of the features that differentiate’s it from most other birds is that it has a red comb and two red wattles under it’s beak.",
+    desc: "A chicken is a bird. One of the features that differentiates it from most other birds is that it has a red comb and two red wattles under its beak.",
     species: "Gallus domesticus"
   },
   {
@@ -30,17 +30,17 @@ export const chWeapons = [
   {
     title: "Bath",
     img: "/../public/selections/bath.png",
-    desc: "The electric waterbath stunning method is the most used method of stunning chickens as of today. It’s quick and efficent. Can stun more than one chicken at a time."
+    desc: "Electric waterbath stunning is the most used method of stunning chickens. Chicken's have their heads submerged into the electrified water. As electric currents run through the head and body, the chicken is rendered unconscious."
   },
   {
     title: "CO2",
     img: "/../public/weapons/co2.png",
-    desc: "The CO2 chamber stuns the animal by using a 70% to 90% carbon dioxide concentrate. "
+    desc: "Controlled atmosphere stunning is touted as the most humane matheod of stunning chickens. By reducing handling and transportation, stress and injuries are less common."
   },
   {
     title: "Tongs",
     img: "/../public/weapons/tongs.png",
-    desc: "This is a pair of electric tongs."
+    desc: "Stunning via electric tongs is a method used around the world. The electrodes of the device are positioned on each side of the head in between the eye and the ear."
   }
 ]
 
@@ -48,17 +48,17 @@ export const copiWeapons = [
   {
     title: "CO2",
     img: "/../public/selections/co2.png",
-    desc: "The CO2 chamber stuns the animal by using a 70% to 90% carbon dioxide concentrate. "
+    desc: "CO2 chamber stunning is gaining popularity due to their ability to stun multiple animals at once while causing the least amount of stress."
   },
   {
     title: "Gun",
     img: "/../public/selections/gun.png",
-    desc: "A captive bolt (also variously known as a cattle gun, stunbolt gun, bolt gun, or stunner) is a device used for stunning animals prior to slaughter."
+    desc: "A captive bolt (also variously known as a cattle gun, stunbolt gun, bolt gun, or stunner) is a device used to stun animals prior to slaughter."
   },
   {
     title: "Tongs",
     img: "/../public/selections/tongs.png",
-    desc: "This method of stunning can be carried out on individual animals. he electrodes are connected to insulated blocks at the ends of the tongs.."
+    desc: "This method of stunning can be carried out on individual animals. The electrodes are placed on each side of the animal's head and an electric current stuns the animal."
   }
 ]
 

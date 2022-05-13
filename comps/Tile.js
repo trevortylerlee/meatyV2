@@ -75,12 +75,13 @@ const DescCont = styled.div`
   ${'' /* outline: 2px solid red; */}
   width: 400px;
   margin: 0 auto;
+  margin-bottom: 2rem;
 
   h2 {
     margin: 0;
     margin-top: 16px;
-    font-size: 6rem;
-    text-align: right;
+    font-size: 4rem;
+    text-align: center;
   }
 `
 
@@ -186,7 +187,7 @@ export default function Tile() {
                 )}
               </TileContainer>
               <DescCont>
-                <h3>{weapon}</h3>
+                <h2>{weapon}</h2>
                 <p>{words}</p>
               </DescCont>
             </div>
