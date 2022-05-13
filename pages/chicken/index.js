@@ -31,7 +31,7 @@ const Container = styled.div`
   width: 400px;
   height: 80vh;
   margin: 0 auto;
-  outline: 2px red solid;
+  ${'' /* outline: 2px red solid; */}
   overflow: hidden;
   
   .aCont {
@@ -87,12 +87,21 @@ const Container = styled.div`
     transform: rotate(180deg);
   }
 
+  .wContBefore {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    left: 70px;
+    top: -10px;
+    z-index: 2;
+    filter: blur(4px);
+  }
   .wCont {
     position: relative;
     width: 250px;
     height: 250px;
     left: 70px;
-    top: -50px;
+    top: -40px;
     z-index: 2;
   }
   .tongsCont {
@@ -605,13 +614,14 @@ const WrapperDecap = styled.div` /* Page 10 */
   position: relative;
   top: -80px;
 `
-const Wrapper5 = styled.div`
+const Wrapper5 = styled.div` /* Page 4 */
   position: relative;
-  top: 0px;
+  top: -110px;
   width: 0;
 `
-const Wrapper6 = styled.div`
-  position: relative;
+const Wrapper6 = styled.div` /* Page 6 CO2 */
+  position: relative; 
+  top: -40px;
   width: 0;
 `
 const Wrapper7 = styled.div`
@@ -736,7 +746,7 @@ export default function ChickenIndex() {
             </div>
             
             </Hoverwrap>
-            <div className="wCont">
+            <div className="wContBefore">
               <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
             </div>
             </Wrapper6>
