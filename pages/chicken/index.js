@@ -31,7 +31,8 @@ const Container = styled.div`
   width: 400px;
   height: 80vh;
   margin: 0 auto;
-  outline: 2px red solid;
+  ${'' /* outline: 2px red solid; */}
+  overflow: hidden;
   
   .aCont {
     position: relative;
@@ -135,6 +136,16 @@ const Container = styled.div`
     width: 300px;
     height: 300px;
     place-content: center;
+    top: 280px;
+    left: 40px;
+    transform: rotate(90deg);
+    z-index: -2;
+  }
+  .chPage4 {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    place-content: center;
     top: 200px;
     left: 40px;
     transform: rotate(90deg);
@@ -155,7 +166,7 @@ const Container = styled.div`
     width: 150px;
     height: 150px;
     left: 120px;
-    top: -220px;
+    top: -160px;
     transform: rotate(90deg);
   }
   .knife2 {
@@ -239,7 +250,7 @@ const Container = styled.div`
     position: relative;
     width: 300px;
     height: 300px;
-    top: 250px;
+    top: 230px;
     left: 60px;
     transform: rotate(-90deg);
   }
@@ -260,6 +271,13 @@ const Container = styled.div`
     transform: rotate(-90deg);
   }
 
+  .cleaverBefore {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    top: -200px;
+    left: 160px;
+  }
   .cleaver {
     position: relative;
     width: 180px;
@@ -333,7 +351,7 @@ const Container = styled.div`
     left: 140px;
   }
 
-  ${'' /* INFO TILES */}
+/* INFO TILES */
   .infoCont {
     position: relative;
     width: 320px;
@@ -347,6 +365,50 @@ const Container = styled.div`
     h3 {
       margin: 0;
       color: blue;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+  .ttCont {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: mistyrose;
+    box-shadow: -3px 0px 0px 0px red;
+
+    h3 {
+      margin: 0;
+      color: red;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+  .tipCont {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #c5fac5;
+    box-shadow: -3px 0px 0px 0px green;
+
+    h3 {
+      margin: 0;
+      color: green;
       font-size: 32px;
       margin-bottom: 8px;
     }
@@ -499,6 +561,25 @@ const Hoverwrap = styled.div`
   }
 `
 
+// Info popup wrappers
+const Info = styled.div` /* Page 0 */
+  position: relative;
+`
+const Info2 = styled.div` /* Page 2 */
+  position: relative;
+`
+const Info3 = styled.div` /* Page 4 */
+  position: relative;
+`
+const Info4 = styled.div` /* Page 10 */
+  position: relative;
+`
+const Info5 = styled.div`
+  position: relative;
+`
+
+
+
 // Wrappers
 // Wrappers surround the interactive elements.
 //
@@ -512,7 +593,7 @@ const Wrapper2 = styled.div`
   top: 82px;
   width: 0;
 `
-const Wrapper3 = styled.div`
+const Wrapper3 = styled.div` /* Page 3 */
   position: relative;
   top: -46px;
   width: 0px;
@@ -524,6 +605,10 @@ const Wrapper5 = styled.div`
   position: relative;
   top: -80px;
   width: 0;
+`
+const WrapperDecap = styled.div`
+  position: relative;
+  top: -80px;
 `
 
 
@@ -553,7 +638,7 @@ export default function ChickenIndex() {
         {/* <BgCont>  */}
         <Container>
           <Nav />
-          <motion.div className="infoCont" initial="onLoad" animate="visible" variants={{
+          <Info as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
             onLoad: {
               opacity: 0
             },
@@ -565,8 +650,8 @@ export default function ChickenIndex() {
               }
             }
           }}>
-            <p>Try clicking on glowing red objects to interact with them!</p>
-          </motion.div>
+            <p>Tap glowing red objects to interact with them!</p>
+          </Info>
           <motion.div initial="onLoad" animate="visible" variants={{
             onLoad: {
               scale: .4,
@@ -743,7 +828,7 @@ export default function ChickenIndex() {
           return <div>
             <Container>
               <Nav />
-              <motion.div className="infoCont" initial="onLoad" animate="visible" variants={{
+              <Info2 as={motion.div} className="infoCont" initial="onLoad" animate="visible" variants={{
                 onLoad: {
                   opacity: 0
                 },
@@ -756,7 +841,7 @@ export default function ChickenIndex() {
               }}>
                 <h3>Did you know?</h3>
                 <p>Chickens have excellent memories.</p>
-              </motion.div>
+              </Info2>
               <Wrapper3>
               <Chickenbath2>
               <div className='chBathCont3'>
@@ -798,7 +883,7 @@ export default function ChickenIndex() {
        return <div>
         <Container>
           <Nav />
-           <motion.div initial="onLoad" animate="visible" variants={{
+           <Wrapper3 as={motion.div} initial="onLoad" animate="visible" variants={{
              onLoad: {
                scale: .4,
                opacity: 0
@@ -825,18 +910,19 @@ export default function ChickenIndex() {
           </div>
           </Knifecont>
           </Hoverwrap>
-          </motion.div>
+          </Wrapper3>
         </Container>
        </div>
     } else if (r.asPath === "/chicken?page=4") { // Page 4 //
         return <div>
           <Container>
             <Nav />
-            <motion.div className="infoCont" initial="onLoad" animate="visible" variants={{
+            <Info3 as={motion.div} className="infoCont" initial="onLoad" animate="visible" variants={{
               onLoad: {
                 opacity: 0
               },
               visible: {
+                scale: 1,
                 opacity: 1,
                 transition: {
                   duration: 1,
@@ -846,9 +932,9 @@ export default function ChickenIndex() {
             }}>
               <h3>Did you know?</h3>
               <p>Chickens are placed in "kill cones" to prevent bruising and trauma.</p>
-            </motion.div>
+            </Info3>
             <Wrapper5>
-            <div className="chPage3">
+            <div className="chPage4">
               <Image src={ch[1].animal} layout="fill" objectFit='contain' />
             </div>
             <div className="bloodWrap">
@@ -971,11 +1057,28 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
+          <Info4 as={motion.div} className="ttCont" initial="onLoad" animate="visible" variants={{
+            onLoad: {
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                delay: 0.4
+              }
+            }
+          }}>
+            <h3>Terrible truths</h3>
+            <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">survived decapitation for 18 months.</a></p>
+          </Info4>
+        <WrapperDecap>
         <div className="chDecap">
           <Image src={ch[2].animal} layout="fill" objectFit='contain' />
         </div>
         <Hoverwrap>
-        <div className="cleaver hover" onClick={
+        <div className="cleaverBefore hover" onClick={
           () => {
             { toc("sounds/toc.mp3") };
             r.push({
@@ -986,6 +1089,7 @@ export default function ChickenIndex() {
           <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
         </div>
         </Hoverwrap>
+        </WrapperDecap>
       </Container>
     </div>
   } else if (r.asPath === "/chicken?page=11") { // Page 11 //
@@ -996,6 +1100,11 @@ export default function ChickenIndex() {
         }
       }>
         <Nav />
+        <div className="ttCont">
+          <h3>Terrible truths</h3>
+          <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">survived decapitation for 18 months.</a></p>
+        </div>
+        <WrapperDecap>
         <div className="chDecapBody">
           <Image src={ch[3].body} layout="fill" objectFit='contain' />
         </div>
@@ -1005,10 +1114,11 @@ export default function ChickenIndex() {
         </div>
         </Head>
         <Cleaver>
-        <div className="cleaver hover">
+        <div className="cleaver">
           <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
         </div>
         </Cleaver>
+        </WrapperDecap>
       </Container>
       <Continue />
     </div>

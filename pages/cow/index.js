@@ -22,6 +22,7 @@ const Container = styled.div`
   height: 80vh;
   margin: 0 auto;
   outline: 2px red solid;
+  overflow: hidden;
 
   .hover:hover {
     filter: drop-shadow(4px 4px 8px lime);

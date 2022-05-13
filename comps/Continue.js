@@ -9,16 +9,16 @@ const ButtonCont = styled.div`
   place-content: center;
   width: 400px;
   margin: 0 auto;
+  margin-top: 1rem;
   z-index: 9999;
 
   button {
     background-color: white;
     display: flex;
-    width: 50%;
-    float: right;
+    margin: 0 auto;
     place-content: center;
     font-size: 1.5rem;
-    padding: 0.5rem;
+    padding: 0.5rem 2rem;
     border-radius: 30px;
     border: 4px solid green; 
     font-weight: bold;
