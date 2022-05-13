@@ -31,7 +31,7 @@ const Container = styled.div`
   width: 400px;
   height: 80vh;
   margin: 0 auto;
-  ${'' /* outline: 2px red solid; */}
+  outline: 2px red solid;
   overflow: hidden;
   
   .aCont {
@@ -601,7 +601,7 @@ const Info5 = styled.div`
 //
 const Wrapper = styled.div`
   position: relative;
-  top: -20px;
+  top: -120px;
   width: 0;
 `
 const Wrapper2 = styled.div`
