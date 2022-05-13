@@ -56,7 +56,7 @@ const Container = styled.div`
     width: 200px;
     height: 200px;
     place-content: center;
-    top: 200px;
+    top: 150px;
     left: 120px;
   }
   .chBathCont {
@@ -101,7 +101,7 @@ const Container = styled.div`
     width: 250px;
     height: 250px;
     left: 70px;
-    top: -40px;
+    top: -120px;
     z-index: 2;
   }
   .tongsCont {
@@ -116,7 +116,7 @@ const Container = styled.div`
     width: 300px;
     height: 300px;
     left: 110px;
-    top: -250px;
+    top: -300px;
   }
   .bathCont {
     position: relative;
@@ -284,14 +284,14 @@ const Container = styled.div`
     position: relative;
     width: 180px;
     height: 180px;
-    top: -200px;
+    top: -150px;
     left: 160px;
   }
   .cleaver {
     position: relative;
     width: 180px;
     height: 180px;
-    top: -220px;
+    top: -180px;
     left: 160px;
   }
 
@@ -606,33 +606,40 @@ const Wrapper = styled.div`
 `
 const Wrapper2 = styled.div`
   position: relative;
-  top: 82px;
+  top: -20px;
   width: 0;
 `
-const Wrapper3 = styled.div` /* Page 3 */
+const Wrapper3 = styled.div` /* Page 2 */
   position: relative;
-  top: -46px;
+  top: -140px;
+  width: 0px;
+`
+const Wrapper8 = styled.div` /* Page 3 */
+  position: relative;
+  top: -80px;
   width: 0px;
 `
 const Wrapper4 = styled.div` /* Page 5 */
   position: relative;
+
 `
 const WrapperDecap = styled.div` /* Page 10 */
   position: relative;
-  top: -80px;
+  top: -150px;
 `
-const Wrapper5 = styled.div` /* Page 4 */
+const Wrapper5 = styled.div` /* Page 4 knife cut */
   position: relative;
-  top: -110px;
+  top: -200px;
   width: 0;
 `
 const Wrapper6 = styled.div` /* Page 6 CO2 */
   position: relative; 
-  top: -40px;
+  top: -120px;
   width: 0;
 `
 const Wrapper7 = styled.div`
   position: relative;
+  top: -80px;
   width: 0;
 `
 
@@ -996,7 +1003,7 @@ export default function ChickenIndex() {
        return <div>
         <Container>
           <Nav />
-           <Wrapper3 as={motion.div} initial="onLoad" animate="visible" variants={{
+           <Wrapper8 as={motion.div} initial="onLoad" animate="visible" variants={{
              onLoad: {
                scale: .4,
                opacity: 0
@@ -1024,7 +1031,7 @@ export default function ChickenIndex() {
           </div>
           </Knifecont>
           </Hoverwrap>
-          </Wrapper3>
+          </Wrapper8>
         </Container>
        </div>
     } else if (r.asPath === "/chicken?page=4") { // Page 4 //
@@ -1289,6 +1296,7 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
+        <Wrapper7>
         <div className="chDisembowel">
           <Image src={ch[4].disemboweled} layout="fill" objectFit='contain' />
         </div>
@@ -1317,6 +1325,7 @@ export default function ChickenIndex() {
           <Image src={ch[4].liver} layout="fill" objectFit='contain' />
         </div>
         </Liver>
+        </Wrapper7>
       </Container>
       <Continue />
     </div>
