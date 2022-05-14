@@ -138,47 +138,69 @@ export default function Continue() {
               r.push("/chicken/end");
             }}>Continue</button>
         </ButtonCont>
-      }
-    return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
-      onLoad: {
-        scale: .4,
-        opacity: 0
-      },
-      visible: {
-        opacity: 1,
-        scale: 1
-      }
-    }}>
-        <button onClick={
-          () => {
-            { play("/sounds/ping.mp3") };
-            r.push({
-            query: {
-              page: Number(page) + 1
-            }
-          })}}>Continue ➜</button>
-      </ButtonCont>
-  } else if (r.pathname === "/cow") {
-    return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
-      onLoad: {
-        scale: .4,
-        opacity: 0
-      },
-      visible: {
-        opacity: 1,
-        scale: 1
-      }
-    }}>
-      <button onClick={
-        () => {
-          { play("/sounds/ping.mp3") };
-          r.push({
-          query: {
-            page: Number(page) + 1
+      } else {
+        return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+          onLoad: {
+            scale: .4,
+            opacity: 0
+          },
+          visible: {
+            opacity: 1,
+            scale: 1
           }
-        })
-      }}>Continue ➜</button>
-    </ButtonCont>
+        }}>
+          <button onClick={
+            () => {
+              { play("/sounds/ping.mp3") };
+              r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })
+            }}>Continue ➜</button>
+        </ButtonCont>
+      }
+  } else if (r.pathname === "/cow") {
+      if (r.asPath === "/cow?page=8") {
+        return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+          onLoad: {
+            scale: .4,
+            opacity: 0
+          },
+          visible: {
+            opacity: 1,
+            scale: 1
+          }
+        }}>
+          <button onClick={
+            () => {
+              { play("/sounds/ping.mp3") };
+              r.push("/cow/end");
+            }}>Continue</button>
+        </ButtonCont>
+      }
+      else {
+        return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+          onLoad: {
+            scale: .4,
+            opacity: 0
+          },
+          visible: {
+            opacity: 1,
+            scale: 1
+          }
+        }}>
+          <button onClick={
+            () => {
+              { play("/sounds/ping.mp3") };
+              r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })
+            }}>Continue ➜</button>
+        </ButtonCont>
+      }
   } else if (r.pathname === "/pig") {
     return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
       onLoad: {
