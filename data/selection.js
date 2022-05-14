@@ -173,7 +173,8 @@ export const coco2 = [
   {
     weapon: "/../public/weapons/chamberOpen.png",
     body: "/../public/co/cowBody.png",
-    head: "/../public/co/cowHead.png"
+    head: "/../public/co/cowHead.png",
+    disembowel: "/../public/co/disembowel.png"
   },
   {
     weapon: "/../public/weapons/chamberCoHalf.png"

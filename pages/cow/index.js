@@ -16,6 +16,7 @@ import { getWeapon } from '../../data/selection';
 import { shakeAnimation, electricAnimation, breatheAnimation, cutAnimation, cleaverAnimation, headAnimation } from '../../data/animation';
 import { glowAnimation } from '../../data/animation';
 import { bloodGush, bloodGush2, bloodGushY } from '../../data/animation';
+import { intestineAnimation, kidneyAnimation, lungsAnimation, heartAnimation, liverAnimation } from '../../data/animation';
 import { motion } from 'framer-motion';
 
 // Styled components
@@ -24,6 +25,7 @@ const Container = styled.div`
   height: 80vh;
   margin: 0 auto;
   outline: 2px red solid;
+  overflow: hidden;
 
   .hover:hover {
     filter: drop-shadow(4px 4px 8px lime);
@@ -280,6 +282,55 @@ const Container = styled.div`
     left: 30px;
   }
 
+  .coDisembowel {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    top: 60px;
+    left: 6px;
+  }
+
+  .intestines {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    left: 150px;
+    top: -180px;
+    cursor-events: none;
+  }
+  .kidneys {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 180px;
+    top: -300px;
+    cursor-events: none;
+  }
+  .lungs {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 160px;
+    top: -350px;
+    cursor-events: none;
+  }
+  .heart {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: -460px;
+    left: 200px;
+    cursor-events: none;
+  }
+  .liver {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 140px;
+    top: -480px;
+    cursor-events: none;
+  }
+
   /* Info tiles */
   .tipCont {
     position: relative;
@@ -451,6 +502,36 @@ const WrapKnifepage4 = styled.div`
   top: -230px;
 `
 
+const Intestines = styled.div`
+  animation-name: ${intestineAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+`
+const Kidneys = styled.div`
+  animation-name: ${kidneyAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+`
+const Lungs = styled.div`
+  animation-name: ${lungsAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+`
+const Heart = styled.div`
+  animation-name: ${heartAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.6s;
+`
+const Liver = styled.div`
+  animation-name: ${liverAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
+`
+
 // Page content starts below
 
 export default function CowIndex() {
@@ -466,6 +547,7 @@ export default function CowIndex() {
   const [gas] = useSound("/sounds/gas.mp3");
   const [electricity] = useSound("/sounds/electricity.mp3");
   const [reload] = useSound("/sounds/reload.mp3");
+  const [wet] = useSound("/sounds/wet.mp3");
 
   if (page === undefined) {
     page = 0;
@@ -808,7 +890,7 @@ export default function CowIndex() {
       </Container>
       <Continue />
     </div> 
-  } else if (r.asPath === "/cow?page=5") { // Page 5 //
+  } else if (r.asPath === "/cow?page=5") { // Page 5 Decapitate //
     return <div>
       <Container>
         <Nav />
@@ -867,6 +949,115 @@ export default function CowIndex() {
           <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
           </div>
         </Cleaver>
+      </Container>
+      <Continue />
+    </div>
+  } else if (r.asPath === "/cow?page=7") { // Page 7: Disembowel //
+    return <div>
+      <Container>
+        <Nav />
+        <Hoverwrap>
+          <div className="coDisembowel hover" onClick={
+            () => {
+              { wet("sounds/wet.mp3") };
+              r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })
+            }}>
+            <Image src={coco2[0].disembowel} layout="fill" objectFit='contain' />
+          </div>
+          <div className='intestines' onClick={
+            () => {
+              { wet("sounds/wet.mp3") };
+              r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })
+            }}>
+            <Image src={ch[4].intestines} layout="fill" objectFit='contain' />
+          </div>
+          <div className='kidneys' onClick={
+            () => {
+              { wet("sounds/wet.mp3") };
+              r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })
+            }}>
+            <Image src={ch[4].kidneys} layout="fill" objectFit='contain' />
+          </div>
+          <div className='lungs' onClick={
+            () => {
+              { wet("sounds/wet.mp3") };
+              r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })
+            }}>
+            <Image src={ch[4].lungs} layout="fill" objectFit='contain' />
+          </div>
+          <div className='heart' onClick={
+            () => {
+              { wet("sounds/wet.mp3") };
+              r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })
+            }}>
+            <Image src={ch[4].heart} layout="fill" objectFit='contain' />
+          </div>
+          <div className='liver' onClick={
+            () => {
+              { wet("sounds/wet.mp3") };
+              r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })
+            }}>
+            <Image src={ch[4].liver} layout="fill" objectFit='contain' />
+          </div>
+        </Hoverwrap>
+      </Container>
+    </div>
+  } else if (r.asPath === "/cow?page=8") { // Page 8 //
+    return <div>
+      <Container>
+        <Nav />
+        <div className="coDisembowel">
+          <Image src={coco2[0].disembowel} layout="fill" objectFit='contain' />
+        </div>
+        <Intestines>
+          <div className='intestines'>
+            <Image src={ch[4].intestines} layout="fill" objectFit='contain' />
+          </div>
+        </Intestines>
+        <Kidneys>
+          <div className='kidneys'>
+            <Image src={ch[4].kidneys} layout="fill" objectFit='contain' />
+          </div>
+        </Kidneys>
+        <Lungs>
+          <div className='lungs'>
+            <Image src={ch[4].lungs} layout="fill" objectFit='contain' />
+          </div>
+        </Lungs>
+        <Heart>
+          <div className='heart'>
+            <Image src={ch[4].heart} layout="fill" objectFit='contain' />
+          </div>
+        </Heart>
+        <Liver>
+          <div className='liver'>
+            <Image src={ch[4].liver} layout="fill" objectFit='contain' />
+          </div>
+        </Liver>
       </Container>
       <Continue />
     </div>
