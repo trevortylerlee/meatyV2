@@ -30,10 +30,13 @@ const Container = styled.div`
     filter: drop-shadow(4px 4px 8px lime);
     cursor: pointer;
   }
-
   .blur {
     filter: blur(4px);
   }
+  .italic {
+    font-style: italic;
+  }
+
 
   .coDefault {
     position: relative;
@@ -302,6 +305,8 @@ const Co2cont = styled.div`
   animation-name: ${shakeAnimation};
   animation-duration: 0.82s;
   animation-iteration-count: infinite;
+  position: relative;
+  top: -160px;
 `
 const Electricity = styled.div`
   animation-name: ${electricAnimation};
@@ -341,12 +346,24 @@ const DidCont = styled.div`
 `
 
 // Wrappers for the cow and weapons
-//CO2
+// CO2
 const WrapCO2page0 = styled.div`
   position: relative;
   width: 0;
   top: -160px;
 `
+// Gun
+const WrapGunpage0 = styled.div`
+  position: relative;
+  width: 0;
+  top: -60px;
+`
+const WrapGunPage1 = styled.div`
+  position: relative;
+  width: 0;
+  top: -110px;
+`
+
 // Knife and onwards
 const WrapKnifepage3 = styled.div`
   position: relative;
@@ -422,6 +439,21 @@ export default function CowIndex() {
       return <div>
         <Container>
           <Nav />
+          <TipCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+            onLoad: {
+              opacity: 0
+            },
+            visible: {
+              opacity: 1,
+              transition: {
+                duration: 1,
+                delay: 3
+              }
+            }
+          }}>
+            <p>Tap glowing red objects to interact with them!</p>
+          </TipCont>
+          <WrapGunpage0>
           <div className="coDefault">
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
@@ -438,12 +470,27 @@ export default function CowIndex() {
             <Image src={cogun[0].weapon} layout="fill" objectFit='contain' />
           </div>
           </Hoverwrap>
+          </WrapGunpage0>
         </Container>
       </div>
     } else if (w === "Tongs") {
       return <div>
         <Container>
           <Nav />
+          <TipCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+            onLoad: {
+              opacity: 0
+            },
+            visible: {
+              opacity: 1,
+              transition: {
+                duration: 1,
+                delay: 3
+              }
+            }
+          }}>
+            <p>Tap glowing red objects to interact with them!</p>
+          </TipCont>
           <div className="coDefaultTong blur">
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
@@ -493,6 +540,23 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
+            <DidCont as={motion.div} className="didCont" initial="onLoad" animate="visible" variants={{
+              onLoad: {
+                opacity: 0
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  delay: 0.4
+                }
+              }
+            }}>
+              <h3>Did you know?</h3>
+              <p>The scientific name for a cow is <span className="italic">Bos taurus.</span></p>
+            </DidCont>
+            <WrapGunPage1>
             <div className="coDefault2">
               <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
             </div>
@@ -510,6 +574,7 @@ export default function CowIndex() {
                 }
               })}}></div>
             </Hoverwrap>
+            </WrapGunPage1>
           </Container>
         </div>
       } else {
@@ -548,6 +613,22 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
+            <DidCont as={motion.div} className="didCont" initial="onLoad" animate="visible" variants={{
+              onLoad: {
+                opacity: 0
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  delay: 0.4
+                }
+              }
+            }}>
+              <h3>Did you know?</h3>
+              <p>The scientific name for a cow is <span className="italic">Bos taurus.</span></p>
+            </DidCont>
             <Co2cont>
             <div className="wContCO2Half" onClick={
               () => r.push({
@@ -565,9 +646,15 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
+            <div className="didCont">
+              <h3>Did you know?</h3>
+              <p>The scientific name for a cow is <span className="italic">Bos taurus.</span></p>
+            </div>
+            <WrapGunPage1>
             <div className="coDefault2">
               <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
             </div>
+            </WrapGunPage1>
           </Container>
           <Continue />
         </div>
