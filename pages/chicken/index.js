@@ -668,6 +668,7 @@ export default function ChickenIndex() {
   const [electricity] = useSound("/sounds/electricity.mp3");
   const [wet] = useSound("/sounds/wet.mp3");
   const [sharp] = useSound("/sounds/sharp.mp3");
+  const [knife] = useSound("/sounds/knife.mp3");
 
   if (page === undefined) {
     page = 0;
@@ -1031,6 +1032,7 @@ export default function ChickenIndex() {
           <div className="knife1 hover" onClick={
             () => {
               {toc("sounds/toc.mp3")};
+              {knife("sounds/knife.mp3")};
               r.push({
               query: {
                 page: Number(page) + 1
