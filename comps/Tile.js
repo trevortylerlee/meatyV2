@@ -106,7 +106,7 @@ export default function Tile() {
   const w = getWeapon();
   const [play] = useSound("/sounds/toc.mp3");
 
-  if (r.asPath === "/animalselection") {
+  if (r.asPath === "/") {
     if (a.length === 0) {
       return <div>
         <Select>
