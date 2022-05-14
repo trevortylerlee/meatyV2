@@ -13,8 +13,10 @@ import { chba, chco2, chto, ch, cogun, coco2, coto, electric } from '../../data/
 import { getWeapon } from '../../data/selection';
 
 // Animations
-import { shakeAnimation, electricAnimation, breatheAnimation } from '../../data/animation';
+import { shakeAnimation, electricAnimation, breatheAnimation, cutAnimation } from '../../data/animation';
 import { glowAnimation } from '../../data/animation';
+import { bloodGush, bloodGush2, bloodGushY } from '../../data/animation';
+import { motion } from 'framer-motion';
 
 // Styled components
 const Container = styled.div`
@@ -166,6 +168,7 @@ const Container = styled.div`
     height: 340px;
     top: 240px;
     left: 30px;
+    z-index: -1;
   }
 
   .knife1 {
@@ -175,6 +178,111 @@ const Container = styled.div`
     left: 120px;
     top: -200px;
     transform: rotate(90deg);
+  }
+  .knife2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 50px;
+    top: -10px;
+    transform: scaleX(-1) rotate(60deg);
+  }
+  .blood {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    border-radius: 50%;
+    left: 100px;
+    top: -80px;
+    background-color: darkred;
+    animation-name: ${bloodGush};
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  .blood2 {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    border-radius: 50%;
+    left: 105px;
+    top: -80px;
+    background-color: red;
+    animation-name: ${bloodGush};
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+  }
+  .blood3 {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    border-radius: 50%;
+    left: 100px;
+    top: -80px;
+    background-color: darkred;
+    animation-name: ${bloodGush2};
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+  }
+  .blood4 {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    border-radius: 50%;
+    left: 95px;
+    top: -90px;
+    background-color: red;
+  }
+
+  .bloodWrap {
+    animation-name: ${bloodGushY};
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  /* Info tiles */
+  .tipCont {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #c5fac5;
+    box-shadow: -3px 0px 0px 0px green;
+
+    h3 {
+      margin: 0;
+      color: green;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+  .didCont {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: aliceblue;
+    box-shadow: -3px 0px 0px 0px blue;
+
+    h3 {
+      margin: 0;
+      color: blue;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
   }
 `
 
@@ -216,6 +324,40 @@ const Knifecont = styled.div`
   animation-duration: 3s;
   animation-iteration-count: infinite;
 `
+const Knifecont2 = styled.div`
+  animation-name: ${cutAnimation};
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  position: relative;
+  z-index: -1;
+`
+
+// Wrappers for info containers
+const TipCont = styled.div`
+  position: relative;  
+`
+const DidCont = styled.div`
+  position: relative;
+`
+
+// Wrappers for the cow and weapons
+//CO2
+const WrapCO2page0 = styled.div`
+  position: relative;
+  width: 0;
+  top: -160px;
+`
+// Knife and onwards
+const WrapKnifepage3 = styled.div`
+  position: relative;
+  width: 0;
+  top: -80px;
+`
+const WrapKnifepage4 = styled.div`
+  position: relative;
+  width: 0;
+  top: -230px;
+`
 
 // Page content starts below
 
@@ -242,6 +384,21 @@ export default function CowIndex() {
       return <div>
         <Container>
           <Nav />
+          <TipCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+            onLoad: {
+              opacity: 0
+            },
+            visible: {
+              opacity: 1,
+              transition: {
+                duration: 1,
+                delay: 3
+              }
+            }
+          }}>
+            <p>Tap glowing red objects to interact with them!</p>
+          </TipCont>
+          <WrapCO2page0>
           <Hoverwrap>
           <div className="aContCO2 hover" onClick={
             () => {
@@ -258,6 +415,7 @@ export default function CowIndex() {
           <div className="wContCO2">
             <Image src={coco2[0].weapon} layout="fill" objectFit='contain' />
           </div>
+          </WrapCO2page0>
         </Container>
       </div>
     } else if (w === "Gun") {
@@ -428,6 +586,7 @@ export default function CowIndex() {
       return <div>
         <Container>
           <Nav />
+          <WrapKnifepage3>
           <div className="coStun">
             <Image src={coto[0].animal} layout="fill" objectFit='contain' />
           </div>
@@ -445,7 +604,47 @@ export default function CowIndex() {
             </div>
           </Knifecont>
           </Hoverwrap>
+          </WrapKnifepage3>
         </Container>
       </div>
+  } else if (r.asPath === "/cow?page=4") { // Page 4 //
+    return <div>
+        <Container>
+        <Nav />
+        <DidCont as={motion.div} className="didCont" initial="onLoad" animate="visible" variants={{
+          onLoad: {
+            opacity: 0
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              duration: 1,
+              delay: 0.4
+            }
+          }
+        }}>
+          <h3>Did you know?</h3>
+          <p>Chickens are placed in "kill cones" to prevent bruising and trauma.</p>
+        </DidCont>
+        <WrapKnifepage4>
+        <div className="coStun">
+          <Image src={coto[1].animal} layout="fill" objectFit="contain" />
+        </div>
+        <Knifecont2>
+          <div className="knife2">
+            <Image src={ch[1].weapon} layout="fill" objectFit="contain" />
+          </div>
+        </Knifecont2>
+        <div className="bloodWrap">
+          <div className="blood"></div>
+          <div className="blood2"></div>
+          <div className="blood3"></div>
+          <div className="blood4"></div>
+        </div>
+      </WrapKnifepage4>
+      </Container>
+      <Continue />
+    </div> 
   }
 }

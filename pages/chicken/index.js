@@ -612,7 +612,7 @@ const Wrapper2 = styled.div`
 `
 const Wrapper3 = styled.div` /* Page 3 */
   position: relative;
-  top: -80px;
+  top: -120px;
   width: 0px;
 `
 const Wrapper4 = styled.div` /* Page 5 */
@@ -636,8 +636,11 @@ const WrapperDisem = styled.div`
   width: 0;
   top: -60px;
 `
-
-// CO2
+const Wrapperidk = styled.div`
+  position: relative;
+  width: 0;
+  top: -60px;
+`
 const Wrapper6 = styled.div`
   position: relative;
   width: 0;
@@ -1010,7 +1013,7 @@ export default function ChickenIndex() {
        return <div>
         <Container>
           <Nav />
-           <Wrapper3 as={motion.div} initial="onLoad" animate="visible" variants={{
+           <Wrapperidk as={motion.div} initial="onLoad" animate="visible" variants={{
              onLoad: {
                scale: .4,
                opacity: 0
@@ -1037,7 +1040,7 @@ export default function ChickenIndex() {
           </div>
           </Knifecont>
           </Hoverwrap>
-          </Wrapper3>
+          </Wrapperidk>
         </Container>
        </div>
     } else if (r.asPath === "/chicken?page=4") { // Page 4 //

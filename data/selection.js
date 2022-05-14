@@ -195,6 +195,9 @@ export const cogun = [
 export const coto = [
   {
     animal: "/../public/co/coSlitStun.png"
+  },
+  {
+    animal: "/../public/co/coSlit.png"
   }
 ]
 
