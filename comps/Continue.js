@@ -49,7 +49,7 @@ export default function Continue() {
     page = 0;
   }
 
-  if (r.asPath === "/") {
+  if (r.asPath === "/animalselection") {
     return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
       onLoad: {
         scale: .4,
