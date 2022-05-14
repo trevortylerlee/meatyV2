@@ -24,7 +24,6 @@ const Container = styled.div`
   height: 80vh;
   margin: 0 auto;
   outline: 2px red solid;
-  overflow: hidden;
 
   .hover:hover {
     filter: drop-shadow(4px 4px 8px lime);
@@ -88,7 +87,7 @@ const Container = styled.div`
     position: relative;
     width: 300px;
     height: 300px;
-    top: 200px;
+    top: 180px;
     left: 50px;
   }
 
@@ -178,7 +177,7 @@ const Container = styled.div`
     position: relative;
     width: 340px;
     height: 340px;
-    top: 40px;
+    top: 30px;
     left: 30px;
     z-index: -1;
   }
@@ -262,7 +261,7 @@ const Container = styled.div`
     position: relative;
     width: 180px;
     height: 180px;
-    top: -320px;
+    top: -400px;
     left: 160px;
   }
 
@@ -367,7 +366,7 @@ const Co2cont = styled.div`
   animation-duration: 0.82s;
   animation-iteration-count: infinite;
   position: relative;
-  top: -160px;
+  top: -180px;
 `
 const Electricity = styled.div`
   animation-name: ${electricAnimation};
@@ -398,6 +397,13 @@ const Knifecont2 = styled.div`
   z-index: -1;
 `
 
+const Cleaver = styled.div`
+  animation-name: ${cleaverAnimation};
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  position: relative;
+`
+
 // Wrappers for info containers
 const TipCont = styled.div`
   position: relative;  
@@ -414,7 +420,7 @@ const TtCont = styled.div`
 const WrapCO2page0 = styled.div`
   position: relative;
   width: 0;
-  top: -160px;
+  top: -180px;
 `
 // Gun
 const WrapGunpage0 = styled.div`
@@ -835,7 +841,7 @@ export default function CowIndex() {
         </Hoverwrap>
       </Container>
     </div>
-  } else if (r.asPath === "/cow?page=6") {
+  } else if (r.asPath === "/cow?page=6") { // Page 6 //
     return <div>
       <Container>
         <Nav />
@@ -849,7 +855,13 @@ export default function CowIndex() {
         <div className="coHead">
           <Image src={coco2[0].head} layout="fill" objectFit="contain" />
         </div>
+        <Cleaver>
+          <div className="cleaver">
+          <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
+          </div>
+        </Cleaver>
       </Container>
+      <Continue />
     </div>
   }
 }
