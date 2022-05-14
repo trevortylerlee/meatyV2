@@ -62,7 +62,7 @@ const Container = styled.div`
 
   p {
     position: relative;
-    top: 50%;
+    top: 58%;
     font-size: 12px;
   }
 `
@@ -72,7 +72,7 @@ const Head = styled.div`
   animation-duration: 3s;
   animation-iteration-count: infinite;
   position: relative;
-  top: 50%;
+  top: 60%;
   &:hover {
     animation-play-state: paused;
   }

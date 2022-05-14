@@ -56,7 +56,7 @@ const Container = styled.div`
     width: 200px;
     height: 200px;
     place-content: center;
-    top: 150px;
+    top: 200px;
     left: 120px;
   }
   .chBathCont {
@@ -87,21 +87,12 @@ const Container = styled.div`
     transform: rotate(180deg);
   }
 
-  .wContBefore {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    left: 70px;
-    top: -10px;
-    z-index: 2;
-    filter: blur(4px);
-  }
   .wCont {
     position: relative;
     width: 250px;
     height: 250px;
     left: 70px;
-    top: -120px;
+    top: -50px;
     z-index: 2;
   }
   .tongsCont {
@@ -116,7 +107,7 @@ const Container = styled.div`
     width: 300px;
     height: 300px;
     left: 110px;
-    top: -300px;
+    top: -250px;
   }
   .bathCont {
     position: relative;
@@ -284,29 +275,22 @@ const Container = styled.div`
     position: relative;
     width: 180px;
     height: 180px;
-    top: -150px;
+    top: -200px;
     left: 160px;
   }
   .cleaver {
     position: relative;
     width: 180px;
     height: 180px;
-    top: -180px;
+    top: -220px;
     left: 160px;
   }
 
-  .chDisembowelBefore {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    top: 300px;
-    left: 48px;
-  }
   .chDisembowel {
     position: relative;
     width: 300px;
     height: 300px;
-    top: 180px;
+    top: 200px;
     left: 48px;
   }
 
@@ -601,45 +585,37 @@ const Info5 = styled.div`
 //
 const Wrapper = styled.div`
   position: relative;
-  top: -120px;
+  top: -20px;
   width: 0;
 `
 const Wrapper2 = styled.div`
   position: relative;
-  top: -20px;
+  top: 82px;
   width: 0;
 `
-const Wrapper3 = styled.div` /* Page 2 */
+const Wrapper3 = styled.div` /* Page 3 */
   position: relative;
-  top: -140px;
-  width: 0px;
-`
-const Wrapper8 = styled.div` /* Page 3 */
-  position: relative;
-  top: -80px;
+  top: -46px;
   width: 0px;
 `
 const Wrapper4 = styled.div` /* Page 5 */
   position: relative;
-
 `
 const WrapperDecap = styled.div` /* Page 10 */
   position: relative;
-  top: -150px;
+  top: -80px;
 `
-const Wrapper5 = styled.div` /* Page 4 knife cut */
+const Wrapper5 = styled.div`
   position: relative;
-  top: -200px;
+  top: 0px;
   width: 0;
 `
-const Wrapper6 = styled.div` /* Page 6 CO2 */
-  position: relative; 
-  top: -120px;
+const Wrapper6 = styled.div`
+  position: relative;
   width: 0;
 `
 const Wrapper7 = styled.div`
   position: relative;
-  top: -80px;
   width: 0;
 `
 
@@ -760,7 +736,7 @@ export default function ChickenIndex() {
             </div>
             
             </Hoverwrap>
-            <div className="wContBefore">
+            <div className="wCont">
               <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
             </div>
             </Wrapper6>
@@ -1002,7 +978,7 @@ export default function ChickenIndex() {
        return <div>
         <Container>
           <Nav />
-           <Wrapper8 as={motion.div} initial="onLoad" animate="visible" variants={{
+           <Wrapper3 as={motion.div} initial="onLoad" animate="visible" variants={{
              onLoad: {
                scale: .4,
                opacity: 0
@@ -1029,7 +1005,7 @@ export default function ChickenIndex() {
           </div>
           </Knifecont>
           </Hoverwrap>
-          </Wrapper8>
+          </Wrapper3>
         </Container>
        </div>
     } else if (r.asPath === "/chicken?page=4") { // Page 4 //
@@ -1276,7 +1252,7 @@ export default function ChickenIndex() {
               opacity: 1
             }
           }}>
-        <div className="chDisembowelBefore hover" onClick={
+        <div className="chDisembowel hover" onClick={
           () => {
             { wet("sounds/wet.mp3") };
             r.push({
@@ -1294,7 +1270,6 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
-        <Wrapper7>
         <div className="chDisembowel">
           <Image src={ch[4].disemboweled} layout="fill" objectFit='contain' />
         </div>
@@ -1323,7 +1298,6 @@ export default function ChickenIndex() {
           <Image src={ch[4].liver} layout="fill" objectFit='contain' />
         </div>
         </Liver>
-        </Wrapper7>
       </Container>
       <Continue />
     </div>
