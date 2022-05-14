@@ -37,18 +37,18 @@ const Container = styled.div`
   
   .aCont {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     place-content: center;
-    top: 310px;
-    left: 20px;
+    top: 220px;
+    left: 40px;
   }
   .chTongsCont {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     place-content: center;
-    top: 200px;
+    top: 180px;
     left: 120px;
     filter: blur(4px);
   }
@@ -57,7 +57,15 @@ const Container = styled.div`
     width: 200px;
     height: 200px;
     place-content: center;
-    top: 200px;
+    top: 190px;
+    left: 120px;
+  }
+  .chTongsCont3 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    place-content: center;
+    top: 140px;
     left: 120px;
   }
   .chBathCont {
@@ -88,12 +96,20 @@ const Container = styled.div`
     transform: rotate(180deg);
   }
 
+  .wContBefore {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    top: 0px;
+    filter: blur(4px);
+  }
   .wCont {
     position: relative;
-    width: 250px;
-    height: 250px;
-    left: 70px;
-    top: -50px;
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    top: -80px;
     z-index: 2;
   }
   .tongsCont {
@@ -101,7 +117,7 @@ const Container = styled.div`
     width: 300px;
     height: 300px;
     left: 125px;
-    top: -40px;
+    top: -80px;
   }
   .tongsCont2 {
     position: relative;
@@ -611,10 +627,6 @@ const Wrapper5 = styled.div`
   top: -160px;
   width: 0;
 `
-const Wrapper6 = styled.div`
-  position: relative;
-  width: 0;
-`
 const Wrapper7 = styled.div`
   position: relative;
   width: 0;
@@ -623,6 +635,18 @@ const WrapperDisem = styled.div`
   position: relative;
   width: 0;
   top: -60px;
+`
+
+// CO2
+const Wrapper6 = styled.div`
+  position: relative;
+  width: 0;
+  top: -80px;
+`
+const WrapperTong = styled.div`
+  position: relative;
+  width: 0;
+  top: -40px;
 `
 
 
@@ -742,7 +766,7 @@ export default function ChickenIndex() {
             </div>
             
             </Hoverwrap>
-            <div className="wCont">
+            <div className="wContBefore">
               <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
             </div>
             </Wrapper6>
@@ -891,6 +915,7 @@ export default function ChickenIndex() {
                   <h3>Did you know?</h3>
                   <p>Chickens have excellent memories.</p>
                 </Info2>
+                <WrapperTong>
                 <div className="chTongsCont2">
                   <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
                 </div>
@@ -913,6 +938,7 @@ export default function ChickenIndex() {
                 <Electricity3 className='elec3'>
                   <Image src={electric[2].bolt} layout="fill" objectFit='contain' />
                 </Electricity3>
+                </WrapperTong>
               </Container>
             </div>
         }
@@ -973,7 +999,7 @@ export default function ChickenIndex() {
                   <h3>Did you know?</h3>
                   <p>Chickens have excellent memories.</p>
                 </div>
-                <div className="chTongsCont2">
+                <div className="chTongsCont3">
                   <Image src={chto[1].animal} layout="fill" objectFit='contain' />
                 </div>
               </Container>

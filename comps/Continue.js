@@ -64,7 +64,7 @@ export default function Continue() {
         () => {
           {play("/sounds/ping.mp3")};
           r.push("/weapons");
-      }}>Continue</button>
+        }}>Continue</button>
     </ButtonCont>
   } else if (r.asPath === "/weapons") {
       if (a === "Chicken") {
