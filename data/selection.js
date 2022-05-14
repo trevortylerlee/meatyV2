@@ -171,7 +171,9 @@ export const feathers = [
 // -----------------------
 export const coco2 = [
   {
-    weapon: "/../public/weapons/chamberOpen.png"
+    weapon: "/../public/weapons/chamberOpen.png",
+    body: "/../public/co/cowBody.png",
+    head: "/../public/co/cowHead.png"
   },
   {
     weapon: "/../public/weapons/chamberCoHalf.png"

@@ -13,7 +13,7 @@ import { chba, chco2, chto, ch, cogun, coco2, coto, electric } from '../../data/
 import { getWeapon } from '../../data/selection';
 
 // Animations
-import { shakeAnimation, electricAnimation, breatheAnimation, cutAnimation } from '../../data/animation';
+import { shakeAnimation, electricAnimation, breatheAnimation, cutAnimation, cleaverAnimation } from '../../data/animation';
 import { glowAnimation } from '../../data/animation';
 import { bloodGush, bloodGush2, bloodGushY } from '../../data/animation';
 import { motion } from 'framer-motion';
@@ -173,6 +173,15 @@ const Container = styled.div`
     left: 30px;
     z-index: -1;
   }
+  
+  .coDecap {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    top: 40px;
+    left: 30px;
+    z-index: -1;
+  }
 
   .knife1 {
     position: relative;
@@ -190,6 +199,7 @@ const Container = styled.div`
     top: -10px;
     transform: scaleX(-1) rotate(60deg);
   }
+
   .blood {
     width: 16px;
     height: 16px;
@@ -235,11 +245,40 @@ const Container = styled.div`
     top: -90px;
     background-color: red;
   }
-
   .bloodWrap {
     animation-name: ${bloodGushY};
     animation-duration: 1s;
     animation-iteration-count: infinite;
+  }
+
+  .cleaverBefore {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    top: -320px;
+    left: 160px;
+  }
+  .cleaver {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    top: -320px;
+    left: 160px;
+  }
+
+  .coBody {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    top: 60px;
+    left: 100px;
+  }
+  .coHead {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    top: -180px;
+    left: 30px;
   }
 
   /* Info tiles */
@@ -278,6 +317,28 @@ const Container = styled.div`
     h3 {
       margin: 0;
       color: blue;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+  .ttCont {
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: mistyrose;
+    box-shadow: -3px 0px 0px 0px red;
+
+    h3 {
+      margin: 0;
+      color: red;
       font-size: 32px;
       margin-bottom: 8px;
     }
@@ -342,6 +403,9 @@ const TipCont = styled.div`
   position: relative;  
 `
 const DidCont = styled.div`
+  position: relative;
+`
+const TtCont = styled.div`
   position: relative;
 `
 
@@ -733,5 +797,59 @@ export default function CowIndex() {
       </Container>
       <Continue />
     </div> 
+  } else if (r.asPath === "/cow?page=5") { // Page 5 //
+    return <div>
+      <Container>
+        <Nav />
+        <TtCont as={motion.div} className="ttCont" initial="onLoad" animate="visible" variants={{
+          onLoad: {
+            opacity: 0
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              duration: 1,
+              delay: 0.4
+            }
+          }
+        }}>
+          <h3>Terrible truths</h3>
+          <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">survived decapitation for 18 months.</a></p>
+        </TtCont>
+        <div className="coDecap">
+          <Image src={coto[1].animal} layout="fill" objectFit="contain" />
+        </div>
+        <Hoverwrap>
+          <div className="cleaverBefore hover" onClick={
+            () => {
+              { toc("sounds/toc.mp3") };
+              r.push({
+                query: {
+                  page: Number(page) + 1
+                }
+              })
+            }}>
+            <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
+          </div>
+        </Hoverwrap>
+      </Container>
+    </div>
+  } else if (r.asPath === "/cow?page=6") {
+    return <div>
+      <Container>
+        <Nav />
+        <div className="ttCont">
+          <h3>Terrible truths</h3>
+          <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">survived decapitation for 18 months.</a></p>
+        </div>
+        <div className="coBody">
+          <Image src={coco2[0].body} layout="fill" objectFit="contain" />
+        </div>
+        <div className="coHead">
+          <Image src={coco2[0].head} layout="fill" objectFit="contain" />
+        </div>
+      </Container>
+    </div>
   }
 }
