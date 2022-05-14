@@ -24,9 +24,9 @@ height:100vh;
 width:100vw;
 object-fit:cover;
 `
-const Logo = styled.text`
+const Logo = styled.h1`
 position:relative;
-font: bold 64px Puritan, sans-serif;
+font: bold 64px Gill Sans, sans-serif;
 `
 const Start = styled.button`
 position:relative;

@@ -489,6 +489,22 @@ const WrapGunPage1 = styled.div`
   width: 0;
   top: -110px;
 `
+// Tongs
+const WrapTongpage0 = styled.div`
+  position: relative;
+  width: 0;
+  top: -100px;
+`
+const WrapTongpage1 = styled.div`
+  position: relative;
+  width: 0;
+  top: -180px;
+`
+const WrapTongpage2 = styled.div`
+  position: relative;
+  width: 0;
+  top: -220px;
+`
 
 // Knife and onwards
 const WrapKnifepage3 = styled.div`
@@ -648,6 +664,7 @@ export default function CowIndex() {
           }}>
             <p>Tap glowing red objects to interact with them!</p>
           </TipCont>
+          <WrapTongpage0>
           <div className="coDefaultTong blur">
             <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
           </div>
@@ -664,6 +681,7 @@ export default function CowIndex() {
             <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
           </div>
           </Hoverwrap>
+          </WrapTongpage0>
         </Container>
       </div>
     } else {
@@ -738,6 +756,23 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
+            <DidCont as={motion.div} className="didCont" initial="onLoad" animate="visible" variants={{
+              onLoad: {
+                opacity: 0
+              },
+              visible: {
+                scale: 1,
+                opacity: 1,
+                transition: {
+                  duration: 1,
+                  delay: 0.4
+                }
+              }
+            }}>
+              <h3>Did you know?</h3>
+              <p>The scientific name for a cow is <span className="italic">Bos taurus.</span></p>
+            </DidCont>
+            <WrapTongpage1>
             <div className="coTong2">
               <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
             </div>
@@ -762,6 +797,7 @@ export default function CowIndex() {
             <Electricity3 className='elec3'>
               <Image src={electric[2].bolt} layout="fill" objectFit='contain' />
             </Electricity3>
+            </WrapTongpage1>
           </Container>
         </div>
       }
@@ -819,9 +855,15 @@ export default function CowIndex() {
         return <div>
           <Container>
             <Nav />
+            <div className="didCont">
+              <h3>Did you know?</h3>
+              <p>The scientific name for a cow is <span className="italic">Bos taurus.</span></p>
+            </div>
+            <WrapTongpage2>
             <div className="coStun">
               <Image src={coto[0].animal} layout="fill" objectFit='contain' />
             </div>
+            </WrapTongpage2>
           </Container>
           <Continue />
         </div>

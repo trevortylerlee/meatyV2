@@ -10,7 +10,7 @@ height:100vh;
 width:100vw;
 padding:2rem;
 `
-const Disclaimer = styled.text`
+const Disclaimer = styled.h2`
 font:36px Ubuntu;
 text-align:center;
 margin-bottom:2rem;
