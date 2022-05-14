@@ -65,6 +65,7 @@ export default function Continue() {
           {play("/sounds/ping.mp3")};
           r.push("/weapons");
       }}>Continue ➜</button>
+
     </ButtonCont>
   } else if (r.asPath === "/weapons") {
       if (a === "Chicken") {
@@ -120,6 +121,24 @@ export default function Continue() {
         </ButtonCont>
         }
   } else if (r.pathname === "/chicken") {
+      if (r.asPath === "/chicken?page=13") {
+        return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+          onLoad: {
+            scale: .4,
+            opacity: 0
+          },
+          visible: {
+            opacity: 1,
+            scale: 1
+          }
+        }}>
+          <button onClick={
+            () => {
+              { play("/sounds/ping.mp3") };
+              r.push("/chicken/end");
+            }}>Continue</button>
+        </ButtonCont>
+      }
     return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
       onLoad: {
         scale: .4,
@@ -183,5 +202,3 @@ export default function Continue() {
     </ButtonCont>
   }
 }
-
-// Function
