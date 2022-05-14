@@ -13,7 +13,7 @@ import { chba, chco2, chto, ch, cogun, coco2, coto, electric } from '../../data/
 import { getWeapon } from '../../data/selection';
 
 // Animations
-import { shakeAnimation, electricAnimation, breatheAnimation, cutAnimation, cleaverAnimation } from '../../data/animation';
+import { shakeAnimation, electricAnimation, breatheAnimation, cutAnimation, cleaverAnimation, headAnimation } from '../../data/animation';
 import { glowAnimation } from '../../data/animation';
 import { bloodGush, bloodGush2, bloodGushY } from '../../data/animation';
 import { motion } from 'framer-motion';
@@ -402,6 +402,11 @@ const Cleaver = styled.div`
   animation-duration: 1.2s;
   animation-fill-mode: forwards;
   position: relative;
+`
+const Head = styled.div`
+  animation-name: ${headAnimation};
+  animation-duration: 2.0s;
+  animation-fill-mode: forwards;
 `
 
 // Wrappers for info containers
@@ -821,7 +826,7 @@ export default function CowIndex() {
           }
         }}>
           <h3>Terrible truths</h3>
-          <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">survived decapitation for 18 months.</a></p>
+          <p>Cow cry by <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">making loud, high-pitched wailing noises.</a> They can also shed tears from their eyes.</p>
         </TtCont>
         <div className="coDecap">
           <Image src={coto[1].animal} layout="fill" objectFit="contain" />
@@ -847,14 +852,16 @@ export default function CowIndex() {
         <Nav />
         <div className="ttCont">
           <h3>Terrible truths</h3>
-          <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">survived decapitation for 18 months.</a></p>
+          <p>Cow cry by <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">making loud, high-pitched wailing noises.</a> They can also shed tears from their eyes.</p>
         </div>
         <div className="coBody">
           <Image src={coco2[0].body} layout="fill" objectFit="contain" />
         </div>
+        <Head>
         <div className="coHead">
           <Image src={coco2[0].head} layout="fill" objectFit="contain" />
         </div>
+        </Head>
         <Cleaver>
           <div className="cleaver">
           <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
