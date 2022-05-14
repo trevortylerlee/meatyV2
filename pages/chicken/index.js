@@ -33,6 +33,7 @@ const Container = styled.div`
   margin: 0 auto;
   outline: 2px red solid;
   overflow: hidden;
+  padding-bottom: 0rem;
   
   .aCont {
     position: relative;
@@ -250,7 +251,7 @@ const Container = styled.div`
     position: relative;
     width: 300px;
     height: 300px;
-    top: 230px;
+    top: 180px;
     left: 60px;
     transform: rotate(-90deg);
   }
@@ -258,7 +259,7 @@ const Container = styled.div`
     position: relative;
     width: 230px;
     height: 230px;
-    top: 260px;
+    top: 240px;
     left: 130px;
     transform: rotate(-90deg);
   }
@@ -266,7 +267,7 @@ const Container = styled.div`
     position: relative;
     width: 112px;
     height: 112px;
-    top: 72px;
+    top: 52px;
     left: 50px;
     transform: rotate(-90deg);
   }
@@ -585,17 +586,17 @@ const Info5 = styled.div`
 //
 const Wrapper = styled.div`
   position: relative;
-  top: -20px;
+  top: -100px;
   width: 0;
 `
 const Wrapper2 = styled.div`
   position: relative;
-  top: 82px;
+  top: px;
   width: 0;
 `
 const Wrapper3 = styled.div` /* Page 3 */
   position: relative;
-  top: -46px;
+  top: -80px;
   width: 0px;
 `
 const Wrapper4 = styled.div` /* Page 5 */
@@ -603,11 +604,11 @@ const Wrapper4 = styled.div` /* Page 5 */
 `
 const WrapperDecap = styled.div` /* Page 10 */
   position: relative;
-  top: -80px;
+  top: -100px;
 `
 const Wrapper5 = styled.div`
   position: relative;
-  top: 0px;
+  top: -160px;
   width: 0;
 `
 const Wrapper6 = styled.div`
@@ -617,6 +618,11 @@ const Wrapper6 = styled.div`
 const Wrapper7 = styled.div`
   position: relative;
   width: 0;
+`
+const WrapperDisem = styled.div`
+  position: relative;
+  width: 0;
+  top: -60px;
 `
 
 
@@ -1242,7 +1248,7 @@ export default function ChickenIndex() {
       <Container>
         <Nav />
         <Hoverwrap>
-          <Wrapper5 as={motion.div} initial="onLoad" animate="visible" variants={{
+          <WrapperDisem as={motion.div} initial="onLoad" animate="visible" variants={{
             onLoad: {
               scale: .4,
               opacity: 0
@@ -1262,7 +1268,7 @@ export default function ChickenIndex() {
           })}}>
           <Image src={ch[4].disembowel} layout="fill" objectFit='contain' />
         </div>
-        </Wrapper5>
+        </WrapperDisem>
         </Hoverwrap>
       </Container>
     </div>
@@ -1270,6 +1276,7 @@ export default function ChickenIndex() {
     return <div>
       <Container>
         <Nav />
+        <WrapperDisem>
         <div className="chDisembowel">
           <Image src={ch[4].disemboweled} layout="fill" objectFit='contain' />
         </div>
@@ -1298,6 +1305,7 @@ export default function ChickenIndex() {
           <Image src={ch[4].liver} layout="fill" objectFit='contain' />
         </div>
         </Liver>
+        </WrapperDisem>
       </Container>
       <Continue />
     </div>
