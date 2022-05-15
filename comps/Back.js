@@ -3,12 +3,8 @@ import { useRouter } from "next/router";
 import useSound from "use-sound";
 
 const Back = styled.text`
-font-size:1.5rem;
-
-.arrow:hover {
-    color:#871010;
-    cursor:pointer;
-}
+    font-size: 1.5rem;
+    font-weight: bold;
 `
 
 export default function Backk() {

@@ -29,6 +29,15 @@ const NavBar = styled.div`
     margin-top: 2rem;
     cursor: pointer;
   }
+  .back:hover {
+    color: red;
+    transition: 0.2s;
+    text-decoration: underline;
+  }
+  .back:active {
+    position: relative;
+    top: 2px;
+  }
 
   .navCont {
     display: flex;
