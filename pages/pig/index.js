@@ -26,6 +26,7 @@ const Container = styled.div`
   margin: 0 auto;
   outline: 2px red solid;
   overflow: hidden;
+  margin-top: 1rem;
 
   /* Effects */
   .hover:hover {

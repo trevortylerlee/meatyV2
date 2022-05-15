@@ -18,15 +18,15 @@ import { glowAnimation } from '../../data/animation';
 import { bloodGush, bloodGush2, bloodGushY } from '../../data/animation';
 import { intestineAnimation, kidneyAnimation, lungsAnimation, heartAnimation, liverAnimation } from '../../data/animation';
 import { motion } from 'framer-motion';
-import Backk from '../../comps/Back';
 
 // Styled components
 const Container = styled.div`
   widtH: 400px;
   height: 80vh;
   margin: 0 auto;
-  /* outline: 2px red solid; */
+  outline: 2px red solid;
   overflow: hidden;
+  margin-top: 1rem;
 
   .hover:hover {
     filter: drop-shadow(4px 4px 8px lime);

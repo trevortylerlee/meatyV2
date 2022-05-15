@@ -10,7 +10,7 @@ const ButtonCont = styled.div`
   place-content: center;
   width: 400px;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   z-index: 9999;
 
   button {

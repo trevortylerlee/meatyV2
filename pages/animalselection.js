@@ -9,6 +9,7 @@ const Container = styled.div`
   widtH: 400px;
   height: 80vh;
   margin: 0 auto;
+  margin-top: 1rem;
   /* outline: 2px red solid; */
 `
 

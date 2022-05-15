@@ -33,9 +33,10 @@ const Container = styled.div`
   width: 400px;
   height: 80vh;
   margin: 0 auto;
-  outline: 2px red solid;
+  /* outline: 2px red solid; */
   overflow: hidden;
   padding-bottom: 0rem;
+  margin-top: 1rem;
   
   .aCont {
     position: relative;

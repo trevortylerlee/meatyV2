@@ -28,6 +28,7 @@ const Container = styled.div`
   margin: 0 auto;
   outline: 2px red solid;
   text-align: center;
+  margin-top: 1rem;
 
   h2 {
     margin: 0;

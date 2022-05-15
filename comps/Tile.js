@@ -34,13 +34,13 @@ const TileContainer = styled.div`
     width: 120px;
     height: 120px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .tile:hover {
     cursor: pointer;
-    color: red;
+    color: green;
     transition: 0.3s;
-    box-shadow: 0 14px 28px rgba(255,0,0,0.25), 0 10px 10px rgba(255,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0,255,0,0.25), 0 10px 10px rgba(255,0,0,0.22);
 
 
     .imgCont {
@@ -80,7 +80,7 @@ const DescCont = styled.div`
 
   h2 {
     margin: 0;
-    margin-top: 16px;
+    margin-top: 0.5rem;
     font-size: 4rem;
     text-align: center;
   }
@@ -91,7 +91,7 @@ const Select = styled.p`
   font-size: 16px;
   font-style: italic;
   opacity: 70%;
-  margin-top: 4rem;
+  margin-top: 3rem;
 `;
 
 // ----------------
