@@ -5,8 +5,13 @@ import Continue from "../comps/Continue";
 import Nav from "../comps/Nav";
 import Tile from "../comps/Tile";
 import { getAnimal, getWeapon } from "../data/selection";
-import Backk from "../comps/Back";
 
+const Container = styled.div`
+  widtH: 400px;
+  height: 80vh;
+  margin: 0 auto;
+  /* outline: 2px red solid; */
+`
 
 export default function WeaponsPage() {
 
@@ -15,9 +20,10 @@ export default function WeaponsPage() {
   let w = getWeapon();
 
   return <div>
-    <Backk />
-    <Nav />
-    <Tile />
-    <Continue />
+    <Container>
+      <Nav />
+      <Tile />
+      <Continue />
+    </Container>
   </div>
 }

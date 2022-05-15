@@ -64,7 +64,7 @@ export default function Continue() {
         () => {
           {play("/sounds/ping.mp3")};
           r.push("/weapons");
-      }}>Continue ➜</button>
+        }}>Continue →</button>
 
     </ButtonCont>
   } else if (r.asPath === "/weapons") {
@@ -83,7 +83,7 @@ export default function Continue() {
             () => {
               {play("/sounds/ping.mp3")};
               r.push("/chicken");
-          }}>Continue ➜</button>
+            }}>Continue →</button>
         </ButtonCont>
       } else if (a === "Cow") {
         return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
@@ -100,7 +100,7 @@ export default function Continue() {
               () => {
                 {play("/sounds/ping.mp3")};
                 r.push("/cow")
-            }}>Continue ➜</button>
+            }}>Continue →</button>
           </ButtonCont>
       } else {
         return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
@@ -117,7 +117,7 @@ export default function Continue() {
             () => {
               { play("/sounds/ping.mp3") };
               r.push("pig")
-          }}>Continue ➜</button>
+            }}>Continue →</button>
         </ButtonCont>
         }
   } else if (r.pathname === "/chicken") {
@@ -136,7 +136,7 @@ export default function Continue() {
             () => {
               { play("/sounds/ping.mp3") };
               r.push("/chicken/end");
-            }}>Continue</button>
+            }}>Continue →</button>
         </ButtonCont>
       } else {
         return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
@@ -157,7 +157,7 @@ export default function Continue() {
                   page: Number(page) + 1
                 }
               })
-            }}>Continue ➜</button>
+            }}>Continue →</button>
         </ButtonCont>
       }
   } else if (r.pathname === "/cow") {
@@ -176,7 +176,7 @@ export default function Continue() {
             () => {
               { play("/sounds/ping.mp3") };
               r.push("/cow/end");
-            }}>Continue</button>
+            }}>Continue →</button>
         </ButtonCont>
       }
       else {
@@ -198,7 +198,7 @@ export default function Continue() {
                   page: Number(page) + 1
                 }
               })
-            }}>Continue ➜</button>
+            }}>Continue →</button>
         </ButtonCont>
       }
   } else if (r.pathname === "/pig") {
@@ -220,7 +220,7 @@ export default function Continue() {
             page: Number(page) + 1
           }
         })
-      }}>Continue ➜</button>
+        }}>Continue →</button>
     </ButtonCont>
   }
 }

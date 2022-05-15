@@ -1,9 +1,7 @@
-import Image from "next/image";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import useSound from "use-sound";
-
-import { getAnimal, misc } from "../data/selection";
+import Backk from "./Back";
 
 const NavBar = styled.div`
   width: 100%;
@@ -26,6 +24,21 @@ const NavBar = styled.div`
     background-image: url("../misc/logoColor.png");
     background-size: 50px 50px;
   }
+
+  .back {
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+
+  .navCont {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .col {
+    flex: 1 0 18%;
+  }
 `
 
 export default function Nav() {
@@ -38,12 +51,23 @@ export default function Nav() {
   }
 
   return <NavBar>
+  <div className="navCont">
+  <div className="col">
+    <span className="back">
+      <Backk />
+    </span>
+  </div>
+  <div className="col"></div>
+  <div className="col">
     <div className="logo" onClick={
       () => {
         {toc("sounds/toc.mp3")};
         resetAnimal()
     }}>
-    {/* <Image src={misc[0].logo} layout="fill" objectFit="contain" /> */}
     </div>
+  </div>
+  <div className="col"></div>
+  <div className="col"></div>
+  </div>
   </NavBar>
 }

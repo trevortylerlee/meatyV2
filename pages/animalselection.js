@@ -6,25 +6,19 @@ import Tile from '../comps/Tile';
 
 // STYLED COMPONENTS
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background-color: red;
-  background-image: url("/misc/barn2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  widtH: 400px;
+  height: 80vh;
+  margin: 0 auto;
+  /* outline: 2px red solid; */
 `
 
 // PAGE CONTENT STARTS BELOW
 export default function Home() {
 
   return <div>
-    {/* <Container> */}
+    <Container>
       <Nav />
       <Tile />
-    {/* </Container> */}
+    </Container>
   </div>
 }

@@ -3,11 +3,7 @@ import { useRouter } from "next/router";
 import useSound from "use-sound";
 
 const Back = styled.text`
-position:relative;
-transform:scaleX(-1);
-font-size:40px;
-left:5rem;
-top:1rem;
+font-size:1.5rem;
 
 .arrow:hover {
     color:#871010;
@@ -28,6 +24,6 @@ export default function Backk() {
             () => {
             {toc("sounds/toc.mp3")};
                 goBack()
-        }}>➜</Back>
+            }}>←</Back>
     </div>
 }
