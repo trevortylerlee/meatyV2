@@ -1,6 +1,6 @@
-import { ST } from 'next/dist/shared/lib/utils';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
+import useSound from 'use-sound';
 
 const Cont = styled.div`
 display:flex;
@@ -42,16 +42,19 @@ font:20px Ubuntu;
 
 export default function(){
     const r = useRouter();
+    const [farm] = useSound("/sounds/farm.mp3");
     
     if(r.pathname === "/"){
     return <Cont>
     <ContentCont>
         <Logo>MEATY</Logo>
         <Start onClick={
-            ()=> r.push({
+            ()=> {
+                {farm("/sounds/farm.mp3")};
+                r.push({
                 pathname:"/disclaimer",
             })
-        }>Start</Start>
+        }}>Start</Start>
     </ContentCont>
         <Splash src='/misc/splash.svg'></Splash>
     </Cont>

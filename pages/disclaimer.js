@@ -1,5 +1,6 @@
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
+import useSound from 'use-sound';
 
 const Cont = styled.div`
 display:flex;
@@ -27,11 +28,13 @@ border-radius:4px;
 
 export default function(){
     const r = useRouter();
+    const [farm] = useSound("/sounds/farm.mp3");
 
     return <Cont>
         <Disclaimer>The following content contains material that some  people may find upsetting.</Disclaimer>
         <Button onClick={
-            ()=> r.push({
+            ()=> 
+                r.push({
                 pathname:"/animalselection",
             })
         }>I understand and wish to proceed</Button>

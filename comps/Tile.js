@@ -7,7 +7,6 @@ import useSound from "use-sound";
 
 // My components
 import Continue from "./Continue";
-import Back from "./Back";
 
 // Data
 import { animals, changeAnimal, changeWeapon, chWeapons, copiWeapons, getAnimal, getWeapon } from '../data/selection';

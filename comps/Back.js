@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 import useSound from "use-sound";
 
-const Back = styled.text`
+const Back = styled.p`
     font-size: 1.5rem;
     font-weight: bold;
 `

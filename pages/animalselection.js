@@ -18,7 +18,7 @@ export default function Home() {
 
   return <div>
     <Container>
-      <Nav />
+      <Nav/>
       <Tile />
     </Container>
   </div>
