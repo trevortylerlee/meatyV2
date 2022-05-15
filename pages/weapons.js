@@ -5,6 +5,8 @@ import Continue from "../comps/Continue";
 import Nav from "../comps/Nav";
 import Tile from "../comps/Tile";
 import { getAnimal, getWeapon } from "../data/selection";
+import Backk from "../comps/Back";
+
 
 export default function WeaponsPage() {
 
@@ -13,6 +15,7 @@ export default function WeaponsPage() {
   let w = getWeapon();
 
   return <div>
+    <Backk />
     <Nav />
     <Tile />
     <Continue />

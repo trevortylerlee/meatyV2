@@ -18,6 +18,7 @@ import { glowAnimation } from '../../data/animation';
 import { bloodGush, bloodGush2, bloodGushY } from '../../data/animation';
 import { intestineAnimation, kidneyAnimation, lungsAnimation, heartAnimation, liverAnimation } from '../../data/animation';
 import { motion } from 'framer-motion';
+import Backk from '../../comps/Back';
 
 // Styled components
 const Container = styled.div`
@@ -564,6 +565,8 @@ export default function CowIndex() {
   const [electricity] = useSound("/sounds/electricity.mp3");
   const [reload] = useSound("/sounds/reload.mp3");
   const [wet] = useSound("/sounds/wet.mp3");
+  const [knife] = useSound("/sounds/knife.mp3");
+  const [sharp] = useSound("/sounds/sharp.mp3");
 
   if (page === undefined) {
     page = 0;
@@ -573,6 +576,7 @@ export default function CowIndex() {
     if (w === "CO2") {
       return <div>
         <Container>
+        
           <Nav />
           <TipCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
             onLoad: {
@@ -611,6 +615,7 @@ export default function CowIndex() {
     } else if (w === "Gun") {
       return <div>
         <Container>
+        
           <Nav />
           <TipCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
             onLoad: {
@@ -649,6 +654,7 @@ export default function CowIndex() {
     } else if (w === "Tongs") {
       return <div>
         <Container>
+        
           <Nav />
           <TipCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
             onLoad: {
@@ -696,6 +702,7 @@ export default function CowIndex() {
       if (w === "CO2") {
         return <div>
           <Container>
+          
             <Nav />
             <Hoverwrap>
             <div className="wContCO2Half hover" onClick={
@@ -714,6 +721,7 @@ export default function CowIndex() {
       } else if (w === "Gun") {
         return <div>
           <Container>
+          
             <Nav />
             <DidCont as={motion.div} className="didCont" initial="onLoad" animate="visible" variants={{
               onLoad: {
@@ -755,6 +763,7 @@ export default function CowIndex() {
       } else {
         return <div>
           <Container>
+          
             <Nav />
             <DidCont as={motion.div} className="didCont" initial="onLoad" animate="visible" variants={{
               onLoad: {
@@ -805,6 +814,7 @@ export default function CowIndex() {
       if (w === "CO2") {
         return <div>
           <Container>
+          
             <Nav />
             <DidCont as={motion.div} className="didCont" initial="onLoad" animate="visible" variants={{
               onLoad: {
@@ -838,6 +848,7 @@ export default function CowIndex() {
       } else if (w === "Gun") {
         return <div>
           <Container>
+          
             <Nav />
             <div className="didCont">
               <h3>Did you know?</h3>
@@ -854,6 +865,7 @@ export default function CowIndex() {
       } else {
         return <div>
           <Container>
+          
             <Nav />
             <div className="didCont">
               <h3>Did you know?</h3>
@@ -871,6 +883,7 @@ export default function CowIndex() {
   } else if (r.asPath === "/cow?page=3") { // PAGE 3 //
       return <div>
         <Container>
+        
           <Nav />
           <WrapKnifepage3>
           <div className="coStun">
@@ -881,6 +894,7 @@ export default function CowIndex() {
             <div className="knife1 hover" onClick={
               () => {
                 { toc("/sounds/toc.mp3") };
+                { knife("/sounds/knife.mp3")};
                 r.push({
                 query: {
                   page: Number(page) + 1
@@ -896,6 +910,7 @@ export default function CowIndex() {
   } else if (r.asPath === "/cow?page=4") { // Page 4 //
     return <div>
         <Container>
+        
         <Nav />
         <DidCont as={motion.div} className="didCont" initial="onLoad" animate="visible" variants={{
           onLoad: {
@@ -935,6 +950,7 @@ export default function CowIndex() {
   } else if (r.asPath === "/cow?page=5") { // Page 5 Decapitate //
     return <div>
       <Container>
+      
         <Nav />
         <TtCont as={motion.div} className="ttCont" initial="onLoad" animate="visible" variants={{
           onLoad: {
@@ -958,7 +974,7 @@ export default function CowIndex() {
         <Hoverwrap>
           <div className="cleaverBefore hover" onClick={
             () => {
-              { toc("sounds/toc.mp3") };
+              {sharp("sounds/sharp.mp3")};
               r.push({
                 query: {
                   page: Number(page) + 1
@@ -973,6 +989,7 @@ export default function CowIndex() {
   } else if (r.asPath === "/cow?page=6") { // Page 6 //
     return <div>
       <Container>
+      
         <Nav />
         <div className="ttCont">
           <h3>Terrible truths</h3>
@@ -997,6 +1014,7 @@ export default function CowIndex() {
   } else if (r.asPath === "/cow?page=7") { // Page 7: Disembowel //
     return <div>
       <Container>
+      
         <Nav />
         <Hoverwrap>
           <div className="coDisembowel hover" onClick={
@@ -1071,6 +1089,7 @@ export default function CowIndex() {
   } else if (r.asPath === "/cow?page=8") { // Page 8 //
     return <div>
       <Container>
+      
         <Nav />
         <div className="coDisembowel">
           <Image src={coco2[0].disembowel} layout="fill" objectFit='contain' />
