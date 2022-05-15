@@ -7,6 +7,7 @@ import useSound from 'use-sound';
 
 import Continue from '../../comps/Continue';
 import Nav from "../../comps/Nav"
+import Backk from '../../comps/Back';
 
 // Import data
 import { chba, chco2, chto, ch, feathers, electric } from '../../data/selection';
@@ -24,6 +25,7 @@ import { cleaverAnimation, headAnimation } from '../../data/animation';
 import { intestineAnimation, kidneyAnimation, lungsAnimation, heartAnimation, liverAnimation } from '../../data/animation';
 import { electricAnimation } from '../../data/animation';
 import { glowAnimation } from '../../data/animation';
+import Back from '../../comps/Back';
 
 // Styled components start here
 
@@ -679,6 +681,7 @@ export default function ChickenIndex() {
       return <div>
         {/* <BgCont>  */}
         <Container>
+        
           <Nav />
           <Info as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
             onLoad: {
@@ -731,6 +734,7 @@ export default function ChickenIndex() {
     } else if (w === "CO2") {
         return <div>
           <Container>
+          
             <Nav />
             <Info as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
               onLoad: {
@@ -779,6 +783,7 @@ export default function ChickenIndex() {
     } else if (w === "Tongs") {
         return <div>
           <Container>
+          
           <Nav />
             <Info as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
               onLoad: {
@@ -835,6 +840,7 @@ export default function ChickenIndex() {
       if (w === "Bath") {
         return <div>
           <Container>
+          
           <Nav />
             <Wrapper2>
             <Chickenbath>
@@ -869,6 +875,7 @@ export default function ChickenIndex() {
       } else if (w === "CO2") {
           return <div>
             <Container>
+            
               <Nav />
               <Info2 as={motion.div} className="infoCont" initial="onLoad" animate="visible" variants={{
                 onLoad: {
@@ -904,6 +911,7 @@ export default function ChickenIndex() {
         } else {
             return <div>
               <Container>
+              
                 <Nav />
                 <Info2 as={motion.div} className="infoCont" initial="onLoad" animate="visible" variants={{
                   onLoad: {
@@ -950,6 +958,7 @@ export default function ChickenIndex() {
         if (w === "Bath") {
           return <div>
             <Container>
+            
               <Nav />
               <Info2 as={motion.div} className="infoCont" initial="onLoad" animate="visible" variants={{
                 onLoad: {
@@ -982,6 +991,7 @@ export default function ChickenIndex() {
         } else if (w === "CO2") {
           return <div>
             <Container>
+            
               <Nav />
               <div className="infoCont">
                 <h3>Did you know?</h3>
@@ -998,6 +1008,7 @@ export default function ChickenIndex() {
         } else {
             return <div>
               <Container>
+              
                 <Nav />
                 <div className="infoCont">
                   <h3>Did you know?</h3>
@@ -1013,6 +1024,7 @@ export default function ChickenIndex() {
     } else if (r.asPath === "/chicken?page=3") { // PAGE 3 //
        return <div>
         <Container>
+        
           <Nav />
            <Wrapperidk as={motion.div} initial="onLoad" animate="visible" variants={{
              onLoad: {
@@ -1048,6 +1060,7 @@ export default function ChickenIndex() {
     } else if (r.asPath === "/chicken?page=4") { // Page 4 //
         return <div>
           <Container>
+          
             <Nav />
             <Info3 as={motion.div} className="infoCont" initial="onLoad" animate="visible" variants={{
               onLoad: {
@@ -1087,6 +1100,7 @@ export default function ChickenIndex() {
     } else if (r.asPath === "/chicken?page=5") { // Page 5 //
         return <div>
           <Container>
+          
             <Nav />
             <Hoverwrap>
               <Wrapper4 as={motion.div} initial="onLoad" animate="visible" variants={{
@@ -1115,6 +1129,7 @@ export default function ChickenIndex() {
     } else if (r.asPath === "/chicken?page=6") { // Page 6 //
     return <div>
       <Container>
+      
         <Nav />
         <Hoverwrap>
         <div className="chPage6 hover" onClick={
@@ -1138,6 +1153,7 @@ export default function ChickenIndex() {
     } else if (r.asPath === "/chicken?page=7") { // Page 7 //
       return <div>
         <Container>
+        
           <Nav />
           <Hoverwrap>
           <div className="chPage6 hover" onClick={
@@ -1161,6 +1177,7 @@ export default function ChickenIndex() {
   } else if (r.asPath === "/chicken?page=8") { // Page 8 //
     return <div>
       <Container>
+      
         <Nav />
         <Hoverwrap>
         <div className="chPage6 hover" onClick={
@@ -1184,6 +1201,7 @@ export default function ChickenIndex() {
   } else if (r.asPath === "/chicken?page=9") { // Page 9 //
     return <div>
       <Container>
+      
         <Nav />
         <div className="chPage6">
           <Image src={feathers[4].chicken} layout="fill" objectFit='contain' />
@@ -1199,6 +1217,7 @@ export default function ChickenIndex() {
   } else if (r.asPath === "/chicken?page=10") { // Page 10: Decapitate
     return <div>
       <Container>
+      
         <Nav />
           <Info4 as={motion.div} className="ttCont" initial="onLoad" animate="visible" variants={{
             onLoad: {
@@ -1251,6 +1270,7 @@ export default function ChickenIndex() {
           { sharp("sounds/sharp.mp3") };
         }
       }>
+        
         <Nav />
         <div className="ttCont">
           <h3>Terrible truths</h3>
@@ -1277,6 +1297,7 @@ export default function ChickenIndex() {
   } else if (r.asPath === "/chicken?page=12") { // Page 12 //
     return <div>
       <Container>
+      
         <Nav />
         <Hoverwrap>
           <WrapperDisem as={motion.div} initial="onLoad" animate="visible" variants={{
@@ -1306,6 +1327,7 @@ export default function ChickenIndex() {
   } else if (r.asPath === "/chicken?page=13") { // Page 13 //
     return <div>
       <Container>
+      
         <Nav />
         <WrapperDisem>
         <div className="chDisembowel">
