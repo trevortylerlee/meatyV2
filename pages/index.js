@@ -46,7 +46,7 @@ export default function(){
     if(r.pathname === "/"){
     return <Cont>
     <ContentCont>
-        <Logo>Meaty</Logo>
+        <Logo>MEATY</Logo>
         <Start onClick={
             ()=> r.push({
                 pathname:"/disclaimer",

@@ -218,3 +218,15 @@ export const electric = [
     bolt: "/../public/weapons/electric4.png"
   },
 ]
+
+// ---------------------
+// Array for pig paths
+// ---------------------
+
+export const pico2 = [
+  {
+    pig: "/../public/pi/default.png",
+    half: "/../public/pi/co2Half.png",
+    inside: "/../public/co2Inside.png"
+  }
+]
