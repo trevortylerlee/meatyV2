@@ -52,6 +52,11 @@ const Container = styled.div`
     animation: glowAnimation 3s infinite;
   }
 
+  .button {
+    position: relative;
+    top: 120px;
+  }
+
   .hover:hover {
     filter: drop-shadow(2px 2px 8px lime);
     cursor: pointer;
@@ -79,6 +84,27 @@ const Head = styled.div`
   }
 `
 
+const Restart = styled.button`
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid red;
+  background: white;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background: red;
+    color: white;
+    transition: 0.3s;
+    text-decoration: underline;
+  }
+
+  &:active {
+    top: 2px;
+  }
+`
 
 
 
@@ -105,6 +131,11 @@ export default function End() {
       <Nav />
       <h2>THANKS FOR PLAYING</h2>
       <h1>MEATY</h1>
+      <div className="button">
+      <Restart onClick={
+        () => r.push("/animalselection")
+      }>Restart</Restart>
+      </div>
       <Head>
         <div className="head1 hover" onClick={handleClick}>
           <Image src={coco2[0].head} layout="fill" objectFit="contain" />

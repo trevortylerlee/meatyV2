@@ -44,6 +44,11 @@ const Container = styled.div`
     font-size: 5rem;
   }
 
+  .button {
+    position: relative;
+    top: 120px;
+  }
+
   .head1 {
     position: relative;
     width: 44px;
@@ -82,6 +87,30 @@ const Head = styled.div`
   }
 `
 
+const Restart = styled.button`
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 2px solid red;
+  background: white;
+  border-radius: 30px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background: red;
+    color: white;
+    transition: 0.3s;
+    text-decoration: underline;
+  }
+
+  &:active {
+    top: 2px;
+  }
+`
+
+
+
 
 
 
@@ -111,6 +140,11 @@ export default function End() {
       <Nav />
       <h2>THANKS FOR PLAYING</h2>
       <h1>MEATY</h1>
+      <div className="button">
+      <Restart onClick={
+        () => r.push("/animalselection")
+      }>Restart</Restart>
+      </div>
       <Head>
       <div className="head1 hover" onClick={handleClick}>
         <Image src={ch[3].head} layout="fill" objectFit="contain" /> 
