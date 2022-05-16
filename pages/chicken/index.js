@@ -447,7 +447,7 @@ const BgCont = styled.div`
   top: 0px;
   left: 0px;
   background-color: red;
-  background-image: url("/misc/barn2.png");
+  background-image: url("/misc/barn.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -680,9 +680,7 @@ export default function ChickenIndex() {
   if (page === 0) { // PAGE 0 //
     if (w === "Bath") {
       return <div>
-        {/* <BgCont>  */}
-        <Container>
-        
+        <Container>        
           <Nav />
           <Info as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
             onLoad: {
@@ -730,7 +728,6 @@ export default function ChickenIndex() {
           </Wrapper>
           </motion.div>
         </Container>
-        {/* </BgCont> */}
       </div>
     } else if (w === "CO2") {
         return <div>
@@ -784,7 +781,6 @@ export default function ChickenIndex() {
     } else if (w === "Tongs") {
         return <div>
           <Container>
-          
           <Nav />
             <Info as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
               onLoad: {

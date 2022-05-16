@@ -1,6 +1,6 @@
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import useSound from 'use-sound';
 
 const Cont = styled.div`
 display:flex;
@@ -9,34 +9,159 @@ align-items:center;
 justify-content:center;
 height:100vh;
 width:100vw;
-padding:2rem;
 `
 const Disclaimer = styled.h2`
-font:36px Ubuntu;
-text-align:center;
-margin-bottom:2rem;
+font-size: 1rem;
+font-weight: normal;
+text-align: left;
+margin: 0;
+margin-top: 1rem;
 `
 const Button = styled.button`
-height:40px;
-width:340px;
-background:#871010;
-color:white;
-font:20px Ubuntu;
-border:none;
-border-radius:4px;
+padding: 0.5rem 1rem;
+color:black;
+background: white;
+border: 3px solid red;
+font-size: 1rem;
+font-weight: bold;
+border-radius:30px;
+margin-top: 2rem;
+cursor: pointer;
+
+&:hover {
+    color: white;
+    background-color: red;
+    transition: 0.3s;
+}
+`
+
+const Splash = styled.img`
+height:100vh;
+width:100vw;
+object-fit:cover;
+`
+
+const ContentCont = styled.div`
+position:absolute;
+display:flex;
+flex-direction:column;
+justify-content:center;
+top:80px;
+height:0vh;
+width:100vw;
+`
+
+const Tile = styled.div`
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 380px;
+    background: rgba(250,250,255,0.9);
+    backdrop-filter: saturate(180%) blur(10px);
+    height: 60vh;
+    margin-top: 400px;
+    border-radius: 10px;
+    min-height: 260px;
+    padding: 2rem;
+    padding-top: 1rem;
+
+    p {
+        font-size: 0.75rem;
+        color: gray;
+        cursor: pointer;
+    }
+    p:hover {
+        text-decoration: underline;
+    }
+`
+const Back = styled.div`
+    position: relative;
+`
+const Butt = styled.div`
+    position: relative;
 `
 
 export default function(){
     const r = useRouter();
-    const [farm] = useSound("/sounds/farm.mp3");
 
     return <Cont>
-        <Disclaimer>The following content contains material that some  people may find upsetting.</Disclaimer>
+        <ContentCont>
+            <Tile as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+                onLoad: {
+                    opacity: 0
+                },
+                visible: {
+                    opacity: 1,
+                    scale: 1,
+                    transition: {
+                        duration: 0.8
+                    }
+                }
+            }}>
+                <Disclaimer as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+                    onLoad: {
+                        opacity: 0
+                    },
+                    visible: {
+                        opacity: 1,
+                        scale: 1,
+                        transition: {
+                            duration: 1.5,
+                            delay: 0.4
+                        }
+                    }
+                }}>MEATY is an interactive web app where players use real-world methods to slaughter livestock.</Disclaimer>
+                <Disclaimer as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+                    onLoad: {
+                        opacity: 0
+                    },
+                    visible: {
+                        opacity: 1,
+                        scale: 1,
+                        transition: {
+                            duration: 1.5,
+                            delay: 3
+                        }
+                    }
+                }}>The following content contains material that some people may find upsetting.</Disclaimer>
+                <Butt as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+                    onLoad: {
+                        opacity: 0
+                    },
+                    visible: {
+                        opacity: 1,
+                        scale: 1,
+                        transition: {
+                            duration: 0.8,
+                            delay: 6
+                        }
+                    }
+                }}>
         <Button onClick={
             ()=> 
                 r.push({
                 pathname:"/animalselection",
             })
         }>I understand and wish to proceed</Button>
+        </Butt>
+                <Back as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+                    onLoad: {
+                        opacity: 0
+                    },
+                    visible: {
+                        opacity: 1,
+                        scale: 1,
+                        transition: {
+                            duration: 0.4,
+                        }
+                    }
+                }}>
+        <p onClick={
+            () => r.push("/")
+        }>Back to title screen</p>
+        </Back>
+        </Tile>
+        </ContentCont>
+        <Splash src='/misc/splash.svg'></Splash>
     </Cont>
 }

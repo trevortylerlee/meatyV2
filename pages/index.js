@@ -110,7 +110,8 @@ export default function(){
                     opacity: 1,
                     scale: 1,
                     transition: {
-                        duration: 0.8
+                        duration: 0.8,
+                        delay: 0.6
                     }
                 }
             }}>
