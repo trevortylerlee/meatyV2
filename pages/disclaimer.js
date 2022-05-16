@@ -21,7 +21,7 @@ const Button = styled.button`
 padding: 0.5rem 1rem;
 color:black;
 background: white;
-border: 3px solid red;
+border: 3px solid green;
 font-size: 1rem;
 font-weight: bold;
 border-radius:30px;
@@ -30,7 +30,7 @@ cursor: pointer;
 
 &:hover {
     color: white;
-    background-color: red;
+    background-color: green;
     transition: 0.3s;
 }
 `
@@ -120,7 +120,7 @@ export default function(){
                         scale: 1,
                         transition: {
                             duration: 1.5,
-                            delay: 3
+                            delay: 2
                         }
                     }
                 }}>The following content contains material that some people may find upsetting.</Disclaimer>
@@ -133,7 +133,7 @@ export default function(){
                         scale: 1,
                         transition: {
                             duration: 0.8,
-                            delay: 6
+                            delay: 4
                         }
                     }
                 }}>

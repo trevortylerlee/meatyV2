@@ -28,6 +28,7 @@ const Container = styled.div`
   margin: 0 auto;
   outline: 2px red solid;
   text-align: center;
+  margin-top: 1rem;
 
   h2 {
     margin: 0;
@@ -60,10 +61,13 @@ const Container = styled.div`
     transform: scale(0.9);
   }
 
-  p {
+  .easter {
     position: relative;
-    top: 58%;
-    font-size: 12px;
+    top: 60%;
+    margin: 0 auto;
+    p {
+      font-size: 12px;
+    }
   }
 `
 
@@ -88,6 +92,9 @@ export default function End() {
 
   const r = useRouter();
 
+  // Sounds
+  const [toc] = useSound("/sounds/toc.mp3");
+
   const sound= "/sounds/chicken.mp3";
   const [playbackRate, setPlaybackRate] = useState(0.75);
   const [play] = useSound(sound, {
@@ -109,7 +116,9 @@ export default function End() {
         <Image src={ch[3].head} layout="fill" objectFit="contain" /> 
       </div>
       </Head>
+      <div className="easter">
       <p>click me!</p>
+      </div>
     </Container>
   </div>
 }
