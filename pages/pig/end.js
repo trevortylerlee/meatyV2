@@ -19,9 +19,6 @@ import { useState } from "react"
 
 
 
-
-
-
 const Container = styled.div`
   width: 400px;
   height: 80vh;

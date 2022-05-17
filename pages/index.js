@@ -111,7 +111,7 @@ export default function(){
                     scale: 1,
                     transition: {
                         duration: 0.8,
-                        delay: 0.6
+                        delay: 0
                     }
                 }
             }}>
@@ -121,12 +121,11 @@ export default function(){
         </div>
         <Logotype>MEATY</Logotype>
         <Start onClick={
-            ()=> {
-                {farm("/sounds/farm.mp3")};
+            ()=>
                 r.push({
                 pathname:"/disclaimer",
             })
-        }}>Start</Start>
+        }>Start</Start>
         <p>Created by Trevor Lee, Ivan Li, and Ivan Tong</p>
 
         </Tile>
