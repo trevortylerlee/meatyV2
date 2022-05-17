@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import useSound from 'use-sound';
 
 const Cont = styled.div`
 display:flex;
@@ -83,6 +84,7 @@ const Butt = styled.div`
 
 export default function(){
     const r = useRouter();
+    const [toc] = useSound("/sounds/toc.mp3");
 
     return <Cont>
         <ContentCont>
@@ -138,11 +140,12 @@ export default function(){
                     }
                 }}>
         <Button onClick={
-            ()=> 
+            ()=> {
+                {toc ("/sounds/toc.mp3")};
                 r.push({
                 pathname:"/animalselection",
             })
-        }>I understand and wish to proceed</Button>
+        }}>I understand and wish to proceed</Button>
         </Butt>
                 <Back as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
                     onLoad: {
