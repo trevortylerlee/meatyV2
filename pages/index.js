@@ -60,7 +60,7 @@ const Tile = styled.div`
     margin: 0 auto;
     width: 380px;
     background: rgba(250,250,255,0.9);
-    backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(20px);
     height: 60vh;
     margin-top: 400px;
     border-radius: 10px;
@@ -98,6 +98,7 @@ const Tile = styled.div`
 export default function(){
     const r = useRouter();
     const [farm] = useSound("/sounds/farm.mp3");
+    const [toc] = useSound("/sounds/toc.mp3");
     
     if(r.pathname === "/"){
     return <Cont>
@@ -111,7 +112,7 @@ export default function(){
                     scale: 1,
                     transition: {
                         duration: 0.8,
-                        delay: 0
+                        delay: 1
                     }
                 }
             }}>
@@ -121,11 +122,12 @@ export default function(){
         </div>
         <Logotype>MEATY</Logotype>
         <Start onClick={
-            ()=>
+            ()=>{
+                {toc ("/sounds/toc.mp3")};
                 r.push({
                 pathname:"/disclaimer",
             })
-        }>Start</Start>
+        }}>Start</Start>
         <p>Created by Trevor Lee, Ivan Li, and Ivan Tong</p>
 
         </Tile>
