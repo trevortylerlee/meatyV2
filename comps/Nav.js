@@ -52,7 +52,7 @@ const NavBar = styled.div`
 export default function Nav() {
 
   const r = useRouter();
-  const [toc] = useSound("sounds/toc.mp3");
+  const [toc] = useSound("/sounds/toc.mp3");
 
   function resetAnimal() {
     r.push("/")
@@ -69,7 +69,7 @@ export default function Nav() {
   <div className="col">
     <div className="logo" onClick={
       () => {
-        {toc("sounds/toc.mp3")};
+        {toc("/sounds/toc.mp3")};
         resetAnimal()
     }}>
     </div>
