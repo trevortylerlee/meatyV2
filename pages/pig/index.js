@@ -64,7 +64,7 @@ const Container = styled.div`
     position: relative;
     width: 300px;
     height: 300px;
-    top: 180px;
+    top: 100px;
     left: 50px;
   }
 
@@ -165,8 +165,9 @@ const TtCont = styled.div`
 // Wrappers for pig + weapons
 const WrapCO2page0 = styled.div`
   position: relative;
-  top: -120px;
+  top: -160px;
 `
+//vercel test
 
 
 
@@ -196,7 +197,6 @@ export default function PigIndex() {
   
   console.log("page");
   if (page === 0) { // Page 0 //
-    console.log("HERE");
     if (w === "CO2") {
       return <div>
         <Container>
@@ -220,7 +220,7 @@ export default function PigIndex() {
             <div className="aContCO2 hover" onClick={
               () => {
                 toc("/sounds.toc.mp3");
-                //PigIndex("/sounds/PigIndex.mp3");
+                {pig("/sounds/PigIndex.mp3")};
                 r.push({
                   query: {
                     page: Number(page) + 1

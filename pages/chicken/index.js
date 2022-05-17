@@ -7,7 +7,6 @@ import useSound from 'use-sound';
 
 import Continue from '../../comps/Continue';
 import Nav from "../../comps/Nav"
-import Backk from '../../comps/Back';
 
 // Import data
 import { chba, chco2, chto, ch, feathers, electric } from '../../data/selection';
