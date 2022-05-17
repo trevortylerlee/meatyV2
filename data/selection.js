@@ -230,3 +230,9 @@ export const pico2 = [
     inside: "/../public/co2Inside.png"
   }
 ]
+
+export const pi = [
+  {
+    head: "/../public/pi/head.png",
+  }
+]

@@ -10,7 +10,7 @@ import styled from "styled-components"
 import Nav from "../../comps/Nav"
 
 // Data
-import {ch} from "../../data/selection"
+import { pi } from "../../data/selection"
 
 // Animation
 import { glowAnimation } from "../../data/animation"
@@ -44,17 +44,18 @@ const Container = styled.div`
     font-size: 5rem;
   }
 
-  .button {
-    position: relative;
-    top: 120px;
-  }
-
   .head1 {
     position: relative;
     width: 44px;
     height: 44px;
-    left: 46%;
+    left: 44%;
+    top: -100px;
     animation: glowAnimation 3s infinite;
+  }
+
+  .button {
+    position: relative;
+    top: 120px;
   }
 
   .hover:hover {
@@ -68,8 +69,9 @@ const Container = styled.div`
 
   .easter {
     position: relative;
-    top: 45%;
+    top: 42%;
     margin: 0 auto;
+
     p {
       font-size: 12px;
     }
@@ -81,7 +83,7 @@ const Head = styled.div`
   animation-duration: 3s;
   animation-iteration-count: infinite;
   position: relative;
-  top: 45%;
+  top: 60%;
   &:hover {
     animation-play-state: paused;
   }
@@ -109,22 +111,11 @@ const Restart = styled.button`
   }
 `
 
-
-
-
-
-
-
-
-
 export default function End() {
 
   const r = useRouter();
 
-  // Sounds
-  const [toc] = useSound("/sounds/toc.mp3");
-
-  const sound= "/sounds/chicken.mp3";
+  const sound = "/sounds/pig.mp3";
   const [playbackRate, setPlaybackRate] = useState(0.75);
   const [play] = useSound(sound, {
     playbackRate,
@@ -132,7 +123,7 @@ export default function End() {
   });
   const handleClick = () => {
     setPlaybackRate(playbackRate + 0.1);
-    {play("/sounds/chicken.mp3")};
+    { play("/sounds/pig.mp3") };
   }
 
   return <div>
@@ -141,14 +132,14 @@ export default function End() {
       <h2>THANKS FOR PLAYING</h2>
       <h1>MEATY</h1>
       <div className="button">
-      <Restart onClick={
-        () => r.push("/animalselection")
-      }>Restart</Restart>
+        <Restart onClick={
+          () => r.push("/animalselection")
+        }>Restart</Restart>
       </div>
       <Head>
-      <div className="head1 hover" onClick={handleClick}>
-        <Image src={ch[3].head} layout="fill" objectFit="contain" /> 
-      </div>
+        <div className="head1 hover" onClick={handleClick}>
+          <Image src={pi[0].head} layout="fill" objectFit="contain" />
+        </div>
       </Head>
       <div className="easter">
       <p>click me!</p>

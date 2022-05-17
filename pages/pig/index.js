@@ -180,7 +180,7 @@ export default function PigIndex() {
   const r = useRouter();
   let w = getWeapon();
   let { page } = r.query;
-
+  console.log("page",page);
   // Sounds
   const [pig] = useSound("/sounds/pig.mp3");
   const [toc] = useSound("/sounds/toc.mp3");
@@ -194,7 +194,9 @@ export default function PigIndex() {
     page = 0;
   } 
   
+  console.log("page");
   if (page === 0) { // Page 0 //
+    console.log("HERE");
     if (w === "CO2") {
       return <div>
         <Container>
@@ -217,8 +219,8 @@ export default function PigIndex() {
           <Hoverwrap>
             <div className="aContCO2 hover" onClick={
               () => {
-                { toc("/sounds.toc.mp3") };
-                { PigIndex("/sounds/PigIndex.mp3") };
+                toc("/sounds.toc.mp3");
+                //PigIndex("/sounds/PigIndex.mp3");
                 r.push({
                   query: {
                     page: Number(page) + 1

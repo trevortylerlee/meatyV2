@@ -8,7 +8,7 @@ const Back = styled.p`
 `
 
 export default function Backk() {
-    const [toc] = useSound("sounds/toc.mp3");
+    const [toc] = useSound("/sounds/toc.mp3");
     const r = useRouter();
 
     function goBack(){

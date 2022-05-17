@@ -48,8 +48,18 @@ const Container = styled.div`
     position: relative;
     width: 44px;
     height: 44px;
-    left: 46%;
+    left: 45%;
     animation: glowAnimation 3s infinite;
+  }
+
+  .easter {
+    position: relative;
+    top: 42%;
+    margin: 0 auto;
+
+    p {
+      font-size: 12px;
+    }
   }
 
   .button {
@@ -78,7 +88,7 @@ const Head = styled.div`
   animation-duration: 3s;
   animation-iteration-count: infinite;
   position: relative;
-  top: 60%;
+  top: 43%;
   &:hover {
     animation-play-state: paused;
   }
@@ -141,7 +151,9 @@ export default function End() {
           <Image src={coco2[0].head} layout="fill" objectFit="contain" />
         </div>
       </Head>
+      <div className="easter">
       <p>click me!</p>
+      </div>
     </Container>
   </div>
 }
