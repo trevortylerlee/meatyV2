@@ -62,9 +62,16 @@ const Container = styled.div`
   }
   .wContCO2Half {
     position: relative;
-    width: 300px;
-    height: 300px;
-    top: 100px;
+    width: 260px;
+    height: 260px;
+    top: 20px;
+    left: 50px;
+  }
+  .wContCO2Inside {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top: 10px;
     left: 50px;
   }
 
@@ -151,6 +158,13 @@ const Hoverwrap = styled.div`
   }
 `
 
+const Co2cont = styled.div`
+  position: relative;
+  animation-name: ${shakeAnimation};
+  animation-duration: 0.82s;
+  animation-iteration-count: infinite;
+`
+
 // Wrappers for info containers
 const TipCont = styled.div`
   position: relative;  
@@ -167,7 +181,6 @@ const WrapCO2page0 = styled.div`
   position: relative;
   top: -160px;
 `
-//vercel test
 
 
 
@@ -181,7 +194,7 @@ export default function PigIndex() {
   const r = useRouter();
   let w = getWeapon();
   let { page } = r.query;
-  console.log("page",page);
+
   // Sounds
   const [pig] = useSound("/sounds/pig.mp3");
   const [toc] = useSound("/sounds/toc.mp3");
@@ -263,10 +276,27 @@ export default function PigIndex() {
       return <div>
         <Container>
           <Nav />
+          <DidCont as={motion.div} className="didCont" initial="onLoad" animate="visible" variants={{
+            onLoad: {
+              opacity: 0
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                duration: 1,
+                delay: 0.4
+              }
+            }
+          }}>
+            <h3>Did you know?</h3>
+            <p>Due to a lack of sweat glands, pigs wallow in mud to <a href="https://en.wikipedia.org/wiki/Pig#Behavior" target="_blank">control their body temperature. </a></p>
+          </DidCont>
           <Hoverwrap>
             <div className="wContCO2Half hover" onClick={
               () => {
                 { gas("/sounds/gas.mp3") };
+                {pig("/sounds/pig.mp3")};
                 r.push({
                   query: {
                     page: Number(page) + 1
@@ -293,5 +323,28 @@ export default function PigIndex() {
         </Container>
       </div>
     }
+  } else if (page === "2") { // Page 2 //
+      if (w === "CO2") {
+        return <div>
+          <Container>
+            <Nav />
+              <div className="didCont" >
+              <h3>Did you know?</h3>
+              <p>Due to a lack of sweat glands, pigs wallow in mud to <a href="https://en.wikipedia.org/wiki/Pig#Behavior" target="_blank">control their body temperature. </a></p>
+              </div>
+            <Co2cont>
+              <div className="wContCO2Inside" onClick={
+                () => r.push({
+                  query: {
+                    page: Number(page) + 1
+                  }
+                })}>
+                <Image src={pico2[0].inside} layout="fill" objectFit='contain' />
+              </div>
+            </Co2cont>
+          </Container>
+          <Continue />
+        </div>
+      }
   }
 }

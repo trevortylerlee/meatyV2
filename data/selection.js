@@ -227,7 +227,7 @@ export const pico2 = [
   {
     pig: "/../public/pi/default.png",
     half: "/../public/pi/co2Half.png",
-    inside: "/../public/co2Inside.png"
+    inside: "/../public/pi/co2Inside.png"
   }
 ]
 
