@@ -993,7 +993,7 @@ export default function CowIndex() {
         <Nav />
         <div className="ttCont">
           <h3>Terrible truths</h3>
-          <p>Cow cry by <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">making loud, high-pitched wailing noises.</a> They can also shed tears from their eyes.</p>
+          <p>Cow cry by <a href="https://en.wikipedia.org/wiki/Cattle" target="blank">making loud, high-pitched wailing noises.</a> They can also shed tears from their eyes.</p>
         </div>
         <div className="coBody">
           <Image src={coco2[0].body} layout="fill" objectFit="contain" />
