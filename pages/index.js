@@ -30,6 +30,7 @@ position:relative;
 font: bold 48px Gill Sans, sans-serif;
 top: -16px;
 margin: 0;
+color:#871010;
 `
 const Start = styled.button`
 position:relative;
@@ -76,7 +77,7 @@ const Tile = styled.div`
         display: flex;
     }
     .logo {
-        background-image: url("/misc/logo.png");
+        background-image: url("/misc/logoColor.png");
         background-size: 110px;
         background-repeat: no-repeat;
         width: 120px;
