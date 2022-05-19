@@ -783,7 +783,7 @@ export default function CowIndex() {
             </DidCont>
             <WrapTongpage1>
             <div className="coTong2">
-              <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
+              <Image src={coto[0].skeleton} layout="fill" objectFit='contain' />
             </div>
             <Hoverwrap>
             <div className="tongsCont2 hover" onClick={
