@@ -231,8 +231,43 @@ export const pico2 = [
   }
 ]
 
+export const pigun = [
+  {
+    animal: "/../public/pi/front.png",
+    weapon: "/../public/selections/gun.png"
+  },
+  {
+    animal: "/../public/pi/frontStun.png",
+    weapon: "/../public/weapons/gunHand.png"
+  }
+]
+
+export const pito = [
+  {
+    animal: "/../public/pi/stun.png"
+  },
+  {
+    animal: "/../public/pi/slit.png"
+  }
+]
+
 export const pi = [
   {
     head: "/../public/pi/head.png",
+  }
+]
+
+export const pipi2 = [
+  {
+    weapon: "/../public/weapons/chamberOpen.png",
+    body: "/../public/pi/body.png",
+    head: "/../public/pi/Head.png",
+    disembowel: "/../public/pi/disembowel.png"
+  },
+  {
+    weapon: "/../public/weapons/chamberCoHalf.png"
+  },
+  {
+    weapon: "/../public/weapons/chamberCoInside.png"
   }
 ]
