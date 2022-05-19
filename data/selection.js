@@ -193,6 +193,7 @@ export const cogun = [
   {
     animal: "/../public/co/coDefaultStun.png",
     weapon: "/../public/weapons/gunHand.png",
+    shot: "/../public/co/shot.png"
   }
 ]
 
@@ -240,7 +241,8 @@ export const pigun = [
   },
   {
     animal: "/../public/pi/frontStun.png",
-    weapon: "/../public/weapons/gunHand.png"
+    weapon: "/../public/weapons/gunHand.png",
+    shot: "/../public/pi/shot.png"
   }
 ]
 

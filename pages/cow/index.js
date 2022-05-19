@@ -856,7 +856,7 @@ export default function CowIndex() {
             </div>
             <WrapGunPage1>
             <div className="coDefault2">
-              <Image src={cogun[1].animal} layout="fill" objectFit='contain' />
+              <Image src={cogun[1].shot} layout="fill" objectFit='contain' />
             </div>
             </WrapGunPage1>
           </Container>

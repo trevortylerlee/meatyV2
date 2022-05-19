@@ -890,7 +890,7 @@ export default function PigIndex() {
             </div>
             <WrapGunPage1>
             <div className="coDefault2">
-              <Image src={pigun[1].animal} layout="fill" objectFit='contain' />
+              <Image src={pigun[1].shot} layout="fill" objectFit='contain' />
             </div>
             </WrapGunPage1>
           </Container>
