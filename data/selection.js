@@ -111,7 +111,8 @@ export const chco2 = [
 
 export const chto = [
   {
-    weapon: "/../public/weapons/tongs.png"
+    weapon: "/../public/weapons/tongs.png",
+    skeleton: "/../public/ch/skeleton.png"
   },
   {
     animal: "/../public/ch/chDefaultStun.png",
@@ -191,13 +192,14 @@ export const cogun = [
   },
   {
     animal: "/../public/co/coDefaultStun.png",
-    weapon: "/../public/weapons/gunHand.png"
+    weapon: "/../public/weapons/gunHand.png",
   }
 ]
 
 export const coto = [
   {
-    animal: "/../public/co/coSlitStun.png"
+    animal: "/../public/co/coSlitStun.png",
+    skeleton: "/../public/co/skeleton.png"
   },
   {
     animal: "/../public/co/coSlit.png"
@@ -244,7 +246,8 @@ export const pigun = [
 
 export const pito = [
   {
-    animal: "/../public/pi/stun.png"
+    animal: "/../public/pi/stun.png",
+    skeleton: "/../public/pi/skeleton.png"
   },
   {
     animal: "/../public/pi/slit.png"

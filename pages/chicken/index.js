@@ -925,7 +925,7 @@ export default function ChickenIndex() {
                 </Info2>
                 <WrapperTong>
                 <div className="chTongsCont2">
-                  <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+                  <Image src={chto[0].skeleton} layout="fill" objectFit='contain' />
                 </div>
                 <div className="tongsCont2 hover" onClick={
                   () => {

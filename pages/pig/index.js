@@ -829,7 +829,7 @@ export default function PigIndex() {
         </DidCont>
         <WrapTongpage1>
         <div className="piTong2">
-          <Image src={pigun[1].animal} layout="fill" objectFit='contain' />
+          <Image src={pito[0].skeleton} layout="fill" objectFit='contain' />
         </div>
         <Hoverwrap>
         <div className="tongsCont2 hover" onClick={
