@@ -67,7 +67,8 @@ const TileContainer = styled.div`
     position: relative;
     margin: 8px auto;
     padding: 2rem;
-    filter: brightness(10%);
+    filter:${props=>props.filter || "brightness(10%)"};
+    ${'' /* filter: brightness(10%); */}
   }
 `
 
@@ -123,7 +124,9 @@ export default function Tile() {
               <div className="titleCont">
                 {o.title}
               </div>
-              <div className="imgCont">
+              <div className="imgCont"
+              
+              >
                 <Image src={o.img} layout="fill" objectFit="contain" />
               </div>
             </div>

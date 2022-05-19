@@ -202,6 +202,24 @@ export default function Continue() {
         </ButtonCont>
       }
   } else if (r.pathname === "/pig") {
+    if (r.asPath === "/pig?page=8") {
+      return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
+        onLoad: {
+          scale: .4,
+          opacity: 0
+        },
+        visible: {
+          opacity: 1,
+          scale: 1
+        }
+      }}>
+        <button onClick={
+          () => {
+            { play("/sounds/ping.mp3") };
+            r.push("/pig/end");
+          }}>Continue →</button>
+      </ButtonCont>
+    }
     return <ButtonCont as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
       onLoad: {
         scale: .4,

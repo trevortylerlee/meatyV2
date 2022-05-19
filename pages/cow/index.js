@@ -848,7 +848,7 @@ export default function CowIndex() {
       } else if (w === "Gun") {
         return <div>
           <Container>
-          
+
             <Nav />
             <div className="didCont">
               <h3>Did you know?</h3>
