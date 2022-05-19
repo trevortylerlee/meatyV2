@@ -2,7 +2,15 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import useSound from 'use-sound';
+import Lottie from 'react-lottie';
+import animationData from '../public/splash.json'
 
+const LottieCont = styled.div`
+z-index:-1;
+height:100vh;
+width:100vw;
+object-fit:cover;
+`
 
 const Cont = styled.div`
 display:flex;
@@ -101,6 +109,17 @@ export default function(){
     const [farm] = useSound("/sounds/farm.mp3");
     const [toc] = useSound("/sounds/toc.mp3");
     
+    const defaultOptions = {
+        loop: true,
+        autoplay: true, 
+        animationData: animationData,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+      };
+
+      
+
     if(r.pathname === "/"){
     return <Cont>
     <ContentCont>
@@ -133,7 +152,12 @@ export default function(){
 
         </Tile>
     </ContentCont>
-        <Splash src='/misc/splash.svg'></Splash>
+
+        <LottieCont>
+            <Lottie 
+            options={defaultOptions}
+            />
+        </LottieCont>
     </Cont>
     }
 }
