@@ -961,7 +961,7 @@ export default function PigIndex() {
         }
       }}>
         <h3>Did you know?</h3>
-          <p>Due to a lack of sweat glands, pigs wallow in mud to <a href="https://en.wikipedia.org/wiki/Pig#Behavior" target="_blank">control their body temperature. </a></p>
+        <p>Due to a lack of sweat glands, pigs wallow in mud to <a href="https://en.wikipedia.org/wiki/Pig#Behavior" target="_blank" rel="noreferrer">control their body temperature. </a></p>
       </DidCont>
       <WrapKnifepage4>
       <div className="piStun">
@@ -1001,7 +1001,7 @@ export default function PigIndex() {
         }
       }}>
         <h3>Terrible truths</h3>
-        <p>A labour shortage in the UK means <a href="https://news.sky.com/story/the-soul-destroying-impact-of-the-pig-crisis-and-why-its-happening-12479145" target="blank">thousands of healthy pigs are being culled</a> due to overcrowding.</p>
+        <p>A labour shortage in the UK means <a href="https://news.sky.com/story/the-soul-destroying-impact-of-the-pig-crisis-and-why-its-happening-12479145" target="blank" rel="noreferrer">thousands of healthy pigs are being culled</a> due to overcrowding.</p>
       </TtCont>
       <div className="piDecap">
         <Image src={pito[1].animal} layout="fill" objectFit="contain" />
@@ -1028,7 +1028,7 @@ export default function PigIndex() {
       <Nav />
       <div className="ttCont">
         <h3>Terrible truths</h3>
-          <p>A labour shortage in the UK means <a href="https://news.sky.com/story/the-soul-destroying-impact-of-the-pig-crisis-and-why-its-happening-12479145" target="blank">thousands of healthy pigs are being culled</a> due to overcrowding.</p>
+        <p>A labour shortage in the UK means <a href="https://news.sky.com/story/the-soul-destroying-impact-of-the-pig-crisis-and-why-its-happening-12479145" target="blank" rel="noreferrer">thousands of healthy pigs are being culled</a> due to overcrowding.</p>
       </div>
       <div className="piBody">
         <Image src={pipi2[0].body} layout="fill" objectFit="contain" />
