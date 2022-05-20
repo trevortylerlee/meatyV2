@@ -23,6 +23,7 @@ const ButtonCont = styled.div`
     border-radius: 30px;
     border: 4px solid green; 
     font-weight: bold;
+    color: black;
     z-index: 9999;
   }
   button:hover {

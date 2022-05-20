@@ -50,6 +50,7 @@ border: 4px solid green;
 font-size: 1.5rem;
 margin-top: 20px;
 font-weight: bold;
+color: black;
 
 &:hover {
     color: white;
