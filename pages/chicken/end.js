@@ -106,14 +106,7 @@ const Restart = styled.button`
   }
 `
 
-
-
-
-
-
-
-
-
+// Page content starts below
 export default function End() {
 
   const r = useRouter();
