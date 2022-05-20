@@ -101,78 +101,78 @@ export function setActive(active) {
 // ------------------------
 export const chba = [
   {
-    weapon: "/../public/weapons/bath.png"
+    weapon: "/weapons/bath.png"
   }
 ]
 
 export const chco2 = [
   {
-    animal: "/../public/ch/chDefault.png",
-    weapon: "/../public/weapons/chamberOpen.png"
+    animal: "/ch/chDefault.png",
+    weapon: "/weapons/chamberOpen.png"
   },
   {
-    weapon: "/../public/weapons/chamberChHalf.png"
+    weapon: "/weapons/chamberChHalf.png"
   },
   {
-    weapon: "/../public/weapons/chamberChInside.png"
+    weapon: "/weapons/chamberChInside.png"
   }
 ]
 
 export const chto = [
   {
-    weapon: "/../public/weapons/tongs.png",
-    skeleton: "/../public/ch/skeleton.png"
+    weapon: "/weapons/tongs.png",
+    skeleton: "/ch/skeleton.png"
   },
   {
-    animal: "/../public/ch/chDefaultStun.png",
-    weapon: "/../public/weapons/tongsHand.png"
+    animal: "/ch/chDefaultStun.png",
+    weapon: "/weapons/tongsHand.png"
   }
 ]
 
 export const ch = [
   {
-    animal: "/../public/ch/chStun.png",
-    weapon: "/../public/weapons/knife.png"
+    animal: "/ch/chStun.png",
+    weapon: "/weapons/knife.png"
   },
   {
-    animal: "/../public/ch/chSlit.png",
-    weapon: "/../public/weapons/bloodyKnife.png"
+    animal: "/ch/chSlit.png",
+    weapon: "/weapons/bloodyKnife.png"
   },
   {
-    animal: "/../public/ch/chDefeather.png",
-    weapon: "/../public/weapons/cleaver.png"
+    animal: "/ch/chDefeather.png",
+    weapon: "/weapons/cleaver.png"
   },
   {
-    body: "/../public/ch/chBody.png",
-    head: "/../public/ch/chHead.png",
+    body: "/ch/chBody.png",
+    head: "/ch/chHead.png",
   },
   {
-    disembowel: "/../public/ch/disembowel.png",
-    disemboweled: "/../public/ch/disemboweled.png",
-    intestines: "/../public/ch/intestines.png",
-    kidneys: "/../public/ch/kidneys.png",
-    lungs: "/../public/ch/lungs.png",
-    heart: "/../public/ch/heart.png",
-    liver: "/../public/ch/liver.png"
+    disembowel: "/ch/disembowel.png",
+    disemboweled: "/ch/disemboweled.png",
+    intestines: "/ch/intestines.png",
+    kidneys: "/ch/kidneys.png",
+    lungs: "/ch/lungs.png",
+    heart: "/ch/heart.png",
+    liver: "/ch/liver.png"
   }
 ]
 
 export const feathers = [
   {
-    chicken: "/../public/ch/defeather1.png",
-    feather: "/../public/ch/feather.png"
+    chicken: "/ch/defeather1.png",
+    feather: "/ch/feather.png"
   },
   {
-    chicken: "/../public/ch/defeather2.png"
+    chicken: "/ch/defeather2.png"
   },
   {
-    chicken: "/../public/ch/defeather3.png"
+    chicken: "/ch/defeather3.png"
   },
   {
-    chicken: "/../public/ch/defeather4.png"
+    chicken: "/ch/defeather4.png"
   },
   {
-    chicken: "/../public/ch/defeather5.png"
+    chicken: "/ch/defeather5.png"
   }
 ]
 
@@ -181,53 +181,53 @@ export const feathers = [
 // -----------------------
 export const coco2 = [
   {
-    weapon: "/../public/weapons/chamberOpen.png",
-    body: "/../public/co/cowBody.png",
-    head: "/../public/co/cowHead.png",
-    disembowel: "/../public/co/disembowel.png"
+    weapon: "/weapons/chamberOpen.png",
+    body: "/co/cowBody.png",
+    head: "/co/cowHead.png",
+    disembowel: "/co/disembowel.png"
   },
   {
-    weapon: "/../public/weapons/chamberCoHalf.png"
+    weapon: "/weapons/chamberCoHalf.png"
   },
   {
-    weapon: "/../public/weapons/chamberCoInside.png"
+    weapon: "/weapons/chamberCoInside.png"
   }
 ]
 
 export const cogun = [
   {
-    animal: "/../public/co/coDefault.png",
-    weapon: "/../public/selections/gun.png"
+    animal: "/co/coDefault.png",
+    weapon: "/selections/gun.png"
   },
   {
-    animal: "/../public/co/coDefaultStun.png",
-    weapon: "/../public/weapons/gunHand.png",
-    shot: "/../public/co/shot.png"
+    animal: "/co/coDefaultStun.png",
+    weapon: "/weapons/gunHand.png",
+    shot: "/co/shot.png"
   }
 ]
 
 export const coto = [
   {
-    animal: "/../public/co/coSlitStun.png",
-    skeleton: "/../public/co/skeleton.png"
+    animal: "/co/coSlitStun.png",
+    skeleton: "/co/skeleton.png"
   },
   {
-    animal: "/../public/co/coSlit.png"
+    animal: "/co/coSlit.png"
   }
 ]
 
 export const electric = [
   {
-    bolt: "/../public/weapons/electric1.png"
+    bolt: "/weapons/electric1.png"
   },
   {
-    bolt: "/../public/weapons/electric2.png"
+    bolt: "/weapons/electric2.png"
   },
   {
-    bolt: "/../public/weapons/electric3.png"
+    bolt: "/weapons/electric3.png"
   },
   {
-    bolt: "/../public/weapons/electric4.png"
+    bolt: "/weapons/electric4.png"
   },
 ]
 
@@ -237,51 +237,51 @@ export const electric = [
 
 export const pico2 = [
   {
-    pig: "/../public/pi/default.png",
-    half: "/../public/pi/co2Half.png",
-    inside: "/../public/pi/co2Inside.png"
+    pig: "/public/pi/default.png",
+    half: "/public/pi/co2Half.png",
+    inside: "/public/pi/co2Inside.png"
   }
 ]
 
 export const pigun = [
   {
-    animal: "/../public/pi/front.png",
-    weapon: "/../public/selections/gun.png"
+    animal: "/public/pi/front.png",
+    weapon: "/public/selections/gun.png"
   },
   {
-    animal: "/../public/pi/frontStun.png",
-    weapon: "/../public/weapons/gunHand.png",
-    shot: "/../public/pi/shot.png"
+    animal: "/pi/frontStun.png",
+    weapon: "/weapons/gunHand.png",
+    shot: "/pi/shot.png"
   }
 ]
 
 export const pito = [
   {
-    animal: "/../public/pi/stun.png",
-    skeleton: "/../public/pi/skeleton.png"
+    animal: "/pi/stun.png",
+    skeleton: "/pi/skeleton.png"
   },
   {
-    animal: "/../public/pi/slit.png"
+    animal: "/pi/slit.png"
   }
 ]
 
 export const pi = [
   {
-    head: "/../public/pi/head.png",
+    head: "/pi/head.png",
   }
 ]
 
 export const pipi2 = [
   {
-    weapon: "/../public/weapons/chamberOpen.png",
-    body: "/../public/pi/body.png",
-    head: "/../public/pi/Head.png",
-    disembowel: "/../public/pi/disembowel.png"
+    weapon: "/weapons/chamberOpen.png",
+    body: "/pi/body.png",
+    head: "/pi/Head.png",
+    disembowel: "/pi/disembowel.png"
   },
   {
-    weapon: "/../public/weapons/chamberCoHalf.png"
+    weapon: "/weapons/chamberCoHalf.png"
   },
   {
-    weapon: "/../public/weapons/chamberCoInside.png"
+    weapon: "/weapons/chamberCoInside.png"
   }
 ]
