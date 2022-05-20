@@ -31,13 +31,14 @@ const Container = styled.div`
     margin: 0;
     position: relative;
     top: 22%;
+    font-family: Gill Sans, sans-serif;
   }
 
   h1 {
     margin: 0;
     position: relative;
     top: 20%;
-    font-family: Gill Sans;
+    font-family: Gill Sans, sans-serif;
     font-size: 5rem;
   }
 
