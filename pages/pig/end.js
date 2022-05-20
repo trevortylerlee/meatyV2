@@ -51,7 +51,7 @@ const Container = styled.div`
 
   .button {
     position: relative;
-    top: 120px;
+    top: 150px;
   }
 
   .hover:hover {
