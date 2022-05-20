@@ -91,7 +91,7 @@ const Butt = styled.div`
     position: relative;
 `
 
-export default function(){
+export default function Disclaimer(){
     const r = useRouter();
     const [toc] = useSound("/sounds/toc.mp3");
 
