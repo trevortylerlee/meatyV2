@@ -718,11 +718,11 @@ export default function ChickenIndex() {
                 page: Number(page) + 1
               }
             })}}>
-            <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+            <Image src={chco2[0].animal} layout="fill" objectFit='contain' alt=""/>
           </div>
           </Hoverwrap>
           <div className="bathCont">
-            <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
+            <Image src={chba[0].weapon} layout="fill" objectFit='contain' alt=""/>
           </div>
           </Wrapper>
           </motion.div>
@@ -767,12 +767,12 @@ export default function ChickenIndex() {
                   page: Number(page) + 1
                 }
             })}}>
-            <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+            <Image src={chco2[0].animal} layout="fill" objectFit='contain' alt=""/>
             </div>
             
             </Hoverwrap>
             <div className="wContBefore">
-              <Image src={chco2[0].weapon} layout="fill" objectFit='contain' />
+                <Image src={chco2[0].weapon} layout="fill" objectFit='contain' alt=""/>
             </div>
             </Wrapper6>
           </Container>
@@ -806,7 +806,7 @@ export default function ChickenIndex() {
               }
             }}>
             <div className="chTongsCont">
-              <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+                <Image src={chco2[0].animal} layout="fill" objectFit='contain' alt=""/>
             </div>
             <Hoverwrap>
             <div className="tongsCont hover" onClick={
@@ -818,7 +818,7 @@ export default function ChickenIndex() {
                   page: Number(page) + 1
                 }
               })}}>
-              <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
+                  <Image src={chto[0].weapon} layout="fill" objectFit='contain' alt=""/>
             </div>
             </Hoverwrap>
             </Wrapper7>
@@ -828,7 +828,7 @@ export default function ChickenIndex() {
         return <div>
           <Container>
           <Nav />
-            <h1>😂😂😂 u broke it moron CHICKEN ERROR</h1>
+            <h1>😂😂😂 u broke it CHICKEN ERROR</h1>
           </Container>
           </div>
       }
@@ -849,21 +849,21 @@ export default function ChickenIndex() {
                   page: Number(page) + 1
                 }
               })}}>
-              <Image src={chco2[0].animal} layout="fill" objectFit='contain' />
+              <Image src={chco2[0].animal} layout="fill" objectFit='contain' alt=""/>
             </div>
             </Hoverwrap>
             </Chickenbath>
             <div className="bathCont">
-              <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
+              <Image src={chba[0].weapon} layout="fill" objectFit='contain' alt=""/>
             </div>
             <Electricity className='elec1'>
-              <Image src={electric[0].bolt} layout="fill" objectFit='contain' />
+              <Image src={electric[0].bolt} layout="fill" objectFit='contain' alt=""/>
             </Electricity>
             <Electricity2 className='elec2'>
-              <Image src={electric[1].bolt} layout="fill" objectFit='contain' />
+              <Image src={electric[1].bolt} layout="fill" objectFit='contain' alt=""/>
             </Electricity2>
             <Electricity3 className='elec3'>
-              <Image src={electric[2].bolt} layout="fill" objectFit='contain' />
+              <Image src={electric[2].bolt} layout="fill" objectFit='contain' alt=""/>
             </Electricity3>
             </Wrapper2>
           </Container>
@@ -899,7 +899,7 @@ export default function ChickenIndex() {
                     page: Number(page) + 1
                   }
                 })}}>
-                <Image src={chco2[1].weapon} layout="fill" objectFit='contain' />
+                  <Image src={chco2[1].weapon} layout="fill" objectFit='contain' alt=""/>
               </div>
               </Hoverwrap>
             </Container>
@@ -925,7 +925,7 @@ export default function ChickenIndex() {
                 </Info2>
                 <WrapperTong>
                 <div className="chTongsCont2">
-                  <Image src={chto[0].skeleton} layout="fill" objectFit='contain' />
+                  <Image src={chto[0].skeleton} layout="fill" objectFit='contain' alt=""/>
                 </div>
                 <div className="tongsCont2 hover" onClick={
                   () => {
@@ -935,16 +935,16 @@ export default function ChickenIndex() {
                       page: Number(page) + 1
                     }
                   })}}>
-                  <Image src={chto[1].weapon} layout="fill" objectFit='contain' />
+                  <Image src={chto[1].weapon} layout="fill" objectFit='contain' alt=""/>
                 </div>
                 <Electricity className='elec1'>
-                  <Image src={electric[0].bolt} layout="fill" objectFit='contain' />
+                  <Image src={electric[0].bolt} layout="fill" objectFit='contain' alt=""/>
                 </Electricity>
                 <Electricity2 className='elec2'>
-                  <Image src={electric[1].bolt} layout="fill" objectFit='contain' />
+                  <Image src={electric[1].bolt} layout="fill" objectFit='contain' alt=""/>
                 </Electricity2>
                 <Electricity3 className='elec3'>
-                  <Image src={electric[2].bolt} layout="fill" objectFit='contain' />
+                  <Image src={electric[2].bolt} layout="fill" objectFit='contain' alt=""/>
                 </Electricity3>
                 </WrapperTong>
               </Container>
@@ -973,11 +973,11 @@ export default function ChickenIndex() {
               <Wrapper3>
               <Chickenbath2>
               <div className='chBathCont3'>
-                <Image src={chto[1].animal} layout="fill" objectFit='contain' />
+                <Image src={chto[1].animal} layout="fill" objectFit='contain' alt=""/>
               </div>
               </Chickenbath2>
               <div className="bathCont">
-                <Image src={chba[0].weapon} layout="fill" objectFit='contain' />
+                <Image src={chba[0].weapon} layout="fill" objectFit='contain' alt=""/>
               </div>
               </Wrapper3>
             </Container>
@@ -996,7 +996,7 @@ export default function ChickenIndex() {
               <div className="aCont">
               </div>
               <Co2cont className="wCont">
-                <Image src={chco2[2].weapon} layout="fill" objectFit='contain' />
+                <Image src={chco2[2].weapon} layout="fill" objectFit='contain' alt=""/>
               </Co2cont>
             </Container>
             <Continue />
@@ -1011,7 +1011,7 @@ export default function ChickenIndex() {
                   <p>Chickens have excellent memories.</p>
                 </div>
                 <div className="chTongsCont3">
-                  <Image src={chto[1].animal} layout="fill" objectFit='contain' />
+                  <Image src={chto[1].animal} layout="fill" objectFit='contain' alt=""/>
                 </div>
               </Container>
               <Continue />
@@ -1020,7 +1020,6 @@ export default function ChickenIndex() {
     } else if (r.asPath === "/chicken?page=3") { // PAGE 3 //
        return <div>
         <Container>
-        
           <Nav />
            <Wrapperidk as={motion.div} initial="onLoad" animate="visible" variants={{
              onLoad: {
@@ -1033,7 +1032,7 @@ export default function ChickenIndex() {
              }
            }}>
           <div className="chPage3">
-             <Image src={ch[0].animal} layout="fill" objectFit='contain' />
+             <Image src={ch[0].animal} layout="fill" objectFit='contain' alt=""/>
           </div>
           <Hoverwrap>
           <Knifecont>
@@ -1046,7 +1045,7 @@ export default function ChickenIndex() {
                 page: Number(page) + 1
               }
             })}}>
-             <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
+             <Image src={ch[0].weapon} layout="fill" objectFit='contain' alt=""/>
           </div>
           </Knifecont>
           </Hoverwrap>
@@ -1076,7 +1075,7 @@ export default function ChickenIndex() {
             </Info3>
             <Wrapper5>
             <div className="chPage4">
-              <Image src={ch[1].animal} layout="fill" objectFit='contain' />
+              <Image src={ch[1].animal} layout="fill" objectFit='contain' alt=""/>
             </div>
             <div className="bloodWrap">
             <div className="blood"></div>
@@ -1086,7 +1085,7 @@ export default function ChickenIndex() {
             </div>
             <Knifecont2>
             <div className="knife2">
-              <Image src={ch[1].weapon} layout="fill" objectFit='contain' />
+              <Image src={ch[1].weapon} layout="fill" objectFit='contain' alt=""/>
             </div>
             </Knifecont2>
             </Wrapper5>
@@ -1116,7 +1115,7 @@ export default function ChickenIndex() {
                 query: {
                   page: Number(page) + 1
                 }})}}>
-              <Image src={feathers[0].chicken} layout="fill" objectFit='contain' />
+              <Image src={feathers[0].chicken} layout="fill" objectFit='contain' alt=""/>
             </div>
             </Wrapper4>
             </Hoverwrap>
@@ -1141,7 +1140,7 @@ export default function ChickenIndex() {
         </Hoverwrap>
         <Feather1>
         <div className="feather">
-          <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
+          <Image src={feathers[0].feather} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Feather1>
       </Container>
@@ -1160,7 +1159,7 @@ export default function ChickenIndex() {
                 page: Number(page) + 1
               }
             })}}>
-            <Image src={feathers[2].chicken} layout="fill" objectFit='contain' />
+            <Image src={feathers[2].chicken} layout="fill" objectFit='contain' alt=""/>
           </div>
           </Hoverwrap>
           <Feather2>
@@ -1189,7 +1188,7 @@ export default function ChickenIndex() {
         </Hoverwrap>
         <Feather3>
           <div className="feather2">
-            <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
+            <Image src={feathers[0].feather} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Feather3>
       </Container>
@@ -1200,11 +1199,11 @@ export default function ChickenIndex() {
       
         <Nav />
         <div className="chPage6">
-          <Image src={feathers[4].chicken} layout="fill" objectFit='contain' />
+          <Image src={feathers[4].chicken} layout="fill" objectFit='contain' alt=""/>
         </div>
         <Feather4>
           <div className="feather2">
-            <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
+            <Image src={feathers[0].feather} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Feather4>
       </Container>
@@ -1253,7 +1252,7 @@ export default function ChickenIndex() {
               page: Number(page) + 1
             }
           })}}>
-          <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
+          <Image src={ch[2].weapon} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Hoverwrap>
         </WrapperDecap>
@@ -1274,16 +1273,16 @@ export default function ChickenIndex() {
         </div>
         <WrapperDecap>
         <div className="chDecapBody">
-          <Image src={ch[3].body} layout="fill" objectFit='contain' />
+          <Image src={ch[3].body} layout="fill" objectFit='contain' alt=""/>
         </div>
         <Head>
         <div className="chDecapHead">
-          <Image src={ch[3].head} layout="fill" objectFit='contain' />
+          <Image src={ch[3].head} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Head>
         <Cleaver>
         <div className="cleaver">
-          <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
+          <Image src={ch[2].weapon} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Cleaver>
         </WrapperDecap>
@@ -1314,7 +1313,7 @@ export default function ChickenIndex() {
               page: Number(page) + 1
             }
           })}}>
-          <Image src={ch[4].disembowel} layout="fill" objectFit='contain' />
+          <Image src={ch[4].disembowel} layout="fill" objectFit='contain' alt=""/>
         </div>
         </WrapperDisem>
         </Hoverwrap>
@@ -1327,31 +1326,31 @@ export default function ChickenIndex() {
         <Nav />
         <WrapperDisem>
         <div className="chDisembowel">
-          <Image src={ch[4].disemboweled} layout="fill" objectFit='contain' />
+          <Image src={ch[4].disemboweled} layout="fill" objectFit='contain' alt=""/>
         </div>
         <Intestines>
         <div className='intestines'>
-          <Image src={ch[4].intestines} layout="fill" objectFit='contain' />
+          <Image src={ch[4].intestines} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Intestines>
         <Kidneys>
         <div className='kidneys'>
-          <Image src={ch[4].kidneys} layout="fill" objectFit='contain' />
+          <Image src={ch[4].kidneys} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Kidneys>
         <Lungs>
         <div className='lungs'>
-          <Image src={ch[4].lungs} layout="fill" objectFit='contain' />
+          <Image src={ch[4].lungs} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Lungs>
         <Heart>
         <div className='heart'>
-          <Image src={ch[4].heart} layout="fill" objectFit='contain' />
+          <Image src={ch[4].heart} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Heart>
         <Liver>
         <div className='liver'>
-          <Image src={ch[4].liver} layout="fill" objectFit='contain' />
+          <Image src={ch[4].liver} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Liver>
         </WrapperDisem>
