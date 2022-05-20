@@ -9,3 +9,14 @@ body {
 * {
   box-sizing: border-box;
 }
+
+
+a {
+  color: red;
+}
+a:hover {
+  color: darkred;s
+}
+a:visited {
+  color: darkred;
+}
