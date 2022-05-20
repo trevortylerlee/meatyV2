@@ -134,7 +134,7 @@ export default function End() {
       </div>
       <Head>
         <div className="head1 hover" onClick={handleClick}>
-          <Image src={pi[0].head} layout="fill" objectFit="contain" alt=""/>
+          <Image src="/pi/head.png" layout="fill" objectFit="contain" alt=""/>
         </div>
       </Head>
       <div className="easter">
