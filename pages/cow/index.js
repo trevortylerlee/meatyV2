@@ -24,7 +24,7 @@ const Container = styled.div`
   widtH: 400px;
   height: 80vh;
   margin: 0 auto;
-  outline: 2px red solid;
+  ${'' /* outline: 2px red solid; */}
   overflow: hidden;
   margin-top: 1rem;
 
