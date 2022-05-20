@@ -925,7 +925,7 @@ export default function CowIndex() {
           }
         }}>
           <h3>Did you know?</h3>
-          <p>Chickens are placed in "kill cones" to prevent bruising and trauma.</p>
+          <p>Cows can see in nearly 360 degrees.</p>
         </DidCont>
         <WrapKnifepage4>
         <div className="coStun">
