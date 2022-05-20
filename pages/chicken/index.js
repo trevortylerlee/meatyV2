@@ -1229,7 +1229,7 @@ export default function ChickenIndex() {
             }
           }}>
             <h3>Terrible truths</h3>
-            <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">survived decapitation for 18 months.</a></p>
+          <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank" rel="noreferrer">survived decapitation for 18 months.</a></p>
           </Info4>
         <WrapperDecap as={motion.div} initial="onLoad" animate="visible" variants={{
              onLoad: {
@@ -1270,7 +1270,7 @@ export default function ChickenIndex() {
         <Nav />
         <div className="ttCont">
           <h3>Terrible truths</h3>
-          <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">survived decapitation for 18 months.</a></p>
+          <p>In 1945 a chicken named Mike <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank" rel="noreferrer">survived decapitation for 18 months.</a></p>
         </div>
         <WrapperDecap>
         <div className="chDecapBody">
