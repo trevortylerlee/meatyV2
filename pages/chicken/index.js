@@ -1134,7 +1134,7 @@ export default function ChickenIndex() {
               page: Number(page) + 1
             }
           })}}>
-          <Image src={feathers[1].chicken} layout="fill" objectFit='contain' />
+          <Image src={feathers[1].chicken} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Hoverwrap>
         <Feather1>
@@ -1163,7 +1163,7 @@ export default function ChickenIndex() {
           </Hoverwrap>
           <Feather2>
             <div className="feather2">
-              <Image src={feathers[0].feather} layout="fill" objectFit='contain' />
+              <Image src={feathers[0].feather} layout="fill" objectFit='contain' alt=""/>
             </div>
           </Feather2>
         </Container>
@@ -1182,7 +1182,7 @@ export default function ChickenIndex() {
               page: Number(page) + 1
             }
           })}}>
-          <Image src={feathers[3].chicken} layout="fill" objectFit='contain' />
+          <Image src={feathers[3].chicken} layout="fill" objectFit='contain' alt=""/>
         </div>
         </Hoverwrap>
         <Feather3>
@@ -1240,7 +1240,7 @@ export default function ChickenIndex() {
              }
            }}>
         <div className="chDecap">
-          <Image src={ch[2].animal} layout="fill" objectFit='contain' />
+          <Image src={ch[2].animal} layout="fill" objectFit='contain' alt=""/>
         </div>
         <Hoverwrap>
         <div className="cleaverBefore hover" onClick={

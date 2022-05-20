@@ -671,7 +671,7 @@ export default function CowIndex() {
           </TipCont>
           <WrapTongpage0>
           <div className="coDefaultTong blur">
-            <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
+            <Image src={cogun[0].animal} layout="fill" objectFit='contain' alt=""/>
           </div>
           <Hoverwrap>
           <div className="tongsCont hover" onClick={
