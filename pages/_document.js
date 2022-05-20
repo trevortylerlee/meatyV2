@@ -6,7 +6,7 @@ export default function Document() {
 <Head>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Puritan:wght@700&family=Ubuntu&display=swap" rel="stylesheet"/>
-        <title>MEATY</title>
+        <title>MEATY: Slaughtering Animals Humanely</title>
         <link rel="icon" href="/misc/logoColor.png" />
         </Head>
       <body>
