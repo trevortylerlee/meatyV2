@@ -75,12 +75,6 @@ const Container = styled.div`
   .hover:active {
     transform: scale(0.9);
   }
-
-  p {
-    position: relative;
-    top: 58%;
-    font-size: 12px;
-  }
 `
 
 const Head = styled.div`
