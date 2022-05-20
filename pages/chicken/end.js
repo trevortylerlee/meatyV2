@@ -20,8 +20,6 @@ import { useState } from "react"
 
 
 
-
-
 const Container = styled.div`
   width: 400px;
   height: 80vh;
@@ -146,7 +144,7 @@ export default function End() {
       </div>
       <Head>
       <div className="head1 hover" onClick={handleClick}>
-        <Image src={ch[3].head} layout="fill" objectFit="contain" alt=""/> 
+        <Image src="/ch/chHead.png" layout="fill" objectFit="contain" alt=""/> 
       </div>
       </Head>
       <div className="easter">
