@@ -104,7 +104,7 @@ const Tile = styled.div`
     }
 `
 
-export default function(){
+export default function Index(){
     const r = useRouter();
     const [farm] = useSound("/sounds/farm.mp3");
     const [toc] = useSound("/sounds/toc.mp3");
