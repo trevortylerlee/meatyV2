@@ -472,6 +472,7 @@ const TtCont = styled.div`
 // Wrappers for pig + weapons
 const WrapCO2page0 = styled.div`
   position: relative;
+  width: 0;
   top: -160px;
 `
 const WrapGunPage1 = styled.div`
