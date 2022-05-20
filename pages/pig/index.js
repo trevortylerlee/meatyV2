@@ -723,7 +723,7 @@ export default function PigIndex() {
       return <div>
         <Container>
           <Nav />
-          <h1>😂😂😂 u broke it moron PIG ERROR</h1>
+          <h1>😂😂😂 u broke it PIG ERROR</h1>
         </Container>
       </div>
     }
@@ -746,7 +746,8 @@ export default function PigIndex() {
             }
           }}>
             <h3>Did you know?</h3>
-            <p>Due to a lack of sweat glands, pigs wallow in mud to <a href="https://en.wikipedia.org/wiki/Pig#Behavior" target="_blank">control their body temperature. </a></p>
+              <p>The scientific name for a pig is <span className="italic">Sus domesticus.</span></p>
+
           </DidCont>
           <Hoverwrap>
             <div className="wContCO2Half hover" onClick={
@@ -825,7 +826,7 @@ export default function PigIndex() {
           }
         }}>
           <h3>Did you know?</h3>
-          <p>The scientific name for a cow is <span className="italic">Bos taurus.</span></p>
+            <p>The scientific name for a pig is <span className="italic">Sus domesticus.</span></p>
         </DidCont>
         <WrapTongpage1>
         <div className="piTong2">
@@ -863,7 +864,7 @@ export default function PigIndex() {
             <Nav />
               <div className="didCont" >
               <h3>Did you know?</h3>
-              <p>Due to a lack of sweat glands, pigs wallow in mud to <a href="https://en.wikipedia.org/wiki/Pig#Behavior" target="_blank">control their body temperature. </a></p>
+                <p>The scientific name for a pig is <span className="italic">Sus domesticus.</span></p>
               </div>
             <Co2cont>
               <div className="wContCO2Inside" onClick={
@@ -903,7 +904,7 @@ export default function PigIndex() {
             <Nav />
             <div className="didCont">
               <h3>Did you know?</h3>
-              <p>The scientific name for a cow is <span className="italic">Bos taurus.</span></p>
+                <p>The scientific name for a pig is <span className="italic">Sus domesticus.</span></p>
             </div>
             <WrapTongpage2>
             <div className="piStun">
@@ -960,7 +961,7 @@ export default function PigIndex() {
         }
       }}>
         <h3>Did you know?</h3>
-        <p>Chickens are placed in "kill cones" to prevent bruising and trauma.</p>
+          <p>Due to a lack of sweat glands, pigs wallow in mud to <a href="https://en.wikipedia.org/wiki/Pig#Behavior" target="_blank">control their body temperature. </a></p>
       </DidCont>
       <WrapKnifepage4>
       <div className="piStun">
@@ -1000,7 +1001,7 @@ export default function PigIndex() {
         }
       }}>
         <h3>Terrible truths</h3>
-        <p>Cow cry by <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank">making loud, high-pitched wailing noises.</a> They can also shed tears from their eyes.</p>
+        <p>A labour shortage in the UK means <a href="https://news.sky.com/story/the-soul-destroying-impact-of-the-pig-crisis-and-why-its-happening-12479145" target="blank">thousands of healthy pigs are being culled</a> due to overcrowding.</p>
       </TtCont>
       <div className="piDecap">
         <Image src={pito[1].animal} layout="fill" objectFit="contain" />
@@ -1027,7 +1028,7 @@ export default function PigIndex() {
       <Nav />
       <div className="ttCont">
         <h3>Terrible truths</h3>
-        <p>Cow cry by <a href="https://en.wikipedia.org/wiki/Cattle" target="blank">making loud, high-pitched wailing noises.</a> They can also shed tears from their eyes.</p>
+          <p>A labour shortage in the UK means <a href="https://news.sky.com/story/the-soul-destroying-impact-of-the-pig-crisis-and-why-its-happening-12479145" target="blank">thousands of healthy pigs are being culled</a> due to overcrowding.</p>
       </div>
       <div className="piBody">
         <Image src={pipi2[0].body} layout="fill" objectFit="contain" />

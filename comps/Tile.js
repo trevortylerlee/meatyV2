@@ -9,7 +9,7 @@ import useSound from "use-sound";
 import Continue from "./Continue";
 
 // Data
-import { animals, changeAnimal, changeWeapon, chWeapons, copiWeapons, getAnimal, getWeapon } from '../data/selection';
+import { setActive, animals, changeAnimal, changeWeapon, chWeapons, copiWeapons, getAnimal, getWeapon } from '../data/selection';
 
 // --------------------
 //  STYLING STARTS HERE
@@ -70,6 +70,14 @@ const TileContainer = styled.div`
     filter:${props=>props.filter || "brightness(10%)"};
     ${'' /* filter: brightness(10%); */}
   }
+
+  .active {
+    filter: brightness(100%);
+  }
+
+  .inactive {
+    filter: brightness(10%);
+  }
 `
 
 const DescCont = styled.div`
@@ -124,9 +132,7 @@ export default function Tile() {
               <div className="titleCont">
                 {o.title}
               </div>
-              <div className="imgCont"
-              
-              >
+              <div className="imgCont">
                 <Image src={o.img} layout="fill" objectFit="contain" />
               </div>
             </div>

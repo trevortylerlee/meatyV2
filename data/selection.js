@@ -10,19 +10,19 @@ export const animals = [
     title: "Chicken",
     img: "/../public/selections/chickenFace.png",
     desc: "A chicken is a bird. One of the features that differentiates it from most other birds is that it has a red comb and two red wattles under its beak.",
-    species: "Gallus domesticus"
+    species: "Gallus domesticus",
   },
   {
     title: "Cow",
     img: "/../public/selections/cowFace.png",
     desc: "Cows are four-footed and have a large body. It has two horns, two eyes plus two ears and one nose and a mouth. Cows are herbivorous animals. They have a lot of uses to mankind.",
-    species: "Bos taurus"
+    species: "Bos taurus",
   },
   {
     title: "Pig",
     img: "/../public/selections/pigFace.png",
     desc: "Pigs are stoud-bodied,short-legged, omnivorous mammals. They are highly intelligent and social animals, and are found all over the globe.",
-    species: "Sus domesticus"
+    species: "Sus domesticus",
   }
 ]
 
@@ -85,6 +85,15 @@ export function changeWeapon(w) {
 export function getWeapon() {
   return weapon;
 }
+
+// Creating a varialbe and a function for the active tile
+let state = "";
+
+export function setActive(active) {
+  state = active;
+  console.log(state);
+}
+
 
 
 // ------------------------
