@@ -2,6 +2,15 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import useSound from 'use-sound';
+import Lottie from 'react-lottie';
+import animationData from '../public/splash.json'
+
+const LottieCont = styled.div`
+z-index:-1;
+height:100vh;
+width:100vw;
+object-fit:cover;
+`
 
 const Cont = styled.div`
 display:flex;
@@ -86,6 +95,15 @@ export default function(){
     const r = useRouter();
     const [toc] = useSound("/sounds/toc.mp3");
 
+    const defaultOptions = {
+        loop: true,
+        autoplay: true, 
+        animationData: animationData,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+      };
+
     return <Cont>
         <ContentCont>
             <Tile as={motion.div} className="tipCont" initial="onLoad" animate="visible" variants={{
@@ -165,6 +183,10 @@ export default function(){
         </Back>
         </Tile>
         </ContentCont>
-        <Splash src='/misc/splash.svg'></Splash>
+        <LottieCont>
+            <Lottie 
+            options={defaultOptions}
+            />
+        </LottieCont>
     </Cont>
 }
