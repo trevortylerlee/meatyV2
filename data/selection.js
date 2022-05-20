@@ -8,7 +8,7 @@ export const misc = [
 export const animals = [
   {
     title: "Chicken",
-    img: "/../public/selections/chickenFace.png",
+    img: "/selections/chickenFace.png",
     desc: "A chicken is a bird. One of the features that differentiates it from most other birds is that it has a red comb and two red wattles under its beak.",
     species: "Gallus domesticus",
   },
