@@ -603,11 +603,11 @@ export default function CowIndex() {
                 page: Number(page) + 1
               }
             })}}>
-            <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
+            <Image src={cogun[0].animal} layout="fill" objectFit='contain' alt=""/>
           </div>
           </Hoverwrap>
           <div className="wContCO2">
-            <Image src={coco2[0].weapon} layout="fill" objectFit='contain' />
+            <Image src={coco2[0].weapon} layout="fill" objectFit='contain' alt=""/>
           </div>
           </WrapCO2page0>
         </Container>
@@ -633,7 +633,7 @@ export default function CowIndex() {
           </TipCont>
           <WrapGunpage0>
           <div className="coDefault">
-            <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
+            <Image src={cogun[0].animal} layout="fill" objectFit='contain' alt=""/>
           </div>
           <Hoverwrap>
           <div className="gun hover" onClick={
@@ -645,7 +645,7 @@ export default function CowIndex() {
                 page: Number(page) + 1
               }
             })}}>
-            <Image src={cogun[0].weapon} layout="fill" objectFit='contain' />
+            <Image src={cogun[0].weapon} layout="fill" objectFit='contain' alt=""/>
           </div>
           </Hoverwrap>
           </WrapGunpage0>
@@ -684,7 +684,7 @@ export default function CowIndex() {
                 page: Number(page) + 1
               }
             })}}>
-            <Image src={chto[0].weapon} layout="fill" objectFit='contain' />
+            <Image src={chto[0].weapon} layout="fill" objectFit='contain' alt=""/>
           </div>
           </Hoverwrap>
           </WrapTongpage0>
@@ -713,7 +713,7 @@ export default function CowIndex() {
                   page: Number(page) + 1
                 }
               })}}>
-              <Image src={coco2[1].weapon} layout="fill" objectFit='contain' />
+              <Image src={coco2[1].weapon} layout="fill" objectFit='contain' alt=""/>
             </div>
             </Hoverwrap>
           </Container>
@@ -741,10 +741,10 @@ export default function CowIndex() {
             </DidCont>
             <WrapGunPage1>
             <div className="coDefault2">
-              <Image src={cogun[0].animal} layout="fill" objectFit='contain' />
+              <Image src={cogun[0].animal} layout="fill" objectFit='contain' alt=""/>
             </div>
             <div className="gunDefault">
-              <Image src={cogun[1].weapon} layout="fill" objectFit='contain' />
+              <Image src={cogun[1].weapon} layout="fill" objectFit='contain' alt=""/>
             </div>
             <Hoverwrap>
             <div className="circle" onClick={
@@ -783,7 +783,7 @@ export default function CowIndex() {
             </DidCont>
             <WrapTongpage1>
             <div className="coTong2">
-              <Image src={coto[0].skeleton} layout="fill" objectFit='contain' />
+              <Image src={coto[0].skeleton} layout="fill" objectFit='contain' alt=""/>
             </div>
             <Hoverwrap>
             <div className="tongsCont2 hover" onClick={
@@ -794,17 +794,17 @@ export default function CowIndex() {
                   page: Number(page) + 1
                 }
               })}}>
-              <Image src={chto[1].weapon} layout="fill" objectFit='contain' />
+              <Image src={chto[1].weapon} layout="fill" objectFit='contain' alt=""/>
             </div>
             </Hoverwrap>
             <Electricity className='elec1'>
-              <Image src={electric[0].bolt} layout="fill" objectFit='contain' />
+              <Image src={electric[0].bolt} layout="fill" objectFit='contain' alt=""/>
             </Electricity>
             <Electricity2 className='elec2'>
-              <Image src={electric[1].bolt} layout="fill" objectFit='contain' />
+              <Image src={electric[1].bolt} layout="fill" objectFit='contain' alt=""/>
             </Electricity2>
             <Electricity3 className='elec3'>
-              <Image src={electric[2].bolt} layout="fill" objectFit='contain' />
+              <Image src={electric[2].bolt} layout="fill" objectFit='contain' alt=""/>
             </Electricity3>
             </WrapTongpage1>
           </Container>
@@ -839,7 +839,7 @@ export default function CowIndex() {
                   page: Number(page) + 1
                 }
               })}>
-              <Image src={coco2[2].weapon} layout="fill" objectFit='contain' />
+              <Image src={coco2[2].weapon} layout="fill" objectFit='contain' alt=""/>
             </div>
             </Co2cont>
           </Container>
@@ -856,7 +856,7 @@ export default function CowIndex() {
             </div>
             <WrapGunPage1>
             <div className="coDefault2">
-              <Image src={cogun[1].shot} layout="fill" objectFit='contain' />
+              <Image src={cogun[1].shot} layout="fill" objectFit='contain' alt=""/>
             </div>
             </WrapGunPage1>
           </Container>
@@ -873,7 +873,7 @@ export default function CowIndex() {
             </div>
             <WrapTongpage2>
             <div className="coStun">
-              <Image src={coto[0].animal} layout="fill" objectFit='contain' />
+              <Image src={coto[0].animal} layout="fill" objectFit='contain' alt=""/>
             </div>
             </WrapTongpage2>
           </Container>
@@ -887,7 +887,7 @@ export default function CowIndex() {
           <Nav />
           <WrapKnifepage3>
           <div className="coStun">
-            <Image src={coto[0].animal} layout="fill" objectFit='contain' />
+            <Image src={coto[0].animal} layout="fill" objectFit='contain' alt=""/>
           </div>
           <Hoverwrap>
           <Knifecont>
@@ -900,7 +900,7 @@ export default function CowIndex() {
                   page: Number(page) + 1
                 }
               })}}>
-              <Image src={ch[0].weapon} layout="fill" objectFit='contain' />
+              <Image src={ch[0].weapon} layout="fill" objectFit='contain' alt=""/>
             </div>
           </Knifecont>
           </Hoverwrap>
@@ -930,11 +930,11 @@ export default function CowIndex() {
         </DidCont>
         <WrapKnifepage4>
         <div className="coStun">
-          <Image src={coto[1].animal} layout="fill" objectFit="contain" />
+          <Image src={coto[1].animal} layout="fill" objectFit="contain" alt=""/>
         </div>
         <Knifecont2>
           <div className="knife2">
-            <Image src={ch[1].weapon} layout="fill" objectFit="contain" />
+            <Image src={ch[1].weapon} layout="fill" objectFit="contain" alt=""/>
           </div>
         </Knifecont2>
         <div className="bloodWrap">
@@ -969,7 +969,7 @@ export default function CowIndex() {
           <p>Cow cry by <a href="https://en.wikipedia.org/wiki/Mike_the_Headless_Chicken" target="blank" rel="noreferrer">making loud, high-pitched wailing noises.</a> They can also shed tears from their eyes.</p>
         </TtCont>
         <div className="coDecap">
-          <Image src={coto[1].animal} layout="fill" objectFit="contain" />
+          <Image src={coto[1].animal} layout="fill" objectFit="contain" alt=""/>
         </div>
         <Hoverwrap>
           <div className="cleaverBefore hover" onClick={
@@ -981,7 +981,7 @@ export default function CowIndex() {
                 }
               })
             }}>
-            <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
+            <Image src={ch[2].weapon} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Hoverwrap>
       </Container>
@@ -996,16 +996,16 @@ export default function CowIndex() {
           <p>Cow cry by <a href="https://en.wikipedia.org/wiki/Cattle" target="blank" rel="noreferrer">making loud, high-pitched wailing noises.</a> They can also shed tears from their eyes.</p>
         </div>
         <div className="coBody">
-          <Image src={coco2[0].body} layout="fill" objectFit="contain" />
+          <Image src={coco2[0].body} layout="fill" objectFit="contain" alt=""/>
         </div>
         <Head>
         <div className="coHead">
-          <Image src={coco2[0].head} layout="fill" objectFit="contain" />
+          <Image src={coco2[0].head} layout="fill" objectFit="contain" alt=""/>
         </div>
         </Head>
         <Cleaver>
           <div className="cleaver">
-          <Image src={ch[2].weapon} layout="fill" objectFit='contain' />
+          <Image src={ch[2].weapon} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Cleaver>
       </Container>
@@ -1026,7 +1026,7 @@ export default function CowIndex() {
                 }
               })
             }}>
-            <Image src={coco2[0].disembowel} layout="fill" objectFit='contain' />
+            <Image src={coco2[0].disembowel} layout="fill" objectFit='contain' alt=""/>
           </div>
           <div className='intestines' onClick={
             () => {
@@ -1037,7 +1037,7 @@ export default function CowIndex() {
                 }
               })
             }}>
-            <Image src={ch[4].intestines} layout="fill" objectFit='contain' />
+            <Image src={ch[4].intestines} layout="fill" objectFit='contain' alt=""/>
           </div>
           <div className='kidneys' onClick={
             () => {
@@ -1048,7 +1048,7 @@ export default function CowIndex() {
                 }
               })
             }}>
-            <Image src={ch[4].kidneys} layout="fill" objectFit='contain' />
+            <Image src={ch[4].kidneys} layout="fill" objectFit='contain' alt=""/>
           </div>
           <div className='lungs' onClick={
             () => {
@@ -1059,7 +1059,7 @@ export default function CowIndex() {
                 }
               })
             }}>
-            <Image src={ch[4].lungs} layout="fill" objectFit='contain' />
+            <Image src={ch[4].lungs} layout="fill" objectFit='contain' alt=""/>
           </div>
           <div className='heart' onClick={
             () => {
@@ -1070,7 +1070,7 @@ export default function CowIndex() {
                 }
               })
             }}>
-            <Image src={ch[4].heart} layout="fill" objectFit='contain' />
+            <Image src={ch[4].heart} layout="fill" objectFit='contain' alt=""/>
           </div>
           <div className='liver' onClick={
             () => {
@@ -1081,7 +1081,7 @@ export default function CowIndex() {
                 }
               })
             }}>
-            <Image src={ch[4].liver} layout="fill" objectFit='contain' />
+            <Image src={ch[4].liver} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Hoverwrap>
       </Container>
@@ -1092,31 +1092,31 @@ export default function CowIndex() {
       
         <Nav />
         <div className="coDisembowel">
-          <Image src={coco2[0].disembowel} layout="fill" objectFit='contain' />
+          <Image src={coco2[0].disembowel} layout="fill" objectFit='contain' alt=""/>
         </div>
         <Intestines>
           <div className='intestines'>
-            <Image src={ch[4].intestines} layout="fill" objectFit='contain' />
+            <Image src={ch[4].intestines} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Intestines>
         <Kidneys>
           <div className='kidneys'>
-            <Image src={ch[4].kidneys} layout="fill" objectFit='contain' />
+            <Image src={ch[4].kidneys} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Kidneys>
         <Lungs>
           <div className='lungs'>
-            <Image src={ch[4].lungs} layout="fill" objectFit='contain' />
+            <Image src={ch[4].lungs} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Lungs>
         <Heart>
           <div className='heart'>
-            <Image src={ch[4].heart} layout="fill" objectFit='contain' />
+            <Image src={ch[4].heart} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Heart>
         <Liver>
           <div className='liver'>
-            <Image src={ch[4].liver} layout="fill" objectFit='contain' />
+            <Image src={ch[4].liver} layout="fill" objectFit='contain' alt=""/>
           </div>
         </Liver>
       </Container>
