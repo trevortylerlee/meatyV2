@@ -499,6 +499,7 @@ const Feather3 = styled.div`
   animation-name: ${featherFly3};
   animation-duration: 1.2s;
   animation-fill-mode: forwards;
+  width: 0;
 `
 const Feather4 = styled.div`
   animation-name: ${featherFly4};
