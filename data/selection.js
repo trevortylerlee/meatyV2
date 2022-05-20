@@ -237,16 +237,16 @@ export const electric = [
 
 export const pico2 = [
   {
-    pig: "/public/pi/default.png",
-    half: "/public/pi/co2Half.png",
-    inside: "/public/pi/co2Inside.png"
+    pig: "/pi/default.png",
+    half: "/pi/co2Half.png",
+    inside: "/pi/co2Inside.png"
   }
 ]
 
 export const pigun = [
   {
-    animal: "/public/pi/front.png",
-    weapon: "/public/selections/gun.png"
+    animal: "/pi/front.png",
+    weapon: "/selections/gun.png"
   },
   {
     animal: "/pi/frontStun.png",
