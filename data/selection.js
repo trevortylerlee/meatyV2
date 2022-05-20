@@ -14,13 +14,13 @@ export const animals = [
   },
   {
     title: "Cow",
-    img: "/../public/selections/cowFace.png",
+    img: "/selections/cowFace.png",
     desc: "Cows are four-footed and have a large body. It has two horns, two eyes plus two ears and one nose and a mouth. Cows are herbivorous animals. They have a lot of uses to mankind.",
     species: "Bos taurus",
   },
   {
     title: "Pig",
-    img: "/../public/selections/pigFace.png",
+    img: "/selections/pigFace.png",
     desc: "Pigs are stoud-bodied,short-legged, omnivorous mammals. They are highly intelligent and social animals, and are found all over the globe.",
     species: "Sus domesticus",
   }
@@ -29,17 +29,17 @@ export const animals = [
 export const chWeapons = [
   {
     title: "Bath",
-    img: "/../public/selections/bath.png",
+    img: "/selections/bath.png",
     desc: "Electric waterbath stunning is the most used method of stunning chickens. Chicken's have their heads submerged into the electrified water. As electric currents run through the head and body, the chicken is rendered unconscious."
   },
   {
     title: "CO2",
-    img: "/../public/weapons/co2.png",
+    img: "/weapons/co2.png",
     desc: "Controlled atmosphere stunning is touted as the most humane matheod of stunning chickens. By reducing handling and transportation, stress and injuries are less common."
   },
   {
     title: "Tongs",
-    img: "/../public/weapons/tongs.png",
+    img: "/weapons/tongs.png",
     desc: "Stunning via electric tongs is a method used around the world. The electrodes of the device are positioned on each side of the head in between the eye and the ear."
   }
 ]
@@ -47,17 +47,17 @@ export const chWeapons = [
 export const copiWeapons = [
   {
     title: "CO2",
-    img: "/../public/selections/co2.png",
+    img: "/selections/co2.png",
     desc: "CO2 chamber stunning is gaining popularity due to their ability to stun multiple animals at once while causing the least amount of stress."
   },
   {
     title: "Gun",
-    img: "/../public/selections/gun.png",
+    img: "/selections/gun.png",
     desc: "A captive bolt (also variously known as a cattle gun, stunbolt gun, bolt gun, or stunner) is a device used to stun animals prior to slaughter."
   },
   {
     title: "Tongs",
-    img: "/../public/selections/tongs.png",
+    img: "/selections/tongs.png",
     desc: "This method of stunning can be carried out on individual animals. The electrodes are placed on each side of the animal's head and an electric current stuns the animal."
   }
 ]
